@@ -1,0 +1,12 @@
+interface:
+  display_name: Metrics Review
+  short_description: Review and analyze product metrics with trend analysis and actionable insights.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

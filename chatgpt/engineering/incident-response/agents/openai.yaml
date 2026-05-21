@@ -1,0 +1,12 @@
+interface:
+  display_name: Incident Response
+  short_description: Run an incident response workflow — triage, communicate, and write postmortem.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

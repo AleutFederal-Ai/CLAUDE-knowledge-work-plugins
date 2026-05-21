@@ -1,0 +1,12 @@
+interface:
+  display_name: Explore Data
+  short_description: Profile and explore a dataset to understand its shape, quality, and patterns.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

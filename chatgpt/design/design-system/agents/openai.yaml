@@ -1,0 +1,12 @@
+interface:
+  display_name: Design System
+  short_description: Audit, document, or extend your design system.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

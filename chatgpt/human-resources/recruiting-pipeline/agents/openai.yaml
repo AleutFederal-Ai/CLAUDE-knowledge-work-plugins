@@ -1,0 +1,12 @@
+interface:
+  display_name: Recruiting Pipeline
+  short_description: Track and manage recruiting pipeline stages.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

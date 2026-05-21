@@ -1,0 +1,12 @@
+interface:
+  display_name: Performance Report
+  short_description: Build a marketing performance report with key metrics, trend analysis, wins and misses, and prioritized optimization recommendations.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

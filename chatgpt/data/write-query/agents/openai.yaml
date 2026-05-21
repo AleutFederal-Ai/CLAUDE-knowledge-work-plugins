@@ -1,0 +1,12 @@
+interface:
+  display_name: Write Query
+  short_description: Write optimized SQL for your dialect with best practices.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

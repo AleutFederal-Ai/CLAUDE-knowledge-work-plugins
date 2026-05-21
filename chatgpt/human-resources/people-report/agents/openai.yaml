@@ -1,0 +1,12 @@
+interface:
+  display_name: People Report
+  short_description: Generate headcount, attrition, diversity, or org health reports.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

@@ -1,0 +1,12 @@
+interface:
+  display_name: Draft Response
+  short_description: Draft a professional customer-facing response tailored to the situation and relationship.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

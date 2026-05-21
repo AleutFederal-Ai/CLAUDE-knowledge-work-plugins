@@ -1,0 +1,12 @@
+interface:
+  display_name: Interview Prep
+  short_description: Create structured interview plans with competency-based questions and scorecards.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

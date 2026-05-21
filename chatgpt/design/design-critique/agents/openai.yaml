@@ -1,0 +1,12 @@
+interface:
+  display_name: Design Critique
+  short_description: Get structured design feedback on usability, hierarchy, and consistency.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

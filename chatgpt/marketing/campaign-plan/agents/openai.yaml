@@ -1,0 +1,12 @@
+interface:
+  display_name: Campaign Plan
+  short_description: Generate a full campaign brief with objectives, audience, messaging, channel strategy, content calendar, and success metrics.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

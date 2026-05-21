@@ -1,0 +1,12 @@
+interface:
+  display_name: Data Context Extractor
+  short_description: Generate or improve a company-specific data analysis skill by extracting tribal knowledge from analysts.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

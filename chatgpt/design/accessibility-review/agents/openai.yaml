@@ -1,0 +1,12 @@
+interface:
+  display_name: Accessibility Review
+  short_description: Run a WCAG 2.1 AA accessibility audit on a design or page.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

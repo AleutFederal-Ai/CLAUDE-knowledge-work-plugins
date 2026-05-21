@@ -1,0 +1,12 @@
+interface:
+  display_name: Customer Research
+  short_description: Multi-source research on a customer question or topic with source attribution.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

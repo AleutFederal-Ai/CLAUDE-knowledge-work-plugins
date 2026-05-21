@@ -1,0 +1,12 @@
+interface:
+  display_name: Review Contract
+  short_description: Review a federal prime contract, task order, subcontract, teaming agreement, or commercial agreement against Aleut Federal's negotiation playbook and the FAR/DFARS framework —…
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

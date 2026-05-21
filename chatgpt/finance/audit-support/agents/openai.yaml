@@ -1,0 +1,12 @@
+interface:
+  display_name: Audit Support
+  short_description: Support DCAA, DCMA, IPA, and CO/COR audits of Aleut Federal — incurred cost audits, accounting-system reviews, business-system audits, forward-pricing rate audits, T&M /…
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

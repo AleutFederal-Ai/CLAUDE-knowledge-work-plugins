@@ -1,0 +1,12 @@
+interface:
+  display_name: Variance Analysis
+  short_description: Decompose financial variances into drivers with narrative explanations and waterfall analysis.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

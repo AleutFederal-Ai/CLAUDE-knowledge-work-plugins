@@ -1,0 +1,12 @@
+interface:
+  display_name: Competitive Brief
+  short_description: Research competitors and generate a positioning and messaging comparison with content gaps, opportunities, and threats.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

@@ -1,0 +1,12 @@
+interface:
+  display_name: Draft Offer
+  short_description: Draft an offer letter with comp details and terms.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

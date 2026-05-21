@@ -1,0 +1,12 @@
+interface:
+  display_name: Brand Review
+  short_description: Review content against your brand voice, style guide, and messaging pillars, flagging deviations by severity with specific before/after fixes.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false
