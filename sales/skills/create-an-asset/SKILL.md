@@ -3,9 +3,61 @@ name: create-an-asset
 description: Generate tailored sales assets (landing pages, decks, one-pagers, workflow demos) from your deal context. Describe your prospect, audience, and goal — get a polished, branded asset ready to share with customers.
 ---
 
-# Create an Asset
+# Create an Asset — Aleut Federal
 
-Generate custom sales assets tailored to your prospect, audience, and goals. Supports interactive landing pages, presentation decks, executive one-pagers, and workflow/architecture demos.
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md).
+
+Generate custom BD assets tailored to a federal customer, opportunity, or teaming counterpart. Supports capability statements, one-pagers, proposal-style decks, past-performance pages, and white papers.
+
+## Aleut Federal Context — Federal Asset Conventions
+
+Federal BD assets have hard conventions. Default to these unless otherwise asked:
+
+### Capability statements
+
+A capability statement is the single most-requested asset. It must fit on **one page** (sometimes two for diverse capabilities) and include:
+
+- **Header**: company name, tagline, ANC/8(a) status, SBA certifications.
+- **Core competencies**: 4–6 bullets — technical and management capabilities, not buzzwords.
+- **Past performance**: 3–5 references with customer, contract number (or task order), period of performance, value, and 1-line scope description.
+- **Differentiators**: ANC sole-source 8(a) eligibility, Mentor-Protégé status, Tribal benefit, OCONUS capability, clearances, CMMC posture, certifications.
+- **Company data**: legal name, CAGE code, UEI (formerly DUNS), NAICS codes (with primary noted), socio-economic codes, GSA Schedule contract # (if held), vehicles (OASIS+ pool, SeaPort-NxG zone, etc.).
+- **Contact**: BD POC, phone, email, website.
+- **Format**: 8.5×11, branded, color but printable in B&W.
+
+### Past-performance one-pagers
+
+For each high-value past-performance contract:
+
+- Customer, contract number, period of performance, place of performance.
+- Type (FFP / T&M / CR), set-aside, vehicle.
+- Total value (ceiling and obligated to date).
+- Scope summary (3–5 sentences).
+- Outcomes / metrics (quantitative where possible).
+- CPARS ratings (where shareable).
+- Customer reference contact (only if approved).
+
+### Proposal-style decks (e.g., for industry days, capabilities briefings)
+
+- Brief: agency-mission-focused, not company-product-focused.
+- Sequence: agency's challenge → our understanding → how we fit → past performance proof → set-aside / vehicle path → ask.
+- 12–20 slides; no animations; printable.
+
+### White papers / unsolicited proposals
+
+- Follow the agency's unsolicited-proposal procedure (FAR Subpart 15.6); mark as proprietary if applicable per FAR 15.609.
+- Coordinate with Legal — submitting an unsolicited proposal can create OCI exposure.
+
+## Compliance Bright Lines
+
+- **No use of federal-customer logos or contract numbers** without CO authorization in writing.
+- **No testimonials from federal employees** (5 C.F.R. § 2635.702).
+- **No statements implying endorsement** by federal customers.
+- **No source-selection-sensitive information** anywhere in distributable assets.
+- **CUI scrubbing**: every asset reviewed for inadvertent CUI before publication.
+- **Section 889** — if discussing solutions, avoid covered telecom from prohibited entities.
+- **Past performance references** require contract-by-contract review — some contracts prohibit disclosure of contract number or customer name.
+- **ANC/8(a) status** — claim only what's currently certified; SBA certifications change.
 
 ---
 

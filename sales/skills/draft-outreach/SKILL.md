@@ -3,9 +3,48 @@ name: draft-outreach
 description: Research a prospect then draft personalized outreach. Uses web research by default, supercharged with enrichment and CRM. Trigger with "draft outreach to [person/company]", "write cold email to [prospect]", "reach out to [name]".
 ---
 
-# Draft Outreach
+# Draft Outreach — Aleut Federal
 
-Research first, then draft. This skill never sends generic outreach - it always researches the prospect first to personalize the message. Works standalone with web search, supercharged when you connect your tools.
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md).
+
+Research first, then draft. This skill never sends generic outreach — it always researches the prospect and the federal context first. Works standalone with web search; supercharged with CRM and federal market-intel tools.
+
+## Aleut Federal Context — Federal Outreach Rules
+
+Outreach in our world is constrained. Tailor the message and the channel to who we're contacting:
+
+### Federal government personnel
+
+- **Contracting Officers (COs) and contract specialists**: appropriate channels are agency-published market-research processes (sources sought, RFIs, industry days). Direct outreach is **not appropriate** for active solicitations during evaluation (Procurement Integrity Act). Outside of active procurements, brief capability emails to the small-business advocate (OSDBU) or HCA are typical.
+- **Program / mission personnel (CORs, PMs, end users)**: relationship building is appropriate at industry events and through agency-organized channels; never around an active solicitation.
+- **Office of Small and Disadvantaged Business Utilization (OSDBU)**: this is the principal channel for ANC / 8(a) capability introductions. Default outreach for new agencies.
+- **No gifts** beyond the de minimis rules in 5 C.F.R. § 2635.204 (typically $20/$50 limits). Coordinate any meals or events with Ethics.
+
+### Prime contractors
+
+- **BD / capture leads / small-business liaisons** at primes are the right contacts for teaming intros. We are an ANC 8(a) entity — emphasize this in subject lines (e.g., "ANC 8(a) — teaming for [solicitation]").
+- **Don't pitch primes mid-evaluation** on an active solicitation if we're a competitor on the same opportunity.
+- **NDA-first** before sharing rates, key personnel, or pricing approach.
+
+### Other vendors / subs
+
+- Standard cold outreach acceptable.
+- Section 889 / SAM exclusion / FAPIIS screen before further engagement.
+
+## Tone and Content
+
+Federal outreach is **dry, factual, and credentials-first**. Skip commercial cold-email flourishes.
+
+A good federal outreach email includes:
+
+1. **Subject**: identify type and value quickly (e.g., "ANC 8(a) — Aleut Federal — Capability Brief for AFCEC HVAC/Mechanical").
+2. **First paragraph**: 1–2 sentences on who we are (ANC 8(a) subsidiary of The Aleut Corporation; lines of business; relevant NAICS).
+3. **Second paragraph**: relevant past performance (1–3 references with customer, contract type, value, scope match).
+4. **Third paragraph**: vehicle alignment and set-aside angle (8(a) sole-source eligibility where applicable; vehicles we hold).
+5. **Call to action**: specific ask (capability brief meeting, teaming discussion, addition to bidders list, response to sources-sought).
+6. **Compliance close**: contact info, CAGE code, DUNS/UEI, set-aside certifications.
+
+Never imply endorsement by federal customers; never quote source-selection material; never overpromise on FAR 52.219-14 self-performance.
 
 ## Connectors (Optional)
 

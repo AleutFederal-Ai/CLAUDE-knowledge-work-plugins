@@ -4,11 +4,72 @@ description: Generate a weighted sales forecast with best/likely/worst scenarios
 argument-hint: "<period>"
 ---
 
-# /forecast
+# /forecast — Aleut Federal BD Forecast
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
 
-Generate a weighted sales forecast with risk analysis and commit recommendations.
+Generate a weighted federal BD forecast with bookings, revenue, and backlog views.
+
+## Aleut Federal Context — Federal Forecasting Mechanics
+
+Federal contracting requires a forecast model that separates **bookings** (award decisions) from **revenue** (delivered work) — they don't move together the way a SaaS forecast does.
+
+### Probability calibration
+
+Probability of award by capture stage (Pwin), tuned against our historical win rates. Default starting points (refine over time with retrospectives):
+
+| Capture stage | Pwin range |
+|---------------|------------|
+| Identification | 5–10% |
+| Qualification | 10–20% |
+| Pursuit / Capture | 20–35% |
+| Proposal Planning (post-solicitation) | 25–45% |
+| Proposal Development | 35–50% |
+| Submitted / Evaluation | 40–65% |
+| Award Pending (oral confirmation / debrief due) | 75–90% |
+
+8(a) sole-source pursuits with a Letter of Intent / customer signal of intent — start higher (60–80%) but always cap at award.
+
+### Revenue forecasting (separate from bookings)
+
+For each contract in the pipeline and current portfolio, build revenue by:
+
+- **FFP / FFP-LOE**: schedule of values / milestones; recognize over time (percentage of completion) where applicable.
+- **T&M / Labor Hour**: forecast hours × bill rate by labor category; pace against ceiling and PoP burn.
+- **Cost-reimbursable (CPFF, CPIF, CPAF)**: forecast costs (direct + indirect) and fee; pace against funded value and ceiling (LoF/LoC at 75% / 85%).
+- **Construction (FFP or cost-type)**: WIP schedule; cost-to-date / EAC; mobilization-loaded curves; weather/seasonality adjustments.
+- **IDIQ task orders**: forecast at task-order level, not vehicle ceiling; assume ramp-up after award.
+
+### Backlog views
+
+- **Total backlog** — sum of unbilled funded + unfunded option periods at last contract value.
+- **Funded backlog** — current funding minus billed-to-date.
+- **Unfunded backlog (option years)** — value of unexercised options, decremented by historical option-exercise rate (default 85%).
+
+### Risk overlays
+
+- **Continuing Resolution risk** — federal FY starts Oct 1; under a CR, new starts and ceiling increases are constrained.
+- **Recompete risk** — apply a haircut (default 30–40%) to revenue from contracts ending within the forecast window unless we are recompete-bidding.
+- **Protest risk** — apply a timing slip if a protest is likely (typical 100 days for GAO; longer at COFC).
+- **Workforce risk** — clearance pipeline, key-personnel retention.
+- **CR / shutdown risk** — government shutdown impacts (mostly affects revenue timing, not bookings).
+
+### Output bands
+
+Always provide best / likely / worst:
+
+- **Best**: 75% of unweighted pipeline + 100% of submitted + portfolio at full-burn.
+- **Likely**: probability-weighted pipeline + portfolio at expected burn.
+- **Worst**: 25% of weighted pipeline + portfolio at floor with recompete losses.
+
+### Gap analysis
+
+For each customer / line of business / set-aside:
+
+- Plan vs Likely.
+- Pursuits required to close the gap given Pwin distribution.
+- B&P investment required.
+- Specific candidate opportunities to accelerate (or de-prioritize) to close.
 
 ## Usage
 

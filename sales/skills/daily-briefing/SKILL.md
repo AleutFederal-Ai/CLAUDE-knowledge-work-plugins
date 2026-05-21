@@ -3,9 +3,25 @@ name: daily-briefing
 description: Start your day with a prioritized sales briefing. Works standalone when you tell me your meetings and priorities, supercharged when you connect your calendar, CRM, and email. Trigger with "morning briefing", "daily brief", "what's on my plate today", "prep my day", or "start my day".
 ---
 
-# Daily Sales Briefing
+# Daily BD Briefing — Aleut Federal
 
-Get a clear view of what matters most today. This skill works with whatever you tell me, and gets richer when you connect your tools.
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md).
+
+Get a clear view of what matters most today across captures, proposals, and customer engagements.
+
+## Aleut Federal Context — Briefing Priorities
+
+Order each morning's briefing as:
+
+1. **Today's federal deadlines** — proposal submissions, Q&A windows, sources-sought responses, debrief request windows, GAO protest deadlines, FAR 52.232-22 LoF/LoC notification triggers, CO response deadlines.
+2. **Active capture stage transitions** — opportunities due to clear a gate today.
+3. **Customer-facing meetings** — CO/COR syncs, industry days, capabilities briefings, teaming negotiations, kickoffs.
+4. **SAM.gov / agency-forecast new posts** — relevant solicitations posted in the last 24 hours by NAICS / agency.
+5. **Compliance and disclosure** — any flags from the mandatory-disclosure log, FAPIIS watch, SAM exclusion changes for our subs.
+6. **Pipeline hygiene flags** — items aging past stage SLAs.
+7. **Personal commitments** — calendar review with conflicts flagged.
+
+End with two suggestions: a "make sure you don't miss this" callout and a "one thing to move forward today."
 
 ## How It Works
 

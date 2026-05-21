@@ -4,9 +4,23 @@ description: Process call notes or a transcript — extract action items, draft 
 argument-hint: "<call notes or transcript>"
 ---
 
-# /call-summary
+# /call-summary — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal Call Summary Rules
+
+When summarizing a federal-customer or teaming call:
+
+- **Source-selection sensitivity**: if the call touched any source-selection or contractor bid/proposal information, mark the summary "PRIVILEGED / PIA-SENSITIVE" and route to GC before broader distribution.
+- **CO directions vs informal exchanges**: clearly separate **written CO directions** (the only thing that changes scope/price/term) from informal exchanges. Anything that smells like a constructive change goes to Legal/Contracts within 24 hours.
+- **Mandatory-disclosure triggers (FAR 52.203-13)**: if the call surfaced potential FCA, criminal, or significant overpayment issues, route to GC immediately and do not file a routine CRM summary.
+- **Debriefs**: do not record without permission; do summarize ratings, weaknesses, deficiencies, and clarification questions; do not pursue source-selection details beyond what's offered.
+- **Industry days / sources sought**: summarize what we heard and our planned follow-up via the agency's posted Q&A channel.
+- **Teaming / JV calls**: flag any commitments that are outside the executed TA / NDA scope; route to Legal.
+- **Past-performance references**: capture any specific customer / contract details mentioned in case they are useful for proposal past-performance volumes.
+
+Distribution list: capture team, BD lead, PM (if applicable), Legal/Contracts (if anything triggers their attention), and CRM.
 
 Process call notes or a transcript to extract action items, draft follow-up communications, and update records.
 
