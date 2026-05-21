@@ -1,7 +1,7 @@
 {
   "name": "finance",
   "version": "1.2.0",
-  "description": "Streamline finance and accounting workflows, from journal entries and reconciliation to financial statements and variance analysis. Speed up audit prep, month-end close, and keeping your books clean.",
+  "description": "Federal-contractor finance and accounting workflows for Aleut Federal. DCAA-compliant journal entries and reconciliations, FAR Part 31 cost allowability checks, indirect rate / ICS preparation, T&M and cost-reimbursable invoicing, CAS-aware financial statements and variance analysis, and audit support for DCAA, DCMA, and IPA engagements.",
   "author": {
     "name": "Anthropic"
   }

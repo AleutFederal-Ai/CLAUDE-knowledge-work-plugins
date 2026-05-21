@@ -1,16 +1,16 @@
 ---
 name: review-contract
-description: Review a contract against your organization's negotiation playbook — flag deviations, generate redlines, provide business impact analysis. Use when reviewing vendor or customer agreements, when you need clause-by-clause analysis against standard positions, or when preparing a negotiation strategy with prioritized redlines and fallback positions.
+description: Review a federal prime contract, task order, subcontract, teaming agreement, or commercial agreement against Aleut Federal's negotiation playbook and the FAR/DFARS framework — flag deviations, generate redlines, and provide business-impact analysis. Use when reviewing federal solicitations, awards, subcontract flow-downs, teaming/JV agreements, NDAs, vendor agreements, or modifications.
 argument-hint: "<contract file or text>"
 ---
 
-# /review-contract -- Contract Review Against Playbook
+# /review-contract -- Federal Contract Review Against Playbook
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
 
-Review a contract against your organization's negotiation playbook. Analyze each clause, flag deviations, generate redline suggestions, and provide business impact analysis.
+Review the agreement against Aleut Federal's playbook and the federal regulatory framework (FAR, DFARS, agency supplements). Analyze each clause, flag deviations, generate redline suggestions, and provide business-impact analysis.
 
-**Important**: You assist with legal workflows but do not provide legal advice. All analysis should be reviewed by qualified legal professionals before being relied upon.
+**Important:** This skill assists with contract analysis; it does not provide legal advice. All outputs must be reviewed by qualified counsel before being relied upon. For any item raising potential False Claims Act, Procurement Integrity Act, or FAR 52.203-13 mandatory disclosure issues, route to senior counsel immediately.
 
 ## Invocation
 
@@ -22,337 +22,259 @@ Review the contract: @$1
 
 ## Workflow
 
-### Step 1: Accept the Contract
+### Step 1: Accept the Document
 
-Accept the contract in any of these formats:
-- **File upload**: PDF, DOCX, or other document format
-- **URL**: Link to a contract in your CLM, cloud storage (e.g., Box, Egnyte, SharePoint), or other document system
-- **Pasted text**: Contract text pasted directly into the conversation
+Accept any of:
+- **File upload** (PDF, DOCX, etc.).
+- **URL** in our CLM, SharePoint, Egnyte, or Box.
+- **Pasted text**.
+- **SAM.gov solicitation number** — if given a solicitation/RFP number, pull the latest from SAM.gov (Sections L, M, H, C, J as a minimum).
 
-If no contract is provided, prompt the user to supply one.
+If nothing is provided, prompt the user for one.
 
-### Step 2: Gather Context
+### Step 2: Identify the Document Type
 
-Ask the user for context before beginning the review:
+Federal agreements fall into a small set of buckets; the review changes by type:
 
-1. **Which side are you on?** (vendor/supplier, customer/buyer, licensor, licensee, partner -- or other)
-2. **Deadline**: When does this need to be finalized? (Affects prioritization of issues)
-3. **Focus areas**: Any specific concerns? (e.g., "data protection is critical", "we need flexibility on term", "IP ownership is the key issue")
-4. **Deal context**: Any relevant business context? (e.g., deal size, strategic importance, existing relationship)
+| Type | What to look for first |
+|------|------------------------|
+| **Prime federal solicitation / RFP** (Section L/M/H/C/J) | Set-aside, NAICS, size standard, evaluation criteria, FAR clauses incorporated by reference, page limits, Q&A deadlines |
+| **Prime federal award (SF 1449, SF 33, DD 1155, task/delivery order)** | CLINs, period of performance, funding (incremental vs fully-funded), FAR/DFARS clauses, options, ceiling, CPARS reporting |
+| **IDIQ / MAC / GWAC / GSA Schedule** | Ordering procedures, fair opportunity, minimum/maximum, scope, fee/IFF, on-ramp/off-ramp |
+| **Subcontract under federal prime** (us as prime or sub) | FAR flow-downs, FAR 52.244-6 commercial-item flow-downs, indemnity caps, payment terms vs prime, T&M ceilings, change control |
+| **Teaming Agreement / Joint Venture Agreement** | 8(a) JV rules (13 C.F.R. § 124.513), workshare allocation, FAR 52.219-14 self-performance, exclusivity, term, dissolution, SBA approval |
+| **NDA / PIA** | Use of CUI, ITAR/EAR, Section 889, source-selection sensitivity, term, governing law |
+| **Commercial vendor agreement** (purchase of goods/services) | Whether federal flow-downs apply, Section 889 reps, Buy American / TAA, payment timing vs prime payment, data rights |
+| **Modification (SF 30) / Engineering Change Proposal** | Scope vs out-of-scope, REA implications, equitable adjustment basis, novation/assignment |
 
-If the user provides partial context, proceed with what you have and note assumptions.
+Confirm the type out loud before continuing.
 
-### Step 3: Load the Playbook
+### Step 3: Gather Context
 
-Look for the organization's contract review playbook in local settings (e.g., `legal.local.md` or similar configuration files).
+Ask the user for context. If they don't have all of it, proceed with assumptions and flag them.
 
-The playbook should define:
-- **Standard positions**: The organization's preferred terms for each major clause type
-- **Acceptable ranges**: Terms that can be agreed to without escalation
-- **Escalation triggers**: Terms that require senior counsel review or outside counsel involvement
+1. **Our role** — prime, subcontractor, teaming partner, JV member/managing venturer, vendor, customer, mentor, protégé?
+2. **Counterparty** — federal agency (which one?), prime contractor, sub, commercial vendor?
+3. **Contract type** — FFP, FFP-LOE, T&M, Labor Hour, CPFF, CPIF, CPAF, IDIQ?
+4. **Set-aside / vehicle** — 8(a) sole-source, 8(a) competitive, SB set-aside, HUBZone, SDVOSB, F&O, GSA MAS, OASIS+, SeaPort-NxG, CIO-SP4, USACE MATOC?
+5. **Estimated value & period of performance.**
+6. **Deadline** for review (CO response deadline, proposal due date, signature date).
+7. **Critical concerns** the user has (e.g., "FAR 52.227-14 data rights are the issue," "we can't accept open-ended indemnity," "ceiling is too low to absorb risk").
+8. **Special facts** — JV vehicle, Mentor-Protégé arrangement, ANC sole-source justification, OCONUS performance, classified work, CUI handling.
 
-**If no playbook is configured:**
-- Inform the user that no playbook was found
-- Offer two options:
-  1. Help the user set up their playbook (walk through defining positions for key clauses)
-  2. Proceed with a generic review using widely-accepted commercial standards as the baseline
-- If proceeding generically, clearly note that the review is based on general commercial standards, not the organization's specific positions
+### Step 4: Load the Playbook and Context
 
-### Step 4: Clause-by-Clause Analysis
+In order, consult:
 
-Apply the following review process:
+1. **Aleut Federal company context** — `ALEUT-FEDERAL-CONTEXT.md` at the repo root (authoritative facts about ANC/8(a) status, regulatory framework, hard constraints).
+2. **Local legal playbook** — `legal.local.md` or similar (specific risk thresholds, approval authority matrix, preferred indemnity caps).
+3. **Prior similar agreements** in our CLM, if connected.
 
-1. **Identify the contract type**: SaaS agreement, professional services, license, partnership, procurement, etc. The contract type affects which clauses are most material.
-2. **Determine the user's side**: Vendor, customer, licensor, licensee, partner. This fundamentally changes the analysis (e.g., limitation of liability protections favor different parties).
-3. **Read the entire contract** before flagging issues. Clauses interact with each other (e.g., an uncapped indemnity may be partially mitigated by a broad limitation of liability).
-4. **Analyze each material clause** against the playbook position.
-5. **Consider the contract holistically**: Are the overall risk allocation and commercial terms balanced?
+If no local playbook is set, use the default Aleut Federal positions in **Step 6** and clearly mark the review as "based on default federal-contractor positions; not yet calibrated to a written local playbook."
 
-Analyze the contract systematically, covering at minimum:
+### Step 5: Read the Entire Document
 
-| Clause Category | Key Review Points |
-|----------------|-------------------|
-| **Limitation of Liability** | Cap amount, carveouts, mutual vs. unilateral, consequential damages |
-| **Indemnification** | Scope, mutual vs. unilateral, cap, IP infringement, data breach |
-| **IP Ownership** | Pre-existing IP, developed IP, work-for-hire, license grants, assignment |
-| **Data Protection** | DPA requirement, processing terms, sub-processors, breach notification, cross-border transfers |
-| **Confidentiality** | Scope, term, carveouts, return/destruction obligations |
-| **Representations & Warranties** | Scope, disclaimers, survival period |
-| **Term & Termination** | Duration, renewal, termination for convenience, termination for cause, wind-down |
-| **Governing Law & Dispute Resolution** | Jurisdiction, venue, arbitration vs. litigation |
-| **Insurance** | Coverage requirements, minimums, evidence of coverage |
-| **Assignment** | Consent requirements, change of control, exceptions |
-| **Force Majeure** | Scope, notification, termination rights |
-| **Payment Terms** | Net terms, late fees, taxes, price escalation |
+Before flagging anything, read end-to-end. In federal documents this means:
 
-For each clause, assess against the playbook (or generic standards) and note whether it is present, absent, or unusual.
+- **Solicitations:** Section L (instructions), Section M (evaluation), Section H (special), Section C (PWS/SOW), Section I (clauses by reference), Section J (attachments — wage determinations, CDRLs, drawings, security forms).
+- **Awards:** all CLINs, all referenced clauses (FAR/DFARS/agency supplement), all attached exhibits.
+- **Subcontracts:** the body, the flow-down exhibit (often "Exhibit A" or "Attachment 1"), and any prime contract incorporated by reference.
 
-#### Detailed Clause Guidance
+Clauses interact. A reasonable indemnity may be undone by a broad warranty; a tight FAR 52.227-14 data-rights position may conflict with a CDRL that demands deliverables in proprietary format.
 
-##### Limitation of Liability
+### Step 6: Clause-by-Clause Analysis
 
-**Key elements to review:**
-- Cap amount (fixed dollar amount, multiple of fees, or uncapped)
-- Whether the cap is mutual or applies differently to each party
-- Carveouts from the cap (what liabilities are uncapped)
-- Whether consequential, indirect, special, or punitive damages are excluded
-- Whether the exclusion is mutual
-- Carveouts from the consequential damages exclusion
-- Whether the cap applies per-claim, per-year, or aggregate
+Apply this systematic review. For each clause, mark **GREEN / YELLOW / RED** per Step 7.
 
-**Common issues:**
-- Cap set at a fraction of fees paid (e.g., "fees paid in the prior 3 months" on a low-value contract)
-- Asymmetric carveouts favoring the drafter
-- Broad carveouts that effectively eliminate the cap (e.g., "any breach of Section X" where Section X covers most obligations)
-- No consequential damages exclusion for one party's breaches
+#### A. Federal-specific clauses (always check on federal contracts and flow-downs)
 
-##### Indemnification
+| Clause / Topic | What to look for | Default AF position |
+|----------------|------------------|---------------------|
+| **FAR 52.212-4 / FAR 52.212-5** (Commercial items, contract terms and conditions required to implement statutes/EOs) | Whether commercial-item terms apply; if so, scope of flow-downs from FAR 52.244-6 | Accept commercial-item treatment where lawful; resist non-commercial flow-downs in commercial-item subs |
+| **FAR 52.215-2** (Audit and Records — Negotiation) | Records retention, government audit access | Accept; coordinate with Finance on records retention (3 years after final payment) |
+| **FAR 52.216-7** (Allowable Cost and Payment) | Provisional billing rates, ICS submission obligation, final indirect rate settlement | Required on cost-type; ensure rate structures align with our DCAA-approved pools |
+| **FAR 52.219-8 / 52.219-9** (Small Business Subcontracting) | SB subcontracting plan thresholds; goals | Accept; ensure achievable goals; align with our Master SB Plan if applicable |
+| **FAR 52.219-14** (Limitations on Subcontracting) | Self-performance % (services 50% cost of personnel; general construction 15%; specialty 25%); JV treatment | **Hard constraint.** Verify staffing plan can comply. Flag RED if PWS makes compliance impossible |
+| **FAR 52.222-6** (Construction Wage Rate Requirements — Davis-Bacon) | DBA applicability; attached WD; conformance process | Accept; coordinate with HR/Payroll on WD enforcement and Copeland anti-kickback certification |
+| **FAR 52.222-41 / 52.222-42 / 52.222-43** (Service Contract Labor Standards) | SCA applicability; attached WD(s); price adjustment on WD updates | Accept; insist on FAR 52.222-43 price-adjustment mechanism on multi-year |
+| **FAR 52.222-54** (E-Verify) | Required for most federal contracts; flow-down to subs | Accept; HR maintains E-Verify enrollment |
+| **FAR 52.223-18** (Texting while driving) | Standard | Accept |
+| **FAR 52.227-14 / 52.227-17** (Rights in Data — General / Special Works) | Government data rights; assertion of limited rights | Default to **limited rights** in pre-existing IP; assert restrictions in proposal where appropriate |
+| **DFARS 252.227-7013 / 7014** (Technical Data / Noncommercial Computer Software) | Government Purpose Rights, Limited Rights, Restricted Rights | Negotiate **Government Purpose Rights** at most for software developed at private expense; assert restrictions |
+| **DFARS 252.204-7012** (Safeguarding CUI / Cyber Incident Reporting) | NIST SP 800-171 implementation; 72-hour incident reporting; flow-down | **Hard constraint.** Verify our SSP and POA&M support; flow down to subs handling CUI |
+| **DFARS 252.204-7019/7020/7021** (NIST SP 800-171 / CMMC) | SPRS score current; CMMC level required | Verify SPRS posted within 3 years; track CMMC level required |
+| **FAR 52.203-13** (Code of Business Ethics) | Required ethics program, hotline, **mandatory disclosure** | **Hard constraint.** Maintain program; route credible-evidence findings to senior counsel |
+| **FAR 52.203-17** (Whistleblower) | Posting and policy | Accept |
+| **FAR 52.204-25 / DFARS 252.204-7018** (Section 889 — covered telecom) | Reps; flow-downs | **Hard constraint.** Verify supply chain free of covered entities |
+| **FAR 52.225-3 / 52.225-9 / 52.225-11 / 52.225-13 / DFARS 252.225-7001** (Buy American / TAA / BABA) | Domestic content; designated-country exceptions | Default to compliant sources; flag any non-compliant materials |
+| **FAR 52.232-39 / 52.232-40 / Prompt Payment Act** | Payment timing | Insist on Prompt Payment Act protections in subs |
+| **FAR 52.249-x** (Termination) | Termination for Convenience / Default mechanics | Verify T4C settlement language; protect unrecovered costs and fee on work performed |
+| **FAR 52.243-x** (Changes) | Unilateral vs bilateral; REA process; constructive change | Preserve right to equitable adjustment; require written direction before performance |
+| **FAR 52.244-6** (Subcontracts for Commercial Items) | Mandatory commercial-item flow-downs | Use as cap on what we flow down to commercial subs |
+| **Limitation of Cost / Funds (FAR 52.232-20 / -22)** | Funding cap and notification | On cost-type, track at ≤ 75% / ≤ 85% notification triggers |
 
-**Key elements to review:**
-- Whether indemnification is mutual or unilateral
-- Scope: what triggers the indemnification obligation (IP infringement, data breach, bodily injury, breach of reps and warranties)
-- Whether indemnification is capped (often subject to the overall liability cap, or sometimes uncapped)
-- Procedure: notice requirements, right to control defense, right to settle
-- Whether the indemnitee must mitigate
-- Relationship between indemnification and the limitation of liability clause
+#### B. Commercial clause categories (review regardless of contract type)
 
-**Common issues:**
-- Unilateral indemnification for IP infringement when both parties contribute IP
-- Indemnification for "any breach" (too broad; essentially converts the liability cap to uncapped liability)
-- No right to control defense of claims
-- Indemnification obligations that survive termination indefinitely
+| Clause Category | Key review points (federal-flavored) |
+|-----------------|--------------------------------------|
+| **Limitation of Liability** | Federal primes often resist any LoL; in subs, push for cap at fees paid in trailing 12 months; carveouts for IP and gross negligence acceptable. **Note**: many flow-downs disclaim LoL — flag risk in those cases. |
+| **Indemnification** | Mutual where possible; in federal primes, indemnity to the Government is limited by Anti-Deficiency Act and FAR — beware language requiring indemnity "without limit." Push for cap aligned to LoL. |
+| **IP Ownership / Data Rights** | Map to FAR 52.227-14 / DFARS 252.227-7013/7014. Mark pre-existing IP in assertions table. |
+| **Confidentiality** | Cover CUI, source-selection information, and proprietary marking under FAR 3.104. Bilateral terms; 5-year default; perpetual for trade secrets and CUI. |
+| **Reps & Warranties** | Watch for warranties broader than FAR-required reps; disclaim where commercially reasonable. |
+| **Term & Termination** | Mirror Government T4C/T4D through to subs; require pass-through of stop-work and termination costs. |
+| **Governing Law / Dispute Resolution** | Federal primes: Contract Disputes Act (41 U.S.C. § 7101 et seq.) and ASBCA/CBCA + COFC. Subs: prefer state of our HQ; resist consolidation clauses that subordinate sub claims to prime claims without our consent. |
+| **Insurance** | FAR 28.307 / 52.228-5 minimums for service contracts; construction must meet Miller Act bonding (perf + payment) > $150K. Verify EM 385-1-1 site insurance where USACE. |
+| **Assignment / Anti-Assignment Act** | Federal prime assignment governed by Anti-Assignment Act (41 U.S.C. § 6305) — novation requires Government consent. Bake into mods. |
+| **Force Majeure** | Excusable delays under FAR 52.249-14 are more restrictive than generic FM. Don't accept commercial FM clauses that override. |
+| **Payment Terms** | Federal: Prompt Payment Act. Subs: insist on pay-when-paid not pay-if-paid (most states limit pay-if-paid on federal subs anyway). |
 
-##### Intellectual Property
+#### C. Construction-only clauses (when document touches Davis-Bacon / Miller Act work)
 
-**Key elements to review:**
-- Ownership of pre-existing IP (each party should retain their own)
-- Ownership of IP developed during the engagement
-- Work-for-hire provisions and their scope
-- License grants: scope, exclusivity, territory, sublicensing rights
-- Open source considerations
-- Feedback clauses (grants on suggestions or improvements)
+- **Differing Site Conditions** (FAR 52.236-2) — preserve right; require written CO notice before disturbance.
+- **Site Investigation** (FAR 52.236-3) — accept but document assumptions.
+- **Permits and Responsibilities** (FAR 52.236-7).
+- **Schedules for Construction Contracts** (FAR 52.236-15) — preserve flexibility on critical path.
+- **Performance and Payment Bonds** (FAR 52.228-15 / 52.228-16) — Miller Act > $150K; verify bonding capacity with Finance.
+- **Safety: USACE EM 385-1-1** (where Corps customer) — verify SSHP requirements; APP/AHA cadence.
+- **Buy American / BABA** for materials.
+- **Liquidated damages** (FAR 52.211-12) — verify daily rate is a reasonable forecast, not a penalty; cap exposure.
 
-**Common issues:**
-- Broad IP assignment that could capture the customer's pre-existing IP
-- Work-for-hire provisions extending beyond the deliverables
-- Unrestricted feedback clauses granting perpetual, irrevocable licenses
-- License scope broader than needed for the business relationship
+#### D. Teaming and JV agreements (when reviewing those)
 
-##### Data Protection
+- **8(a) JV rules** — 13 C.F.R. § 124.513: 8(a) participant must be managing venturer; JV must perform requirements; profit allocation in proportion to workshare. SBA approval required before award on sole-source.
+- **Workshare** — define percentages by labor category / CLIN to support FAR 52.219-14 compliance.
+- **Exclusivity** — bilateral and limited to the specific opportunity; carveouts for separate pursuits.
+- **Dissolution** — IP and data return; ongoing past-performance attribution per FAR 15.305(a)(2)(iii).
+- **Mentor-Protégé** — confirm SBA-approved Mentor-Protégé Agreement is in effect and applicable.
 
-**Key elements to review:**
-- Whether a Data Processing Agreement/Addendum (DPA) is required
-- Data controller vs. data processor classification
-- Sub-processor rights and notification obligations
-- Data breach notification timeline (72 hours for GDPR)
-- Cross-border data transfer mechanisms (SCCs, adequacy decisions, binding corporate rules)
-- Data deletion or return obligations on termination
-- Data security requirements and audit rights
-- Purpose limitation for data processing
+### Step 7: Flag Deviations (GREEN / YELLOW / RED)
 
-**Common issues:**
-- No DPA when personal data is being processed
-- Blanket authorization for sub-processors without notification
-- Breach notification timeline longer than regulatory requirements
-- No cross-border transfer protections when data moves internationally
-- Inadequate data deletion provisions
+#### GREEN — Acceptable
+Aligns with the Aleut Federal default position or is better. Note for awareness.
 
-##### Term and Termination
+#### YELLOW — Negotiate
+Outside default but within range. Provide:
+- Exact redline language.
+- Fallback position.
+- Business impact of accepting as-is vs negotiating.
 
-**Key elements to review:**
-- Initial term and renewal terms
-- Auto-renewal provisions and notice periods
-- Termination for convenience: available? notice period? early termination fees?
-- Termination for cause: cure period? what constitutes cause?
-- Effects of termination: data return, transition assistance, survival clauses
-- Wind-down period and obligations
+#### RED — Escalate
+Outside acceptable range, triggers an escalation criterion, or poses material risk. Provide:
+- Why it's RED (specific risk: FCA exposure, uncapped indemnity, unlawful flow-down, IP loss, FAR 52.219-14 violation, CMMC/CUI gap, etc.).
+- Standard market or AF-required alternative.
+- Exposure estimate.
+- Escalation path (GC, CFO, COO, Mandatory Disclosure Committee).
 
-**Common issues:**
-- Long initial terms with no termination for convenience
-- Auto-renewal with short notice windows (e.g., 30-day notice for annual renewal)
-- No cure period for termination for cause
-- Inadequate transition assistance provisions
-- Survival clauses that effectively extend the agreement indefinitely
+**Automatic RED triggers (always escalate):**
+- Anything implicating False Claims Act, Procurement Integrity Act, FAR 52.203-13 mandatory disclosure, or Anti-Kickback Act.
+- Uncapped indemnity in a subcontract or commercial agreement.
+- Loss of pre-existing IP (Unlimited Rights granted in proposal IP).
+- FAR 52.219-14 self-performance compliance impossible under the staffing plan.
+- DFARS 252.204-7012 / NIST 800-171 / CMMC requirements we cannot meet.
+- Section 889 reps we cannot honestly make.
+- Buy American / TAA / BABA representations we cannot honestly make.
+- Cost or pricing data certifications under TINA where we lack adequate basis.
+- Non-novated assignment of a federal prime contract.
+- LD rates that exceed a reasonable forecast of actual damages.
+- 8(a) JV without SBA approval prior to award on sole-source.
 
-##### Governing Law and Dispute Resolution
+### Step 8: Generate Redline Suggestions
 
-**Key elements to review:**
-- Choice of law (governing jurisdiction)
-- Dispute resolution mechanism (litigation, arbitration, mediation first)
-- Venue and jurisdiction for litigation
-- Arbitration rules and seat (if arbitration)
-- Jury waiver
-- Class action waiver
-- Prevailing party attorney's fees
+For each YELLOW and RED:
 
-**Common issues:**
-- Unfavorable jurisdiction (unusual or remote venue)
-- Mandatory arbitration with rules favorable to the drafter
-- Waiver of jury trial without corresponding protections
-- No escalation process before formal dispute resolution
-
-### Step 5: Flag Deviations
-
-Classify each deviation from the playbook using a three-tier system:
-
-#### GREEN -- Acceptable
-
-The clause aligns with or is better than the organization's standard position. Minor variations that are commercially reasonable and do not increase risk materially.
-
-**Examples:**
-- Liability cap at 18 months of fees when standard is 12 months (better for the customer)
-- Mutual NDA term of 2 years when standard is 3 years (shorter but reasonable)
-- Governing law in a well-established commercial jurisdiction close to the preferred one
-
-**Action**: Note for awareness. No negotiation needed.
-
-#### YELLOW -- Negotiate
-
-The clause falls outside the standard position but within a negotiable range. The term is common in the market but not the organization's preference. Requires attention and likely negotiation, but not escalation.
-
-**Examples:**
-- Liability cap at 6 months of fees when standard is 12 months (below standard but negotiable)
-- Unilateral indemnification for IP infringement when standard is mutual (common market position but not preferred)
-- Auto-renewal with 60-day notice when standard is 90 days
-- Governing law in an acceptable but not preferred jurisdiction
-
-**Action**: Generate specific redline language. Provide fallback position. Estimate business impact of accepting vs. negotiating.
-- **Include**: Specific redline language to bring the term back to standard position
-- **Include**: Fallback position if the counterparty pushes back
-- **Include**: Business impact of accepting as-is vs. negotiating
-
-#### RED -- Escalate
-
-The clause falls outside acceptable range, triggers a defined escalation criterion, or poses material risk. Requires senior counsel review, outside counsel involvement, or business decision-maker sign-off.
-
-**Examples:**
-- Uncapped liability or no limitation of liability clause
-- Unilateral broad indemnification with no cap
-- IP assignment of pre-existing IP
-- No DPA offered when personal data is processed
-- Unreasonable non-compete or exclusivity provisions
-- Governing law in a problematic jurisdiction with mandatory arbitration
-
-**Action**: Explain the specific risk. Provide market-standard alternative language. Estimate exposure. Recommend escalation path.
-- **Include**: Why this is a RED flag (specific risk)
-- **Include**: What the standard market position looks like
-- **Include**: Business impact and potential exposure
-- **Include**: Recommended escalation path
-
-### Step 6: Generate Redline Suggestions
-
-For each YELLOW and RED deviation, provide:
-- **Current language**: Quote the relevant contract text
-- **Suggested redline**: Specific alternative language
-- **Rationale**: Brief explanation suitable for sharing with the counterparty
-- **Priority**: Whether this is a must-have or nice-to-have in negotiation
-
-#### Redline Generation Best Practices
-
-When generating redline suggestions:
-
-1. **Be specific**: Provide exact language, not vague guidance. The redline should be ready to insert.
-2. **Be balanced**: Propose language that is firm on critical points but commercially reasonable. Overly aggressive redlines slow negotiations.
-3. **Explain the rationale**: Include a brief, professional rationale suitable for sharing with the counterparty's counsel.
-4. **Provide fallback positions**: For YELLOW items, include a fallback position if the primary ask is rejected.
-5. **Prioritize**: Not all redlines are equal. Indicate which are must-haves and which are nice-to-haves.
-6. **Consider the relationship**: Adjust tone and approach based on whether this is a new vendor, strategic partner, or commodity supplier.
-
-#### Redline Format
-
-For each redline:
 ```
-**Clause**: [Section reference and clause name]
-**Current language**: "[exact quote from the contract]"
-**Proposed redline**: "[specific alternative language with additions in bold and deletions struck through conceptually]"
-**Rationale**: [1-2 sentences explaining why, suitable for external sharing]
+**Clause**: [Section / FAR-DFARS reference]
+**Current language**: "[exact quote]"
+**Proposed redline**: "[specific alternative with additions in bold]"
+**Rationale**: [1–2 sentences citing FAR/DFARS authority or AF policy, suitable for sharing with the counterparty's counsel]
 **Priority**: [Must-have / Should-have / Nice-to-have]
-**Fallback**: [Alternative position if primary redline is rejected]
+**Fallback**: [Alternative if primary rejected]
 ```
 
-### Step 7: Business Impact Summary
+Best practices:
 
-Provide a summary section covering:
-- **Overall risk assessment**: High-level view of the contract's risk profile
-- **Top 3 issues**: The most important items to address
-- **Negotiation strategy**: Recommended approach (which issues to lead with, what to concede)
-- **Timeline considerations**: Any urgency factors affecting the negotiation approach
+1. **Cite authority.** Federal reviewers respect FAR/DFARS citations; "we just prefer it this way" doesn't move primes.
+2. **Be specific.** Drafted language ready to paste.
+3. **Mirror the prime.** In subs, never accept terms worse than the prime contract.
+4. **Cap flow-downs.** Use FAR 52.244-6 as the ceiling for commercial-item subs.
+5. **Prioritize.** Identify must-haves vs nice-to-haves — federal reviews have hard CO deadlines.
 
-#### Negotiation Priority Framework
+### Step 9: Business Impact Summary
 
-When presenting redlines, organize by negotiation priority:
+Provide:
 
-**Tier 1 -- Must-Haves (Deal Breakers)**
-Issues where the organization cannot proceed without resolution:
-- Uncapped or materially insufficient liability protections
-- Missing data protection requirements for regulated data
-- IP provisions that could jeopardize core assets
-- Terms that conflict with regulatory obligations
+- **Overall risk:** High / Medium / Low; brief narrative.
+- **Top 3–5 issues** with severity.
+- **Negotiation strategy:** what to lead with; what to trade.
+- **8(a) / set-aside considerations:** any threat to set-aside validity, FAR 19.8 compliance, or SBA approval requirements.
+- **Capacity considerations:** bonding (Miller Act), insurance, cleared personnel, CMMC posture.
+- **Timeline:** CO deadlines, proposal deadlines, signature windows.
 
-**Tier 2 -- Should-Haves (Strong Preferences)**
-Issues that materially affect risk but have negotiation room:
-- Liability cap adjustments within range
-- Indemnification scope and mutuality
-- Termination flexibility
-- Audit and compliance rights
+### Step 10: Routing and Approvals
 
-**Tier 3 -- Nice-to-Haves (Concession Candidates)**
-Issues that improve the position but can be conceded strategically:
-- Preferred governing law (if alternative is acceptable)
-- Notice period preferences
-- Minor definitional improvements
-- Insurance certificate requirements
+Recommend the right path:
 
-**Negotiation strategy**: Lead with Tier 1 items. Trade Tier 3 concessions to secure Tier 2 wins. Never concede on Tier 1 without escalation.
+- **CLM intake** — log the document; assign reviewer.
+- **Senior counsel** — for any RED automatic trigger above.
+- **Mandatory Disclosure Committee** — if credible evidence of FCA/criminal/significant-overpayment per FAR 52.203-13.
+- **CO communication path** — when changes require Government action, identify whether a request for clarification (RFI), a question on the solicitation, a REA, or a mod request is the right channel. Never bypass the CO.
+- **SBA coordination** — for 8(a) sole-source justifications, JV approval, novations.
 
-### Step 8: CLM Routing (If Connected)
-
-If a Contract Lifecycle Management system is connected via MCP:
-- Recommend the appropriate approval workflow based on contract type and risk level
-- Suggest the correct routing path (e.g., standard approval, senior counsel, outside counsel)
-- Note any required approvals based on contract value or risk flags
-
-If no CLM is connected, skip this step.
+If a CLM is connected via MCP, log the review and route automatically.
 
 ## Output Format
 
-Structure the output as:
-
 ```
-## Contract Review Summary
+## Federal Contract Review Summary
 
-**Document**: [contract name/identifier]
-**Parties**: [party names and roles]
-**Your Side**: [vendor/customer/etc.]
-**Deadline**: [if provided]
-**Review Basis**: [Playbook / Generic Standards]
+**Document**: [name / solicitation / award number]
+**Type**: [RFP / Award / Subcontract / Teaming / NDA / Mod / ...]
+**Parties / Roles**: [agency, prime, sub roles]
+**Vehicle / Set-aside**: [8(a) SS, 8(a) competitive, MAS, OASIS+, F&O, etc.]
+**Contract Type**: [FFP / T&M / CPFF / IDIQ ...]
+**Estimated Value / PoP**: ...
+**Our Role**: [prime / sub / JV member / vendor]
+**Review Basis**: [Aleut Federal default playbook + local playbook if loaded]
+**Deadline**: ...
 
-## Key Findings
+## Key Findings (Top 3–5)
 
-[Top 3-5 issues with severity flags]
+[Severity flag + 1-line issue + clause cite]
+
+## FAR / DFARS Flow-Down & Compliance Scan
+
+[Table of incorporated clauses; presence/absence; AF position; flag]
 
 ## Clause-by-Clause Analysis
 
-### [Clause Category] -- [GREEN/YELLOW/RED]
-**Contract says**: [summary of the provision]
-**Playbook position**: [your standard]
-**Deviation**: [description of gap]
-**Business impact**: [what this means practically]
-**Redline suggestion**: [specific language, if YELLOW or RED]
+### [Category / Clause #] — [GREEN / YELLOW / RED]
+**Contract says**: ...
+**AF playbook / FAR position**: ...
+**Deviation**: ...
+**Business impact**: ...
+**Redline**: ...
 
-[Repeat for each major clause]
+[repeat]
+
+## 8(a) / Set-Aside Considerations
+[Any issues with set-aside validity, FAR 19.8, SBA approval, JV compliance]
+
+## Capacity / Capability Considerations
+[Bonding, insurance, cleared staff, CMMC level, accounting system adequacy]
 
 ## Negotiation Strategy
+[Lead-with items, concession candidates, must-haves]
 
-[Recommended approach, priorities, concession candidates]
+## Mandatory-Disclosure / FCA / PIA Check
+[Any credible-evidence concerns; route to senior counsel]
 
 ## Next Steps
-
-[Specific actions to take]
+[Specific actions, approvals required, deadlines]
 ```
 
 ## Notes
 
-- If the contract is in a language other than English, note this and ask if the user wants a translation or review in the original language
-- For very long contracts (50+ pages), offer to focus on the most material sections first and then do a complete review
-- Always remind the user that this analysis should be reviewed by qualified legal counsel before being relied upon for legal decisions
+- For very long solicitations or awards (100+ pages), offer to scope to Sections L/M/H/C/I first, then full review.
+- If the document is classified or contains CUI in an unauthorized environment, **stop** and route to the FSO and Information Security.
+- Always remind the user that this analysis must be reviewed by qualified counsel and the Contracting Officer (for prime contract changes) before reliance.
