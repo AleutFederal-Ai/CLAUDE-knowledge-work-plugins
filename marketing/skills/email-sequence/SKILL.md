@@ -4,9 +4,32 @@ description: Design and draft multi-email sequences with full copy, timing, bran
 argument-hint: "[sequence type]"
 ---
 
-# Email Sequence
+# Email Sequence — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal Email Sequences
+
+Most sequences target federal personas (OSDBU, SBLO, program leads), primes, or industry partners — not commercial buyers.
+
+Constraints:
+- **CAN-SPAM** applies; never email federal personnel on a personal email without opt-in; agency-business email rules apply.
+- **No gifts / commercial inducements** to federal employees beyond 5 C.F.R. § 2635 de minimis.
+- **No source-selection-sensitive content.**
+- **No agency logos / customer references** without CO authorization.
+- **No federal-employee testimonials.**
+- **PIA / former-official screen** for agency personnel in case studies / testimonials.
+
+Default sequence types:
+- Capability introduction (to OSDBUs and SBLOs).
+- Industry-day follow-up.
+- Sources-sought / RFI follow-up.
+- Recompete teaming inquiry.
+- Mentor-Protégé partnership outreach.
+- Trade-show follow-up.
+- Capabilities-brief request follow-up.
+
+Cadence: respect the federal fiscal year and conference calendar; federal audiences respond to relevance and specificity, not volume.
 
 Design and draft complete email sequences with full copy, timing, branching logic, and performance benchmarks for any lifecycle or campaign use case.
 

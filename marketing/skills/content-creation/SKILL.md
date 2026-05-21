@@ -4,9 +4,26 @@ description: Draft marketing content across channels — blog posts, social medi
 user-invocable: false
 ---
 
-# Content Creation Skill
+# Content Creation Skill — Aleut Federal
 
-Guidelines and frameworks for creating effective marketing content across channels.
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md).
+
+Guidelines and frameworks for creating effective federal-market content across channels.
+
+## Aleut Federal Context — Federal-Market Content Rules
+
+Federal-market content (blog, social, email, landing page, press release, case study, white paper) must:
+
+- **Respect Procurement Integrity Act (FAR 3.104)** — no source-selection-sensitive material; no implied insider knowledge of pending procurements.
+- **Require CO authorization** to use agency name, agency logo, contract number, or identifying customer detail.
+- **Avoid federal-employee testimonials** (5 C.F.R. § 2635.702) and any implication of endorsement.
+- **Section 889** — no covered telecom in any solution mention.
+- **CUI scrub** — no controlled unclassified information in distributable content.
+- **Buy American / TAA / BABA hygiene** — when discussing materials or suppliers, default to compliant origin.
+- **Accuracy on certifications** — claim only currently-held SBA / NAICS / clearance / CMMC certifications.
+- **Aleut shareholder voice** — accurately represent Aleut shareholder benefit; coordinate with Aleut Corp Comms for shareholder-facing material.
+
+Default tone: dry, credentials-first, agency-mission-focused — not commercial-sales hype.
 
 ## Content Type Templates
 

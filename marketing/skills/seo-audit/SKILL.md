@@ -4,9 +4,20 @@ description: Run a comprehensive SEO audit — keyword research, on-page analysi
 argument-hint: "<url or topic> [audit type]"
 ---
 
-# /seo-audit
+# /seo-audit — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal-Market SEO
+
+Federal-market SEO is different from commercial SEO:
+
+- **Buyers** don't shop via Google for federal solicitations — they post in SAM.gov and use agency forecast tools. SEO's role is **credibility and discoverability** when an OSDBU / SBLO / program lead Googles us before a meeting.
+- **Target queries** include: our name, our parent (Aleut Corporation), our NAICS codes, our key vehicles (e.g., "OASIS+ engineering 8(a)", "SeaPort-NxG ANC"), our agency names, our set-aside status, and high-intent capability terms paired with agencies.
+- **Authority signals** that matter: well-titled capability statements (PDF), past-performance one-pagers, agency-specific landing pages, leadership bylines in federal trade press, accurate SAM.gov / DSBS / GSA eLibrary listings, accurate parent-ANC coverage.
+- **Avoid** keyword stuffing with restricted terms — no agency logos, no contract numbers, no implied endorsement, no source-selection language.
+- **Section 889 / Buy American / TAA / BABA** compliance in any solution-mention content.
+- **CUI scrub** on everything indexed.
 
 Audit a website's SEO health, research keyword opportunities, identify content gaps, and benchmark against competitors. Produces a prioritized action plan a marketer can execute immediately.
 
