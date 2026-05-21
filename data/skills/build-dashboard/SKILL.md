@@ -4,9 +4,28 @@ description: Build an interactive HTML dashboard with charts, filters, and table
 argument-hint: "<description> [data source]"
 ---
 
-# /build-dashboard - Build Interactive Dashboards
+# /build-dashboard — Build Interactive Dashboards (Aleut Federal)
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal-Contractor Dashboards
+
+Common dashboard types in our world:
+
+- **Program / contract health** — cost, schedule, scope, risk; LoC/LoF posture; CDRL deliverable status; CPARS-supporting metrics.
+- **Indirect rate posture** — fringe / OH / G&A / material handling actual vs provisional vs forecast; YTD trend.
+- **Capture pipeline** — Shipley stages, by agency / vehicle / set-aside; Pwin-weighted; recompete watchlist.
+- **Compliance posture** — FAR 52.219-14 by contract, FAPIIS scan, CMMC POA&M aging, mandatory-disclosure log (counsel-restricted).
+- **Construction WIP** — cost-to-date, EAC, retainage, over/under billings, safety metrics.
+- **Workforce** — direct vs indirect, by clearance level, by CMMC role; OFCCP / AAP utilization vs goals.
+
+Compliance gates:
+
+- **No CUI in dashboards** distributed outside the authorized environment.
+- **PII aggregated / suppressed** below thresholds that allow re-identification.
+- **Source-selection sensitivity** — capture / proposal dashboards distributed only to the cleared capture team.
+- **Banner markings** for CUI in CUI-environment dashboards.
+- **Records retention** — dashboard snapshots delivered to customers are CDRL artifacts retained per the contract.
 
 Build a self-contained interactive HTML dashboard with charts, filters, tables, and professional styling. Opens directly in a browser -- no server or dependencies required.
 

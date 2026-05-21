@@ -4,9 +4,20 @@ description: Apply statistical methods including descriptive stats, trend analys
 user-invocable: false
 ---
 
-# Statistical Analysis Skill
+# Statistical Analysis Skill — Aleut Federal
 
-Descriptive statistics, trend analysis, outlier detection, hypothesis testing, and guidance on when to be cautious about statistical claims.
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md).
+
+Descriptive statistics, trend analysis, outlier detection, hypothesis testing, and guidance on cautious statistical claims in a federal-contractor context.
+
+## Aleut Federal Context — Statistical Work in Our Environment
+
+- **Statistical claims in proposals / past performance** must withstand debrief / protest challenge; document sources, definitions, sample sizes, assumptions.
+- **DCAA sampling** — internal sampling at least as rigorous as DCAA's; document method, size justification, population control total.
+- **OFCCP adverse-impact analysis** — 4/5ths rule plus Fisher's exact / chi-square at 2 SD; coordinate with HR / Legal.
+- **PII / CUI** in samples — minimum-necessary; aggregate before sharing.
+- **Indirect rate forecasting** — methodology must withstand DCAA challenge; feeds FAR 42.704 negotiations and FPRA.
+- **Confidence intervals** — quote them in customer reports; reviewers expect rigor.
 
 ## Descriptive Statistics Methodology
 

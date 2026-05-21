@@ -4,9 +4,22 @@ description: Run a WCAG 2.1 AA accessibility audit on a design or page. Trigger 
 argument-hint: "<Figma URL, URL, or description>"
 ---
 
-# /accessibility-review
+# /accessibility-review — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Section 508 / WCAG for Federal Customers
+
+Accessibility on federal-customer deliverables is mandatory:
+
+- **Section 508** (29 U.S.C. § 794d) requires federal-procured ICT to meet the **Revised 508 Standards** (36 C.F.R. Part 1194), aligned to **WCAG 2.0 A and AA** (many agencies now cite 2.1 / 2.2 AA).
+- **VPAT / Accessibility Conformance Report (ACR)** — most federal solicitations require an ACR (ITI VPAT 2.x) before award and at deliverable milestones.
+- **WCAG 2.1 AA** as current best practice.
+- **Manual + automated testing** — automated tools (axe, WAVE, Lighthouse, Accessibility Insights) catch ~30%; manual keyboard / screen-reader testing (NVDA, JAWS, VoiceOver) catches the rest.
+- **PDF deliverables** must be accessible — tagged, reading order, alt text, language metadata.
+- **Color contrast**, focus indicators, error identification, alt text, captions/transcripts, keyboard navigability, target size, page titles, language attributes.
+
+Deviations that can't be remediated must be documented in the VPAT with basis (e.g., "Partially Supports" + specific gap + roadmap).
 
 Audit a design or page for WCAG 2.1 AA accessibility compliance.
 

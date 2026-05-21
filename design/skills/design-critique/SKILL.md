@@ -4,9 +4,22 @@ description: Get structured design feedback on usability, hierarchy, and consist
 argument-hint: "<Figma URL, screenshot, or description>"
 ---
 
-# /design-critique
+# /design-critique — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal-User Design Critique
+
+When critiquing designs for federal-customer use:
+
+- **Section 508 / WCAG 2.1 AA** — flag any accessibility issues alongside usability ones; equal weight.
+- **Federal-employee context** — federal users are often on older browsers, locked-down endpoints, with PIV/CAC authentication, intermittent connectivity (especially OCONUS / field), and high security training. Designs that assume modern browser features or unauthenticated flows often fail in the wild.
+- **Conservative visual style** — federal users expect understated, mission-focused, professional UIs. Avoid marketing flair (animations, illustrations, conversion CTAs).
+- **Document-first** — many federal workflows revolve around producing or consuming structured documents (CDRLs, reports). Critique through that lens.
+- **No tracking / analytics** without explicit notice — privacy expectations are high; many agencies forbid third-party scripts on internal tools.
+- **Branding** — agency / customer branding rules apply; never apply Aleut Federal branding to a customer-owned product without CO authorization.
+
+Critique surfaces these as first-class concerns, not afterthoughts.
 
 Get structured design feedback across multiple dimensions.
 

@@ -4,9 +4,19 @@ description: Profile and explore a dataset to understand its shape, quality, and
 argument-hint: "<table or file>"
 ---
 
-# /explore-data - Profile and Explore a Dataset
+# /explore-data — Profile and Explore a Dataset (Aleut Federal)
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal Data Profiling
+
+Before profiling any dataset:
+
+- **Confirm the classification level** — public / FOUO / CUI / classified — and that the analysis environment is authorized for that level.
+- **Identify PII / CUI columns** explicitly — names, SSNs, security clearances, financial account IDs, contract-sensitive data — and apply masking / minimization.
+- **Source-selection sensitivity** — if the dataset is proposal- or capture-related, treat as PIA-sensitive.
+- **Audit logging** — assume profiling queries on production systems are logged (NIST 800-53 AU-2); don't run exploratory queries on production without authorization.
+- **Synthetic / scrubbed data** preferred for first-pass exploration on CUI tables.
 
 Generate a comprehensive data profile for a table or uploaded file. Understand its shape, quality, and patterns before diving into analysis.
 

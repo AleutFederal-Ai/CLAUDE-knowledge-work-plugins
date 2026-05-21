@@ -4,9 +4,26 @@ description: Answer data questions -- from quick lookups to full analyses. Use w
 argument-hint: "<question>"
 ---
 
-# /analyze - Answer Data Questions
+# /analyze — Answer Data Questions (Aleut Federal)
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal-Contractor Data Questions
+
+Most analytical questions come from one of three buckets:
+
+1. **Internal program / financial** — by-program P&L, indirect rate posture, ICS prep, billings vs revenue, EAC, backlog, headcount by clearance/CMMC/contract.
+2. **External federal market** — SAM.gov solicitations, USAspending awards, FPDS, agency forecasts, competitor activity, GSA Schedule pricing.
+3. **Compliance posture** — FAR 52.219-14 self-performance, FAPIIS status of subs, OFCCP utilization, mandatory-disclosure log counts, CMMC POA&M aging, CPARS trends.
+
+Hard rules:
+
+- **No CUI in unauthorized environments.** Don't pull CUI from production into a notebook on an uncontrolled endpoint or commercial AI tool.
+- **PII** handled per Privacy Act and system PIA; minimum-necessary.
+- **Audit trail** — assume access is logged (NIST 800-53 AU-2).
+- **Source-selection sensitivity (FAR 3.104)** — analyses of competitor pursuits or our own proposal data are privileged and PIA-sensitive.
+- **Aggregate / mark CUI** before sharing.
+- **Records retention** per FAR 4.703 / agency.
 
 Answer a data question, from a quick lookup to a full analysis to a formal report.
 

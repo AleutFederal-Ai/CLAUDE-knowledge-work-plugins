@@ -4,9 +4,20 @@ description: Write correct, performant SQL across all major data warehouse diale
 user-invocable: false
 ---
 
-# SQL Queries Skill
+# SQL Queries Skill — Aleut Federal
 
-Write correct, performant, readable SQL across all major data warehouse dialects.
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md).
+
+Write correct, performant, readable SQL across all major data warehouse dialects in a federal-contractor environment.
+
+## Aleut Federal Context — Federal-Data SQL Hygiene
+
+- **No CUI in development snippets, commits, or chat.** Use parameterized examples or scrubbed sample data.
+- **Audit logging** — production warehouses on federal-data systems log queries (NIST 800-53 AU-2/3); name sessions / queries clearly.
+- **PII minimization** — pull only fields needed; avoid `SELECT *` on PII tables.
+- **Cost-data joins** must align to contract / CLIN / task / indirect-pool definitions — the wrong join misrepresents billable cost.
+- **USAspending / SAM.gov / FPDS** public datasets — useful for market intel; document refresh cadence.
+- **Records retention** — results stored as deliverables retained per FAR 4.703 / contract.
 
 ## Dialect-Specific Reference
 

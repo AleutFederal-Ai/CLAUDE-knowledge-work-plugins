@@ -4,9 +4,20 @@ description: Create publication-quality visualizations with Python. Use when tur
 argument-hint: "<data source> [chart type]"
 ---
 
-# /create-viz - Create Visualizations
+# /create-viz — Create Visualizations (Aleut Federal)
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal-Audience Visualizations
+
+For visualizations shared with federal customers:
+
+- **Section 508 / WCAG 2.1 AA** — colorblind-safe palettes; contrast ratios met; data labels not color-only; figure captions and alt text.
+- **CUI / classification banners** on visualizations carrying controlled data.
+- **No agency logos** without CO authorization.
+- **Conservative styling** — federal customers prefer clear, restrained chart design; avoid commercial-marketing flair.
+- **Methodology footer** — data source, period, computation, refresh date — auditors and reviewers will ask.
+- **Accessible PDFs** — if visualizations are embedded in deliverable PDFs, the PDF must remain Section 508 conformant (tagged, alt text, reading order).
 
 Create publication-quality data visualizations using Python. Generates charts from data with best practices for clarity, accuracy, and design.
 

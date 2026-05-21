@@ -4,9 +4,21 @@ description: Write or review UX copy — microcopy, error messages, empty states
 argument-hint: "<context or copy to review>"
 ---
 
-# /ux-copy
+# /ux-copy — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal UX Copy Rules
+
+- **Plain Writing Act of 2010** — federal communications must use plain language. Follow plainlanguage.gov guidelines. Short sentences, active voice, common words, no jargon without definition.
+- **Reading level** — target ~8th-grade level for general-public-facing copy; technical-audience copy can match the audience.
+- **Section 508 / WCAG** — error messages identify the field and the fix; not just "Invalid input." Empty states describe the next action accessibly.
+- **PRA burden statements** — required on any data-collection screen subject to PRA, with OMB control number and burden estimate.
+- **Privacy Act statement** — required where Privacy-Act-covered records are collected.
+- **No marketing or persuasive copy** — federal-customer copy is informational and procedural, not promotional.
+- **Agency style guides** — many agencies have their own (GSA, USDS); follow them where applicable.
+- **CUI / classification banners** in headers/footers per the marking guide.
+- **No surveillance language** ("we're tracking you") — privacy expectations are high; describe data uses plainly.
 
 Write or review UX copy for any interface context.
 

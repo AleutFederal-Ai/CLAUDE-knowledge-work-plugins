@@ -4,9 +4,22 @@ description: Generate developer handoff specs from a design. Use when a design i
 argument-hint: "<Figma URL or design description>"
 ---
 
-# /design-handoff
+# /design-handoff — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal-Contract Handoff Elements
+
+In addition to standard tokens, components, and states, federal-contract handoffs include:
+
+- **Section 508 / WCAG 2.1 AA** annotations — focus order, ARIA labels, contrast ratios, target sizes, keyboard interactions.
+- **PIV/CAC / SSO** state — explicit "authenticated via [agency PIV]" affordances and session-timeout flows.
+- **Network resilience** — designs accommodate intermittent connectivity, large payload latency, slow endpoints (OCONUS).
+- **Form 1100 / data-collection compliance** — Paperwork Reduction Act burden statements where applicable.
+- **Data classification banners** — header/footer marking per CUI / classification banner standards (32 C.F.R. Part 2002; agency CUI marking guides).
+- **Browser support matrix** — typically supports older IE/Edge/Chrome versions; verify per the contract.
+- **No external assets at runtime** without ATO approval (no third-party CDNs, no analytics).
+- **VPAT impact** — note any handoff items that need to be reflected in the project's ACR.
 
 Generate comprehensive developer handoff documentation from a design.
 
