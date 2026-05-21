@@ -4,9 +4,27 @@ description: Generate headcount, attrition, diversity, or org health reports. Us
 argument-hint: "<report type — headcount, attrition, diversity, org health>"
 ---
 
-# /people-report
+# /people-report — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal-Contractor People Reports
+
+Add to standard people metrics:
+
+- **Headcount by direct vs indirect** — drives indirect-rate posture.
+- **Headcount by contract** — supports FAR 52.219-14 self-performance evidence on set-asides.
+- **Cleared headcount by level** (SECRET / TS / TS/SCI), active vs inactive.
+- **CMMC-trained headcount** for L2 contracts.
+- **OFCCP / EEO-1 / VETS-4212** views — annual reporting baselines and trends.
+- **AAP utilization** — protected-veteran and individual-with-disability vs goals.
+- **Adverse-impact analysis** — selection rates by EEO group across the funnel.
+- **JV personnel** — staffing on JV contracts vs AF directly; supports 13 C.F.R. § 124.513 reporting.
+- **Mentor-Protégé** capability-transfer metrics.
+- **Subcontractor workforce reporting** where required — small-business / SDB on prime-with-subs.
+- **Aleut shareholder employment** — count and % where reported up to Aleut Corp.
+
+All reports reviewed for CUI / PII before distribution.
 
 Generate people analytics reports from your HR data. Analyze workforce data to surface trends, risks, and opportunities.
 
