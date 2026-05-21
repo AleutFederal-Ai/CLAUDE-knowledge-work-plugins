@@ -4,9 +4,25 @@ description: Pre-deployment verification checklist. Use when about to ship a rel
 argument-hint: "[service or release name]"
 ---
 
-# /deploy-checklist
+# /deploy-checklist — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal Deployment Gates
+
+In addition to standard pre-deploy verification, a federal-contract deploy must satisfy:
+
+- **ATO scope check** — the change stays within the authorized boundary; if it changes the boundary (new component, new data flow, new external connection), the change is **significant** and requires ATO / AO action **before** deploy (NIST RMF Step 6).
+- **Configuration management** — change ticket approved by the program CCB; baseline updated; SSP / SSPP delta noted.
+- **POA&M alignment** — if the deploy closes a POA&M item, evidence captured for the next continuous-monitoring report.
+- **Security scan results** — SAST/DAST/SCA/container scans clean (or risk-accepted) per the SSPP; SBOM regenerated and stored.
+- **FIPS-validated crypto** in use; no new non-validated modules introduced.
+- **No CUI / classified data** in deploy artifacts that move through unauthorized environments.
+- **Section 508 regression test** for any UI changes.
+- **CDRL impact** — does the deploy affect a contracted deliverable / SLA? Coordinate with the COR before changing observable behavior.
+- **Customer-facing communication** — federal customers expect formal notice of changes affecting their experience; coordinate with the COR.
+- **Rollback** — pre-staged; tested; rollback time meets contract availability SLA.
+- **Records** — deployment record retained per the contract retention requirement (typically FAR 4.703).
 
 Generate a pre-deployment checklist to verify readiness before shipping.
 

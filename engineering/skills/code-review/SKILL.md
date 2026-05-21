@@ -4,9 +4,26 @@ description: Review code changes for security, performance, and correctness. Tri
 argument-hint: "<PR URL, diff, or file path>"
 ---
 
-# /code-review
+# /code-review — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal Code-Review Gates
+
+In addition to standard security / performance / correctness checks, every code review on federal-contract code must verify:
+
+- **No CUI / classified data in source** — code, comments, fixtures, sample data, logs.
+- **No hardcoded secrets** — credentials, API keys, tokens, certificates.
+- **FIPS 140-2/140-3 cryptography only** — no homegrown crypto; no non-validated libraries (e.g., no `MD5`, `SHA-1` for signing; only validated modules for AES/RSA/ECDSA).
+- **NIST SP 800-53 control alignment** — changes affecting AC, AU, IA, SC controls require SSP / POA&M consideration.
+- **Section 508 / WCAG 2.1 AA** — UI changes meet accessibility requirements (no images without alt text, semantic HTML, keyboard navigation, contrast).
+- **Section 889 / supply chain** — no new dependencies from covered telecom entities; verify SBOM updates and SSDF attestation.
+- **Logging** — adequate audit logging (NIST 800-53 AU controls); no PII / CUI in logs.
+- **Data classification** — code handling CUI must be in a CUI-authorized repo / branch and protect data at rest and in transit per NIST 800-171.
+- **License compliance** — no GPL contamination of work-for-hire deliverables where the customer expects unlimited or government-purpose rights (FAR 52.227-14 / DFARS 252.227-7013).
+- **Configuration baseline** — changes to security-relevant configuration require ATO / change-control board awareness.
+
+For any change implicating a security control, link the PR to the SSP control and POA&M item.
 
 Review code changes with a structured lens on security, performance, correctness, and maintainability.
 

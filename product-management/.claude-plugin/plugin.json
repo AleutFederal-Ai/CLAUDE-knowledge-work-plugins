@@ -1,7 +1,7 @@
 {
   "name": "product-management",
   "version": "1.2.0",
-  "description": "Write feature specs, plan roadmaps, and synthesize user research faster. Keep stakeholders updated and stay ahead of the competitive landscape.",
+  "description": "Program and product management for Aleut Federal's federal contracts — write task-level specs aligned to PWS/SOW/SOO, plan program roadmaps against CLIN milestones and option periods, synthesize user research with federal end-users, brief stakeholders (CO/COR/program office/Aleut Corp), and track the competitive / recompete landscape.",
   "author": {
     "name": "Anthropic"
   }

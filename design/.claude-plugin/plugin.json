@@ -1,7 +1,7 @@
 {
   "name": "design",
   "version": "1.2.0",
-  "description": "Accelerate design workflows — critique, design system management, UX writing, accessibility audits, research synthesis, and dev handoff. From exploration to pixel-perfect specs.",
+  "description": "Design workflows for Aleut Federal's federal UX/UI, A&E (architecture & engineering), and construction-design work — critique, design system management, UX writing, Section 508 / WCAG accessibility audits, research synthesis with federal-user constraints, and dev handoff for FedRAMP / ATO environments.",
   "author": {
     "name": "Anthropic"
   }

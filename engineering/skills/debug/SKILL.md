@@ -4,9 +4,22 @@ description: Structured debugging session — reproduce, isolate, diagnose, and 
 argument-hint: "<error message or problem description>"
 ---
 
-# /debug
+# /debug — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Debugging in a Federal Environment
+
+When debugging on a federal contract:
+
+- **No CUI / classified data outside the authorized environment.** Don't paste logs, stack traces, or sample payloads from CUI / ITAR systems into commercial AI tools or unclassified chat.
+- **Production access** on federal systems requires ATO-authorized accounts; use approved break-glass procedures, not personal tooling.
+- **Logging** — any debug logging added must comply with NIST 800-53 AU controls and not log PII / CUI in clear text.
+- **Cyber-incident threshold** — if the bug surfaces evidence of unauthorized access, exfiltration, or compromise of CUI, **stop debugging** and escalate per the DFARS 252.204-7012 incident-response process; 72-hour reporting to DIBNet may apply.
+- **Configuration drift** — fixes that change a security-relevant configuration are change-controlled; document for the ATO package.
+- **Time tracking** — debug effort on a specific contract is direct; debugging unrelated to a contract is indirect. Charge accordingly per DFARS 252.242-7006.
+
+Default to the project's SSP runbook for incident classification thresholds before assuming a bug is "just a bug."
 
 Run a structured debugging session to find and fix issues systematically.
 

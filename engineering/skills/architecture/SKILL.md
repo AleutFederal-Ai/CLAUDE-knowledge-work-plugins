@@ -4,9 +4,26 @@ description: Create or evaluate an architecture decision record (ADR). Use when 
 argument-hint: "<decision or system to design>"
 ---
 
-# /architecture
+# /architecture — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal IT Architecture Constraints
+
+Architecture decisions on federal contracts must consider:
+
+- **FIPS 199 categorization** (Low / Moderate / High) per system CIA impact; controls flow from this.
+- **NIST RMF (SP 800-37)** — every decision affects the system's ATO posture, SSP, and POA&M.
+- **NIST SP 800-53 baseline** — controls matching the FIPS 199 level; inheritance from a FedRAMP provider where applicable.
+- **CUI handling** — DFARS 252.204-7012 / NIST 800-171 for non-federal systems handling CUI; CMMC level required by the contract.
+- **Cloud hosting** — FedRAMP Moderate or High; for DoD CUI, DoD IL4 / IL5; classified IL6.
+- **Cryptography** — FIPS 140-2/140-3 validated modules only; CMVP certificate on file.
+- **Software supply chain** — EO 14028 SBOM, NIST SP 800-218 SSDF attestation, Section 889, BAA/TAA/BABA on hardware.
+- **Accessibility** — Section 508 / WCAG 2.1 AA for any UI delivered to or used by federal users.
+- **Data residency / personnel** — CONUS storage; U.S.-person admin requirements; ITAR-controlled data requires controlled environments.
+- **Records retention** — per the contract (often FAR 4.703 baseline: 3 years after final payment).
+
+Every ADR records the federal authority driving the constraint, not just the technical trade-off.
 
 Create an Architecture Decision Record (ADR) or evaluate a system design.
 
