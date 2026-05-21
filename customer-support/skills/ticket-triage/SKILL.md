@@ -4,9 +4,21 @@ description: Triage and prioritize a support ticket or customer issue. Use when 
 argument-hint: "<ticket or issue description>"
 ---
 
-# /ticket-triage
+# /ticket-triage — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal-Contract Ticket Triage
+
+Tag and prioritize against the **contract's SLA / PWS**, not a generic P1–P4:
+
+- **Contract-defined severity** — most federal IT/O&M contracts define severity classes (e.g., Sev 1 mission-impacting, Sev 2 degraded, Sev 3 minor); use those exact terms.
+- **CDRL impact** — does the ticket put a CDRL deliverable at risk?
+- **CPARS impact** — patterns of missed SLA on tickets feed CPARS narrative.
+- **Security incident threshold** — if the ticket may be a cyber incident under DFARS 252.204-7012, escalate to the cyber-incident track separately (72-hour DIBNet report applies).
+- **CUI exposure** — if the ticket references CUI, ensure the ticketing system is authorized to hold the description; otherwise sanitize.
+- **PIA-sensitive content** — never let source-selection or proposal information into the general ticket queue.
+- **Route to CO/COR** for any ticket that implicates scope, schedule, or cost change.
 
 Categorize, prioritize, and route an incoming support ticket or customer issue. Produces a structured triage assessment with a suggested initial response.
 

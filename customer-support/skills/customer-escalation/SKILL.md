@@ -4,9 +4,21 @@ description: Package an escalation for engineering, product, or leadership with 
 argument-hint: "<issue summary> [customer name]"
 ---
 
-# /customer-escalation
+# /customer-escalation — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal-Customer Escalation
+
+For escalations on federal-customer contracts:
+
+- **Route through the CO / COR**, not directly to end users or program staff. The CO is the only customer authority on scope, price, and PoP.
+- **CDRL / SLA impact** — describe in contract terms, not generic "customer experience" language.
+- **CPARS exposure** — serious unresolved issues trend to "Marginal" / "Unsatisfactory."
+- **Cure notice / show-cause / T4D risk** — route to Contracts and Legal immediately.
+- **REA / constructive change** — for Government-directed out-of-scope work, preserve the REA via Contracts.
+- **CUI** — escalation packets must not include CUI outside the authorized environment.
+- **Mandatory disclosure (FAR 52.203-13)** — credible-evidence concerns escalate to GC separately.
 
 Package a support issue into a structured escalation brief for engineering, product, or leadership. Gathers context, structures reproduction steps, assesses business impact, and identifies the right escalation target.
 

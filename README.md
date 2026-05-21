@@ -1,6 +1,6 @@
 # Knowledge Work Plugins — Aleut Federal Customization
 
-> **Aleut Federal context.** This repository is the Aleut Federal customization of Anthropic's knowledge-work plugins. The single source of truth for company facts, regulatory framework (FAR/DFARS, SBA 8(a), SCA, Davis-Bacon, DCAA, NIST 800-171, CMMC, etc.), markets, vehicles, and hard constraints is [ALEUT-FEDERAL-CONTEXT.md](./ALEUT-FEDERAL-CONTEXT.md). Every skill in the GovCon-core plugins (legal, finance, sales, operations, human-resources, marketing) references that file. Read it once; every skill assumes it.
+> **Aleut Federal context.** This repository is the Aleut Federal customization of Anthropic's knowledge-work plugins. The single source of truth for company facts, regulatory framework (FAR/DFARS, SBA 8(a), SCA, Davis-Bacon, DCAA, NIST 800-171, CMMC, etc.), markets, vehicles, and hard constraints is [ALEUT-FEDERAL-CONTEXT.md](./ALEUT-FEDERAL-CONTEXT.md). Every skill across legal, finance, sales, operations, human-resources, marketing, engineering, design, data, product-management, enterprise-search, customer-support, and productivity references that file. Read it once; every skill assumes it. The `bio-research` plugin has been removed as it is not relevant to Aleut Federal's lines of business.
 
 Plugins that turn Claude into a specialist for your role, team, and company. Built for [Claude Cowork](https://claude.com/product/cowork), also compatible with [Claude Code](https://claude.com/product/claude-code).
 

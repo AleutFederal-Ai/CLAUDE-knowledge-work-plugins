@@ -4,9 +4,23 @@ description: Review and analyze product metrics with trend analysis and actionab
 argument-hint: "<time period or metric focus>"
 ---
 
-# Metrics Review
+# Metrics Review — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Program Metrics That Matter
+
+For federal-contract program / product metrics, prioritize the metrics the customer evaluates us against in CPARS:
+
+- **Quality** — defect rates, rework, deliverable acceptance rate, CDRL submissions on first-pass acceptance.
+- **Schedule** — milestones met / missed; cycle time on Government-action items vs ours.
+- **Cost control** — EAC vs target; LoF/LoC posture; indirect rate accuracy.
+- **Management** — staffing levels vs plan, key-personnel continuity, communication cadence with CO/COR.
+- **Small-business utilization** — sub spend vs goal under FAR 52.219-9 plan.
+- **Regulatory compliance** — FAR 52.219-14 self-performance evidence, CMMC posture, safety (EM 385-1-1) for construction.
+- **Customer satisfaction** — interim CPARS narratives, end-user NPS where applicable.
+
+For user-facing federal products, also track Section 508 conformance, PIV/CAC SSO success rate, and Privacy Act compliance metrics.
 
 Review and analyze product metrics, identify trends, and surface actionable insights.
 

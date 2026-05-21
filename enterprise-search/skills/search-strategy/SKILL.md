@@ -4,9 +4,23 @@ description: Query decomposition and multi-source search orchestration. Breaks n
 user-invocable: false
 ---
 
-# Search Strategy
+# Search Strategy — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal-Contractor Search Sources
+
+Route queries by source class:
+
+- **Contracts / mods / CLINs / FAR clause registry** — CLM and contracts folders.
+- **Proposals / capture files** — proposal libraries; PIA-sensitive.
+- **Customer comms** — CO/COR email, PIEE messages, agency portals.
+- **Compliance / DCAA / DCMA / ATO** — GRC, eMASS, POA&M trackers.
+- **Federal market intel** — SAM.gov, USAspending, FPDS, agency forecasts, DSBS, GovWin / HigherGov / Bloomberg Gov.
+- **Internal knowledge** — SharePoint / Egnyte / wikis (segregated by classification).
+- **Chat / email** — Slack / Teams / Outlook (segregated by authorized environment).
+
+Note classification of each source. Never federate search across classification boundaries without a cross-domain solution.
 
 The core intelligence behind enterprise search. Transforms a single natural language question into parallel, source-specific searches and produces ranked, deduplicated results.
 

@@ -4,9 +4,22 @@ description: Generate a daily or weekly digest of activity across all connected 
 argument-hint: "[--daily | --weekly | --since <date>]"
 ---
 
-# Digest Command
+# Digest Command — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal-Aware Digest
+
+Digest output must respect:
+
+- **Classification markings** — never include CUI / FOUO / classified content in a digest distributed outside the authorized environment.
+- **Source-selection sensitivity (FAR 3.104)** — capture / proposal items are PIA-sensitive; segregate or exclude in distributable digests.
+- **Privileged content** — items from / to counsel marked privileged stay privileged.
+- **Mandatory-disclosure signals** — credible-evidence concerns under FAR 52.203-13 go separately to GC, not into the routine digest.
+- **CO / COR action items** — surface deadlines on customer items (cure notices, REA deadlines, mod windows).
+- **CDRL deliverable deadlines** — first-class digest items.
+
+Top of digest: action-today items; aging > SLA; compliance flags.
 
 Scan recent activity across all connected sources and generate a structured digest highlighting what matters.
 

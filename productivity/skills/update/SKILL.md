@@ -4,9 +4,19 @@ description: Sync tasks and refresh memory from your current activity. Use when 
 argument-hint: "[--comprehensive]"
 ---
 
-# Update Command
+# Update Command — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). See `task-management` and `memory-management` for AF task/memory hygiene rules (charge-code tagging, CDRL handling, CUI prohibition, source-selection segregation, mandatory-disclosure routing). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Comprehensive-Scan Caution
+
+When running `--comprehensive` against connected sources:
+
+- **Skip CUI-marked content** — do not pull into TASKS.md or memory.
+- **Skip source-selection / proposal items** — keep in the cleared capture environment.
+- **Skip privileged / counsel-prepared content** — preserve privilege.
+- **Surface CO/COR action items** as a first-class category.
+- **Aging items** flagged against contracted SLAs, not calendar age alone.
 
 Keep your task list and memory current. Two modes:
 

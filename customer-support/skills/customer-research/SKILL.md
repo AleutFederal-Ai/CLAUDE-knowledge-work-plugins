@@ -4,9 +4,20 @@ description: Multi-source research on a customer question or topic with source a
 argument-hint: "<question or topic>"
 ---
 
-# /customer-research
+# /customer-research — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal-Customer Research
+
+When researching a federal-customer question:
+
+- **Pull the contract + mods** — many "customer questions" are actually questions about contracted scope. Read the PWS / SOW and the relevant FAR/DFARS clauses first.
+- **Check prior CO/COR communications** — what was previously committed (and by whom — only the CO commits the Government).
+- **Identify CDRL responsibility** — is the requested item already a deliverable?
+- **Privacy / PII** — research that touches federal-employee PII handled per Privacy Act / agency SORN.
+- **PIA** — never use research to surface non-public source-selection or proposal info on an adjacent procurement.
+- **CUI handling** — research outputs that include CUI live in authorized environments only.
 
 Multi-source research on a customer question, product topic, or account-related inquiry. Synthesizes findings from all available sources with clear attribution and confidence scoring.
 

@@ -4,9 +4,23 @@ description: Write a feature spec or PRD from a problem statement or feature ide
 argument-hint: "<feature or problem statement>"
 ---
 
-# Write Spec
+# Write Spec — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal-Contract Specs
+
+A "spec" in our world ties to a Government-issued artifact:
+
+- **PWS / SOW / SOO** — what we're contractually obligated to deliver.
+- **CDRL / DID** — formal deliverable formats; if the spec is for a CDRL, follow the DID exactly.
+- **Section L / M / H / C / J** — when the spec supports a proposal, mirror the solicitation structure.
+- **SRS / Software Requirements Specification (e.g., DI-IPSC-81433)** — federal software specs follow DID format.
+- **ATO artifacts** — features that affect ATO posture must show SSP / SP 800-53 control linkage and POA&M impact.
+- **Section 508 / WCAG 2.1 AA** requirements for any UI.
+- **CUI / classification handling** baked into the spec.
+- **Acceptance criteria** map to CDRL acceptance procedures and CPARS factors.
+- **Out-of-scope** — if the spec covers anything not currently in the contract, the spec must note that an REA or mod is required before performance.
 
 Write a feature specification or product requirements document (PRD).
 

@@ -4,9 +4,20 @@ description: Draft a knowledge base article from a resolved issue or common ques
 argument-hint: "<resolved issue or ticket>"
 ---
 
-# /kb-article
+# /kb-article — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal-Customer KB Articles
+
+KB articles distributed to federal customers must:
+
+- **Stay CUI-free.** No CUI in indexed answers; if the resolution requires CUI, the article must point users to the authorized channel and stop short of disclosing details.
+- **Section 508 / WCAG 2.1 AA** — accessible HTML / PDF; readable by NVDA / JAWS / VoiceOver.
+- **Plain Writing Act** — short sentences, active voice, defined acronyms.
+- **No agency logos / contract numbers** in customer-distributed articles without CO authorization.
+- **Customer-owned content?** — work product produced under the contract may belong to the Government per FAR 52.227-14 / DFARS 252.227-7013/-7014; KB articles built from that content may need agency review before publication outside the customer environment.
+- **Versioning** — each article has a date and version; retain superseded versions per FAR 4.703 / contract.
 
 Draft a publish-ready knowledge base article from a resolved support issue, common question, or documented workaround. Structures the content for searchability and self-service.
 

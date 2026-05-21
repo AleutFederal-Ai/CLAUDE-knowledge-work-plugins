@@ -4,9 +4,17 @@ description: Search across all connected sources in one query. Trigger with "fin
 argument-hint: "<query>"
 ---
 
-# Search Command
+# Search Command — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). See `search-strategy` and `knowledge-synthesis` for federal-aware source routing and CUI/privilege handling. If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Hard Rules
+
+- Refuse to surface CUI / classified results in environments not authorized for them.
+- Honor privilege markings; never reproduce privileged content without marking the output.
+- Refuse to surface source-selection-sensitive content (FAR 3.104) outside the cleared capture team.
+- For content under a **litigation hold**, surface a pointer + hold notice; never alter or destroy.
+- Classified material — route the user to the classified system, do not return content.
 
 Search across all connected MCP sources in a single query. Decompose the user's question, run parallel searches, and synthesize results.
 

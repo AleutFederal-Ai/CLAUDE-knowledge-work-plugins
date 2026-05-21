@@ -4,9 +4,9 @@ description: Synthesize user research from interviews, surveys, and feedback int
 argument-hint: "<research topic or question>"
 ---
 
-# Synthesize Research
+# Synthesize Research — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). See `design/research-synthesis` for federal-research-synthesis rules (PRA, Privacy Act, federal-employee identifiability, CDRL deliverables) — they apply equally here. If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
 
 Synthesize user research from multiple sources into structured insights and recommendations.
 

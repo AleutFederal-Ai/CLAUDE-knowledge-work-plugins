@@ -4,9 +4,25 @@ description: Manages connected MCP sources for enterprise search. Detects availa
 user-invocable: false
 ---
 
-# Source Management
+# Source Management — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal-Source Inventory
+
+Prioritize connecting:
+
+- **Contract / CLM** (e.g., Conga, Ironclad, in-house).
+- **PIEE / WAWF** for federal voucher / invoice status.
+- **SAM.gov / USAspending / FPDS / DSBS** public.
+- **GovWin IQ / HigherGov / Bloomberg Government / EZGovOpps** (paid intel if active).
+- **Deltek Costpoint / Unanet** (ERP) for cost-accounting and ICS.
+- **eMASS / GRC** for ATO posture and POA&M.
+- **CRM** for capture / pipeline.
+- **HRIS** for clearances and OFCCP categories.
+- **SharePoint / Egnyte** for contract files, proposals, deliverables.
+
+For each source, capture: classification level supported, auth method, retention, audit-log destination. Refuse to connect a source mixing classification levels with the current authorized environment.
 
 Knows what sources are available, helps connect new ones, and manages how sources are queried.
 
