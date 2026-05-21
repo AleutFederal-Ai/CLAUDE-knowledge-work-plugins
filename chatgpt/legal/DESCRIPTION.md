@@ -1,0 +1,1 @@
+Federal contracting legal workflows for Aleut Federal. Review FAR/DFARS clauses, triage NDAs and teaming/JV agreements, run FAR Part 9/19 and Procurement Integrity / FCA / FAR 52.203-13 compliance checks, draft 8(a) and ANC-specific documents, and organize precedent across services and federal construction contracts.

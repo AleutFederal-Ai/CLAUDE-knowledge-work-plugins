@@ -1,0 +1,1 @@
+Data work for Aleut Federal — query and analyze internal job-cost / indirect-rate / ICS / labor data, external federal datasets (SAM.gov, USAspending, FPDS, agency forecasts), build dashboards for program / capture / compliance, and turn data into reports for COs, CORs, and Aleut Corp. CUI / CMMC-aware.

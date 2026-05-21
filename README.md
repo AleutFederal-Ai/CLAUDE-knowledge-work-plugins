@@ -31,21 +31,22 @@ Install these directly from Cowork, browse the full collection here on GitHub, o
 
 ## Getting Started
 
-### Cowork
+### Claude (Cowork)
 
-Install plugins from [claude.com/plugins](https://claude.com/plugins/).
-
-### Claude Code
+Install plugins from [claude.com/plugins](https://claude.com/plugins/), or add this marketplace directly:
 
 ```bash
-# Add the marketplace first
-claude plugin marketplace add anthropics/knowledge-work-plugins
-
-# Then install a specific plugin
-claude plugin install sales@knowledge-work-plugins
+claude plugin marketplace add AleutFederal-Ai/aleut-federal-ai-skills
+claude plugin install sales@aleut-federal-ai-skills
 ```
 
 Once installed, plugins activate automatically. Skills fire when relevant, and slash commands are available in your session (e.g., `/sales:call-prep`, `/data:write-query`).
+
+### ChatGPT Enterprise
+
+Per-plugin Custom GPT bundles are pre-built in [`chatgpt/`](./chatgpt/). Each plugin folder under `chatgpt/` contains `INSTRUCTIONS.md`, `DESCRIPTION.md`, a `knowledge/` directory of skill files, and a per-plugin operator README with import steps. See [`chatgpt/README.md`](./chatgpt/README.md) for the import procedure and rebuild instructions.
+
+The ChatGPT export is generated from the Claude plugin source by `chatgpt/build.py`; the Claude plugin files are the single source of truth. Rerun the script after any skill edit.
 
 ## How Plugins Work
 

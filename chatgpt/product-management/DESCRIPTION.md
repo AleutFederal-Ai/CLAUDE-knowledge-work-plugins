@@ -1,0 +1,1 @@
+Program and product management for Aleut Federal's federal contracts — write task-level specs aligned to PWS/SOW/SOO, plan program roadmaps against CLIN milestones and option periods, synthesize user research with federal end-users, brief stakeholders (CO/COR/program office/Aleut Corp), and track the competitive / recompete landscape.

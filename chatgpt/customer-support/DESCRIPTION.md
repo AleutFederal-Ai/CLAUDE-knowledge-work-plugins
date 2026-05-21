@@ -1,0 +1,1 @@
+Help-desk and end-user support for Aleut Federal's federal IT / O&M / mission-support contracts — triage tickets against SLA/CDRL commitments, draft responses that meet federal-customer expectations, escalate to CORs/COs through the correct channels, and build CMMC / NIST 800-171-aligned knowledge-base content (no CUI in indexed answers).

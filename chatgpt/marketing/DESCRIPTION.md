@@ -1,0 +1,1 @@
+Federal-market marketing for Aleut Federal. Build GovCon-compliant capability statements and one-pagers, plan agency-focused thought-leadership and event campaigns (AFCEA, NCMA, SAME, conferences), produce ANC / 8(a) competitive briefs, and report on past-performance and CPARS-driven brand reputation.
