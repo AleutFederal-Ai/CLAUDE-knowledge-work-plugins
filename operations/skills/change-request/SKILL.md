@@ -4,9 +4,31 @@ description: Create a change management request with impact analysis and rollbac
 argument-hint: "<change description>"
 ---
 
-# /change-request
+# /change-request — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Contract Changes vs Operational Changes
+
+Two different change tracks live here:
+
+1. **Operational / IT change requests** — internal systems, processes, deploys. Standard impact / approval / rollback workflow applies.
+2. **Federal contract changes** — anything affecting scope, price, period of performance, or T&Cs on a prime contract or subcontract. **Only the Contracting Officer can change a federal contract** (FAR Subpart 43). "We'll just do it" creates constructive-change exposure and potentially FCA exposure.
+
+For federal contract changes:
+
+- **Identify** the change (scope creep from COR / end user, environmental difference, key personnel change, schedule slip).
+- **Classify**:
+  - **In-scope** — performable under existing contract; document anyway.
+  - **Out-of-scope** — requires bilateral mod (SF 30) via the CO.
+  - **Constructive change** — Government direction not formalized; preserve **REA** right under FAR 52.243-x.
+- **Notify the CO in writing** before incurring out-of-scope costs.
+- **Document** all direction; only the CO authorizes cost or scope change.
+- **REA / claim** — prepare via Contracts + Legal.
+- **Subcontract flow-down** — parallel changes for our subs if prime changes.
+- **LoC / LoF risk** — track for cost-type per FAR 52.232-20/-22.
+
+Bright line: never perform out-of-scope work without written CO direction unless preserving an REA right; document all communications.
 
 Create a structured change request with impact analysis, risk assessment, and rollback plan.
 

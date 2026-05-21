@@ -4,9 +4,25 @@ description: Plan resource capacity — workload analysis and utilization foreca
 argument-hint: "<team or project scope>"
 ---
 
-# /capacity-plan
+# /capacity-plan — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal-Contractor Capacity Planning
+
+Federal contracting capacity has dimensions commercial planning doesn't:
+
+- **Direct vs indirect headcount** — direct flows to contracts and revenue; indirect (BD, contracts, IT, HR, accounting) sits in pools and drives indirect rates. Increases in indirect drive rate creep.
+- **B&P / IR&D capacity** — finite annual budget, allocable per FAR 31.205-18; track utilization vs plan.
+- **Cleared personnel** — facility / personnel security-clearance pipeline; lead times often 6–18 months for SECRET, longer for TS/SCI.
+- **CMMC-ready personnel** — for CUI work, staff must be trained on the SSP and NIST 800-171 controls.
+- **Labor categories** — T&M bill-rate exposure requires the LCAT mix to match the contract LCAT pricing.
+- **Site-specific** — construction PMs, superintendents, SSHOs, USACE EM 385-1-1-qualified staff for Corps projects.
+- **OCONUS / Alaska** — travel, locality pay, lift logistics; Service Contract Act locality WD differences.
+- **FAR 52.219-14 self-performance** — set-aside contracts require demonstrable compliance.
+- **Subcontractor capacity** — JVA workshare allocations must be planable, not theoretical.
+
+Output: required headcount by labor category, clearance, and contract; B&P / IR&D burn; subcontractor commitments; hiring lead times; FAR 52.219-14 compliance evidence per set-aside contract.
 
 Analyze team capacity and plan resource allocation.
 

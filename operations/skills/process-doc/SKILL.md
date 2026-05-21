@@ -4,9 +4,25 @@ description: Document a business process — flowcharts, RACI, and SOPs. Use whe
 argument-hint: "<process name or description>"
 ---
 
-# /process-doc
+# /process-doc — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal-Contractor SOPs
+
+Federal-contractor SOPs need to support DCAA / DCMA / IPA inspection. Always include:
+
+- **Authority** the process implements (FAR / DFARS / agency supplement clause, NIST 800-171 control, EM 385-1-1 requirement, etc.).
+- **Scope** — which contracts / contract types this SOP applies to.
+- **Roles & responsibilities (RACI)** — including the CO / COR interface where applicable.
+- **Inputs / triggers**.
+- **Steps** with control points (who approves, what evidence is created).
+- **Records to retain** — link to retention per FAR 4.703 (typically 3 years after final payment).
+- **Exceptions / escalations** — e.g., mandatory-disclosure path (FAR 52.203-13), CO notification (FAR 52.243-x changes, FAR 52.232-20/-22 LoF/LoC).
+- **Review cadence** — at minimum annual; refresh whenever the underlying clause or program changes.
+- **Owner / signature**.
+
+SOPs covering CUI must include "CUI handling" steps consistent with DFARS 252.204-7012 / NIST 800-171; SOPs covering construction safety must reference USACE EM 385-1-1 and OSHA 29 C.F.R. Part 1926.
 
 Document a business process as a complete standard operating procedure (SOP).
 
