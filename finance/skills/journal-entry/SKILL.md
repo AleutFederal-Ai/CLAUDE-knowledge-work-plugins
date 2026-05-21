@@ -4,11 +4,33 @@ description: Prepare journal entries with proper debits, credits, and supporting
 argument-hint: "<entry type> [period]"
 ---
 
-# Journal Entry Preparation
+# Journal Entry Preparation — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
 
-**Important**: This command assists with journal entry workflows but does not provide financial advice. All entries should be reviewed by qualified financial professionals before posting.
+**Important:** This skill assists with journal entry workflows; it does not provide financial advice. All entries should be reviewed by qualified personnel before posting.
+
+## Aleut Federal Context — Federal-Contractor JE Rules
+
+Every JE must satisfy:
+
+- **Direct vs indirect classification** per FAR 31.202 / 31.203 — direct charged to the cost objective (contract/CLIN/task); indirect to the proper pool (fringe / OH / G&A / material handling).
+- **Cost allowability** per FAR 31.205 — unallowable costs (advertising, lobbying, alcohol, entertainment, donations, bad debts, fines, penalties, certain legal costs, executive comp > FAR 31.205-6(p) cap) go to a non-billable segregated account, never an indirect pool that flows to billable.
+- **Consistent cost accounting** — practice changes trigger CAS 9903.302 considerations on CAS-covered awards.
+- **Approval and segregation of duties** — preparer ≠ approver; threshold-based dual approval per local policy.
+- **Supporting documentation** — invoice / receipt / agreement; accruals show the calculation; reclasses show prior classification and reason.
+- **No backdating** — period locked at close; corrections require restatement memos.
+- **CAS impact memo** for any practice change.
+
+Common federal-contractor JE types:
+- Public voucher accruals (SF 1034/1035 cycle timing).
+- Subcontractor cost accruals through period end.
+- Indirect rate true-ups (provisional vs trailing actuals).
+- Retainage withheld / released on construction.
+- Mobilization / demobilization capitalization vs expense.
+- Bid & Proposal (B&P) and IR&D — verify allowability per FAR 31.205-18.
+- GFP transactions / adjustments.
+- Unallowable cost reclassifications.
 
 Prepare journal entries with proper debits, credits, supporting detail, and review documentation.
 

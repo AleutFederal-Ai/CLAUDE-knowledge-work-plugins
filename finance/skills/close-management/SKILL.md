@@ -4,11 +4,33 @@ description: Manage the month-end close process with task sequencing, dependenci
 user-invocable: false
 ---
 
-# Close Management
+# Close Management — Aleut Federal
 
-**Important**: This skill assists with close management workflows but does not provide financial advice. All close activities should be reviewed by qualified financial professionals.
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md).
 
-Month-end close checklist, task sequencing and dependencies, status tracking, and common close activities organized by day.
+**Important:** This skill assists with close management workflows; it does not provide financial advice. All close activities should be reviewed by qualified personnel.
+
+Month-end close checklist, task sequencing and dependencies, status tracking, and common close activities — calibrated for a federal services and construction contractor.
+
+## Aleut Federal Context — Federal-Contractor Close Activities
+
+Add to the standard close calendar:
+
+**WD 1–2:** Lock timesheets; confirm subcontractor accruals through period end; project-cost cutoff per CLIN.
+
+**WD 3–5:** Provisional indirect-rate true-up; job-cost-to-GL by contract; trigger Limitation of Funds / Limitation of Cost notifications at 75% / 85% (FAR 52.232-20/-22); prepare public vouchers (SF 1034/1035) for cost-type / T&M; AIA G702/G703 progress billings for construction; verify retainage.
+
+**WD 5–7:** Revenue recognition by contract type (FFP — POC or as-delivered; CR — costs + fee; T&M — bill rate × hours + materials); PM sign-off on monthly EAC for cost-type and EVMS contracts; construction WIP / EAC; contingency drawdown.
+
+**WD 7–8:** FAR 31.205 unallowable cost scan; executive comp YTD vs FAR 31.205-6(p) cap; EO 14026 / SCA wage determination compliance on active contracts.
+
+**WD 8–10:** Management P&L by program / contract; variance commentary at program, pool, and enterprise level; cash flow with outstanding PIEE vouchers; bonding / surety reporting.
+
+**Quarterly add-ons:** Re-forecast indirect rates; adjust provisional rates with CO if material variance (FAR 42.704); CPARS / past-performance preparation; mandatory-disclosure log review with GC.
+
+**Annual (FY close):** Begin Incurred Cost Submission (ICS) — due within 6 months of FY-end per FAR 52.216-7; IPA audit on consolidated financials; DCAA / DCMA business-systems recertifications; OFCCP / VETS-4212 reporting cadence.
+
+Block these in the calendar with named owners and predecessor/successor links so close doesn't ship before federal gates close.
 
 ## Month-End Close Checklist
 

@@ -4,11 +4,27 @@ description: Generate financial statements (income statement, balance sheet, cas
 argument-hint: "<frequency> <period>"
 ---
 
-# /financial-statements
+# /financial-statements — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
 
-**Important**: This command assists with financial statement workflows but does not provide financial advice. All statements should be reviewed by qualified financial professionals before use in reporting or filings.
+**Important:** This skill assists with financial statement workflows; it does not provide financial advice. All statements should be reviewed by qualified personnel and our IPA before reporting, filings, or distribution to Aleut Corp.
+
+## Aleut Federal Context — Federal-Contractor Statement Views
+
+We are a privately held subsidiary of an Alaska Native Corporation, not SEC-registered, not SOX-subject. Standard external reporting is **GAAP**, consolidated up to The Aleut Corporation. Internal views must also support federal-contractor analysis. Generate these as standard:
+
+1. **GAAP P&L, Balance Sheet, Cash Flow** — consolidated and by entity.
+2. **By-program / by-contract P&L** — revenue, direct, applied indirect, fee, project margin.
+3. **Indirect-pool view** — actuals vs provisional billing rates vs forecast; YTD variance.
+4. **Cost-type contract view** — funded vs billed vs cost-to-date; LoF / LoC posture (FAR 52.232-20 / -22).
+5. **Construction WIP schedule** — cost-to-date, ECC, billings, retainage, over/under billings.
+6. **DCAA-ready** — costs by ICS schedule for the trailing 12 months.
+7. **Backlog / unfunded backlog** — by contract type, customer, vehicle, option period.
+
+Variance commentary should call out: indirect rate drift (potential FAR 42.704 adjustment with the CO), Limitation of Funds / Cost triggers at 75% / 85%, unallowables found in billable pools, executive comp YTD vs FAR 31.205-6(p) cap, B&P / IR&D allowability per FAR 31.205-18, and JV financial views per 13 C.F.R. § 124.513(d).
+
+External statements (CO, agency, lender, surety, IPA) follow GAAP; internal views may use cost-accounting bases with a clear basis note.
 
 Generate financial statements with period-over-period comparison and variance analysis. The workflow below walks through income statement generation; balance sheet and cash flow statement reference formats, GAAP presentation requirements (ASC 220/210/230), and common period-end adjustments are included as supporting reference material.
 

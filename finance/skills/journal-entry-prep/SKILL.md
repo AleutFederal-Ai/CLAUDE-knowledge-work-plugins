@@ -4,11 +4,13 @@ description: Prepare journal entries with proper debits, credits, and supporting
 user-invocable: false
 ---
 
-# Journal Entry Preparation
+# Journal Entry Preparation — Aleut Federal
 
-**Important**: This skill assists with journal entry workflows but does not provide financial advice. All entries should be reviewed by qualified financial professionals before posting.
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). See also the user-invocable `journal-entry` skill in this plugin for federal-contractor JE rules (direct vs indirect under FAR 31.202/203, FAR 31.205 allowability, CAS consistency, FAR 31.205-6(p) executive comp cap, segregation of unallowables).
 
-Best practices, standard entry types, documentation requirements, and review workflows for journal entry preparation.
+**Important:** This skill assists with journal entry workflows; it does not provide financial advice. All entries should be reviewed by qualified personnel before posting.
+
+Best practices, standard entry types, documentation requirements, and review workflows for journal entry preparation, calibrated for federal-contractor cost accounting.
 
 ## Standard Accrual Types and Their Entries
 

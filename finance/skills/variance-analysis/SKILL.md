@@ -4,11 +4,31 @@ description: Decompose financial variances into drivers with narrative explanati
 argument-hint: "<line item> <period> vs <comparison>"
 ---
 
-# Variance Analysis
+# Variance Analysis — Aleut Federal
 
-**Important**: This skill assists with variance analysis workflows but does not provide financial advice. All analyses should be reviewed by qualified financial professionals before use in reporting.
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md).
 
-Techniques for decomposing variances, materiality thresholds, narrative generation, waterfall chart methodology, and budget vs actual vs forecast comparisons.
+**Important:** This skill assists with variance analysis workflows; it does not provide financial advice. All analyses should be reviewed by qualified personnel before use in reporting.
+
+Techniques for decomposing variances, materiality thresholds, narrative generation, waterfall methodology, and budget vs actual vs forecast — calibrated for federal-contractor reporting.
+
+## Aleut Federal Context — Federal-Contractor Variance Categories
+
+Beyond standard P&L variance, decompose at these dimensions:
+
+| Dimension | Why it matters |
+|-----------|----------------|
+| **By contract type (FFP / CR / T&M / IDIQ)** | Risk profile and margin behavior differ; CR variance often reflects timing of incurrence, not performance |
+| **By contract / CLIN / task** | Drives CO and PM conversations; supports EAC updates |
+| **Indirect pool actual vs provisional vs forecast** | Triggers FAR 42.704 rate adjustment when material |
+| **B&P / IR&D spend vs plan** | FAR 31.205-18 allowability; CAS 420 |
+| **Labor utilization (direct vs indirect)** | Indirect creep is the most common cause of rate drift |
+| **Unallowable spend trending** | Early-warning indicator for cost-segregation control failure |
+| **Subcontract pass-through vs ceiling** | Bills-paid timing and capacity |
+| **Construction WIP — over/under billings** | Revenue recognition accuracy |
+| **JV separate financials variance** | 13 C.F.R. § 124.513(d) reporting |
+
+Narrative should call out **root cause** (volume, price, mix, timing, rate, productivity) and **federal-contracting consequence** (e.g., "indirect labor up 8% — driving G&A from provisional 12% to projected 13.4%; if sustained, request CO rate adjustment under FAR 42.704 and rebuild forward-pricing rates").
 
 ## Variance Decomposition Techniques
 
