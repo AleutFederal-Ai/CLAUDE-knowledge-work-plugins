@@ -1,0 +1,8 @@
+{
+  "name": "aleut-enterprise",
+  "version": "0.1.0",
+  "description": "Enterprise-wide skills for Aleut Federal — cross-cutting policy / regulatory / research / corporate-governance workflows that don't fit a single role plugin. Anchors source-disciplined SBA / ANC / 8(a) research and other company-wide reference workflows.",
+  "author": {
+    "name": "Aleut Federal"
+  }
+}
