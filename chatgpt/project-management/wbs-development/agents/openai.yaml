@@ -1,0 +1,12 @@
+interface:
+  display_name: Wbs Development
+  short_description: Develop a Work Breakdown Structure (WBS) and WBS dictionary for an Aleut Federal federal project — hierarchical decomposition of project scope into deliverable-oriented work…
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

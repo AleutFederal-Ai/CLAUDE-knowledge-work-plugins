@@ -1,0 +1,12 @@
+interface:
+  display_name: Incident Investigation
+  short_description: Investigate a workplace incident or near-miss at an Aleut Federal construction site or office — fact gathering, root cause analysis, corrective and preventive actions, OSHA…
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

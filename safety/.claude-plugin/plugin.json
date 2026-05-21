@@ -1,0 +1,8 @@
+{
+  "name": "safety",
+  "version": "0.1.0",
+  "description": "Construction-heavy safety workflows for Aleut Federal — APP / AHA development per USACE EM 385-1-1 and OSHA 29 C.F.R. Part 1926, incident investigation and OSHA 300/300A/301 recordkeeping, safety stand-downs, toolbox talks, and subcontractor safety onboarding.",
+  "author": {
+    "name": "Aleut Federal"
+  }
+}

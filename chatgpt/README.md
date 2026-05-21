@@ -38,6 +38,11 @@ Every other Skill is explicit-invoke. When a user invokes a role Skill (e.g. `le
 ## Skills bundled
 
 | `aleut-enterprise/` | 1 | `sba-anc-source-guide` |
+| `cio-shop/` | 8 | `cmmc-poam-management`, `it-asset-management`, `it-change-management`, `it-governance`, `it-incident-response`, `it-vendor-onboarding`, `policy-procedure-lookup`, `user-access-provisioning` |
+| `safety/` | 8 | `aha-development`, `app-development`, `incident-investigation`, `osha-recordkeeping`, `safety-inspection`, `safety-stand-down`, `subcontractor-safety-onboarding`, `toolbox-talk` |
+| `iso/` | 8 | `document-control`, `environmental-aspects`, `iso-27001-soa`, `iso-45001-hazard-id`, `iso-internal-audit`, `management-review`, `ncr-capa`, `surveillance-audit-prep` |
+| `program-management/` | 7 | `evms-monthly`, `integrated-baseline-review`, `integrated-master-schedule`, `option-exercise-prep`, `program-management-review`, `program-monthly-report`, `program-risk-management` |
+| `project-management/` | 6 | `project-ccb`, `project-charter`, `project-closeout`, `project-risk-management`, `project-status-report`, `wbs-development` |
 | `legal/` | 9 | `brief`, `compliance-check`, `legal-response`, `legal-risk-assessment`, `meeting-briefing`, `review-contract`, `signature-request`, `triage-nda`, `vendor-check` |
 | `finance/` | 8 | `audit-support`, `close-management`, `financial-statements`, `journal-entry`, `journal-entry-prep`, `reconciliation`, `sox-testing`, `variance-analysis` |
 | `sales/` | 9 | `account-research`, `call-prep`, `call-summary`, `competitive-intelligence`, `create-an-asset`, `daily-briefing`, `draft-outreach`, `forecast`, `pipeline-review` |
@@ -54,7 +59,7 @@ Every other Skill is explicit-invoke. When a user invokes a role Skill (e.g. `le
 
 | | | |
 |---|---|---|
-| **Total** | 102 explicit-invoke Skills + 1 implicit-invoke context Skill | |
+| **Total** | 139 explicit-invoke Skills + 1 implicit-invoke context Skill | |
 
 ## Importing into OpenAI
 

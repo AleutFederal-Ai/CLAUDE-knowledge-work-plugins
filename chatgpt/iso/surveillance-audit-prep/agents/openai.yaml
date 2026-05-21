@@ -1,0 +1,12 @@
+interface:
+  display_name: Surveillance Audit Prep
+  short_description: Prepare Aleut Federal for an external ISO surveillance, recertification, or transition audit by the certification body (CB) — ISO 9001 / 14001 / 45001 / 27001.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

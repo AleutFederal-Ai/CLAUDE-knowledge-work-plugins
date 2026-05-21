@@ -1,0 +1,8 @@
+{
+  "name": "project-management",
+  "version": "0.1.0",
+  "description": "Federal project management for Aleut Federal — PMBOK-aligned charter, WBS, schedule, scope, cost, quality, risk, communications, procurement, and stakeholder management calibrated for federal task-order execution. Project-level CCB, weekly/monthly status, and formal closeout with CDRL completion and CPARS support.",
+  "author": {
+    "name": "Aleut Federal"
+  }
+}

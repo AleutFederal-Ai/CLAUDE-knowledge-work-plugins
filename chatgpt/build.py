@@ -46,6 +46,11 @@ CHATGPT_ROOT = REPO_ROOT / "chatgpt"
 # (Claude-only meta-plugin).
 PLUGINS = [
     "aleut-enterprise",
+    "cio-shop",
+    "safety",
+    "iso",
+    "program-management",
+    "project-management",
     "legal",
     "finance",
     "sales",

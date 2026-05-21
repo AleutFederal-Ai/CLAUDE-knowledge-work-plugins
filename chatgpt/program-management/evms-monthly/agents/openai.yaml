@@ -1,0 +1,12 @@
+interface:
+  display_name: Evms Monthly
+  short_description: Produce monthly Earned Value Management System (EVMS) reports for an Aleut Federal federal program — Format II–V reports per DI-MGMT-81466A, SPI / CPI / TCPI calculations,…
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

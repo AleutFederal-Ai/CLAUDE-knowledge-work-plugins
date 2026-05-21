@@ -1,0 +1,12 @@
+interface:
+  display_name: Project Risk Management
+  short_description: Manage project-level risk for an Aleut Federal federal task order or project — risk identification, assessment, treatment, monitoring, and escalation.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

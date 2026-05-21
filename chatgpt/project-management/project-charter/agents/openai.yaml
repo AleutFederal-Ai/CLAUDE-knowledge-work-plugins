@@ -1,0 +1,12 @@
+interface:
+  display_name: Project Charter
+  short_description: Draft a project charter for an Aleut Federal federal task order or project — PMBOK-aligned but federal-flavored.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

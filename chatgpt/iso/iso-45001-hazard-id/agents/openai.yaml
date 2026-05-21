@@ -1,0 +1,12 @@
+interface:
+  display_name: Iso 45001 Hazard Id
+  short_description: Maintain Aleut Federal's ISO 45001 hazard identification, risk assessment, and OH&S risk treatment process (clauses 6.1.2 and 8.1.2).
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

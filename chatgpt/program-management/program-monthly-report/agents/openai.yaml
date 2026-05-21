@@ -1,0 +1,12 @@
+interface:
+  display_name: Program Monthly Report
+  short_description: Produce the Monthly Status Report (MSR) for an Aleut Federal federal program — CDRL deliverable on most programs in a customer-specified format (often DI-MGMT-81646 or…
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

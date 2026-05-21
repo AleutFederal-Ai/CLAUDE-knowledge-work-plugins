@@ -1,0 +1,12 @@
+interface:
+  display_name: It Asset Management
+  short_description: Track Aleut Federal IT assets — hardware (laptops, mobile, networking, peripherals), software licenses, SaaS subscriptions, cloud tenants.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

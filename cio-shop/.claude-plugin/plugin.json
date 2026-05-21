@@ -1,0 +1,8 @@
+{
+  "name": "cio-shop",
+  "version": "0.1.0",
+  "description": "Internal IT operations for Aleut Federal — enterprise IT service management, IT governance and policy, internal CMMC / NIST 800-171 posture (POA&M, SSP), IT procurement and vendor onboarding (Section 889 / FedRAMP / BAA / TAA), and integration with the AF Policy / Procedure library. Distinct from the engineering plugin (federal customer-delivered software/systems).",
+  "author": {
+    "name": "Aleut Federal"
+  }
+}

@@ -1,0 +1,12 @@
+interface:
+  display_name: Project Closeout
+  short_description: Run formal closeout of an Aleut Federal federal project — final CDRL delivery, customer acceptance, financial reconciliation, property return (GFP / GFE), CPARS final input,…
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

@@ -1,0 +1,12 @@
+interface:
+  display_name: Project Status Report
+  short_description: Produce a weekly or biweekly project status report for an Aleut Federal federal project — concise narrative + key metrics for AF leadership, the CO/COR, and the broader project…
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

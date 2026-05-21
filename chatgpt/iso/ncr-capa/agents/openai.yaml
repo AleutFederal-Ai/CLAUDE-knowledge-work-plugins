@@ -1,0 +1,12 @@
+interface:
+  display_name: Ncr Capa
+  short_description: Manage a Nonconformity Report (NCR) and Corrective / Preventive Action (CAPA) across Aleut Federal ISO management systems — ISO 9001 § 10.2 / 14001 § 10.2 / 45001 § 10.2 / 27001…
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

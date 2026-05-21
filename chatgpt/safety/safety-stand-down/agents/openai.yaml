@@ -1,0 +1,12 @@
+interface:
+  display_name: Safety Stand Down
+  short_description: Plan and execute a safety stand-down at an Aleut Federal site — full-stop pause of work to brief all personnel on a specific hazard, refresh training, address an incident or…
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

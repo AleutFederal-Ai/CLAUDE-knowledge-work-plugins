@@ -1,0 +1,12 @@
+interface:
+  display_name: Document Control
+  short_description: Manage controlled documents in Aleut Federal's ISO management systems — version control, approval workflow, distribution, retention, retrieval, and obsolete-document handling.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

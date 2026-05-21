@@ -1,0 +1,12 @@
+interface:
+  display_name: Aha Development
+  short_description: Develop an Activity Hazard Analysis (AHA) for an Aleut Federal construction activity per USACE EM 385-1-1 Section 01.A and OSHA 1926.21.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

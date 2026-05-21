@@ -1,0 +1,12 @@
+interface:
+  display_name: Cmmc Poam Management
+  short_description: Manage Aleut Federal's internal CMMC / NIST SP 800-171 posture — Plan of Action and Milestones (POA&M) tracking, System Security Plan (SSP) updates, SPRS score management,…
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

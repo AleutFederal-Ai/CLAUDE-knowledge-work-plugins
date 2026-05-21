@@ -1,0 +1,12 @@
+interface:
+  display_name: Project Ccb
+  short_description: Run a project-level Change Control Board (CCB) for an Aleut Federal federal project — review and disposition proposed changes to scope, schedule, cost, technical approach, or…
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

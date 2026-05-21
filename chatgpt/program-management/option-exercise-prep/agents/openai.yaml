@@ -1,0 +1,12 @@
+interface:
+  display_name: Option Exercise Prep
+  short_description: Prepare Aleut Federal for an option-year exercise on a federal contract — pre-option assessment of program health (CPARS, cost, schedule, performance), pricing update…
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false
