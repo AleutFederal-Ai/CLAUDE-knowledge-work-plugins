@@ -41,12 +41,11 @@ This directory is the ChatGPT Enterprise Custom GPT bundle for the **operations*
 The Claude version of this plugin references the following MCP connectors:
 
 - `slack`
-- `google-calendar`
+- `google calendar`
 - `gmail`
 - `notion`
 - `atlassian`
 - `asana`
-- `servicenow`
 - `ms365`
 
 ChatGPT Enterprise does not run MCP. Options to bridge the gap:

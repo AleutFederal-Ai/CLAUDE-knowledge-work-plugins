@@ -46,7 +46,7 @@ The Claude version of this plugin references the following MCP connectors:
 - `atlassian`
 - `ms365`
 - `docusign`
-- `google-calendar`
+- `google calendar`
 - `gmail`
 
 ChatGPT Enterprise does not run MCP. Options to bridge the gap:

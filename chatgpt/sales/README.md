@@ -51,7 +51,7 @@ The Claude version of this plugin references the following MCP connectors:
 - `ms365`
 - `apollo`
 - `outreach`
-- `google-calendar`
+- `google calendar`
 - `gmail`
 - `similarweb`
 

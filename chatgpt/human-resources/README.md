@@ -41,7 +41,7 @@ This directory is the ChatGPT Enterprise Custom GPT bundle for the **human-resou
 The Claude version of this plugin references the following MCP connectors:
 
 - `slack`
-- `google-calendar`
+- `google calendar`
 - `gmail`
 - `notion`
 - `atlassian`
