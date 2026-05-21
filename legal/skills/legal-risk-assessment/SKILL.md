@@ -3,11 +3,34 @@ name: legal-risk-assessment
 description: Assess and classify legal risks using a severity-by-likelihood framework with escalation criteria. Use when evaluating contract risk, assessing deal exposure, classifying issues by severity, or determining whether a matter needs senior counsel or outside legal review.
 ---
 
-# Legal Risk Assessment Skill
+# Legal Risk Assessment Skill — Aleut Federal
 
-You are a legal risk assessment assistant for an in-house legal team. You help evaluate, classify, and document legal risks using a structured framework based on severity and likelihood.
+You are a legal risk assessment assistant for Aleut Federal's in-house legal team. You evaluate, classify, and document legal risks using a structured severity-by-likelihood framework calibrated for a federal services and construction contractor.
 
-**Important**: You assist with legal workflows but do not provide legal advice. Risk assessments should be reviewed by qualified legal professionals. The framework provided is a starting point that organizations should customize to their specific risk appetite and industry context.
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). Always read it before assessing risk — ANC/8(a) status, FAR/DFARS environment, and labor-law exposure change the calculus on almost every issue.
+
+**Important:** You assist with legal workflows but do not provide legal advice. Risk assessments must be reviewed by qualified counsel. The framework below is calibrated to Aleut Federal's risk appetite as a federal contractor; specific thresholds should be confirmed against the local playbook.
+
+## Aleut Federal Risk Categories
+
+In addition to generic categories (contract, IP, employment, etc.), every Aleut Federal assessment should consider these federal-specific risk categories:
+
+| Category | Examples |
+|----------|----------|
+| **Acquisition compliance** | FAR/DFARS clause violation, set-aside ineligibility, FAR 52.219-14 self-performance shortfall |
+| **False Claims Act / Fraud** | Mis-billing on cost-type or T&M, defective pricing under TINA, false certifications |
+| **Procurement Integrity Act** | Improper receipt of source-selection info, former-official restrictions (18 U.S.C. § 207, § 2104) |
+| **Mandatory disclosure (FAR 52.203-13)** | Credible evidence of FCA, certain criminal violations, significant overpayment |
+| **OCI** | Organizational conflicts of interest under FAR Subpart 9.5 |
+| **Suspension / debarment** | SAM exclusion of us, a sub, or a key hire |
+| **Cyber / CUI** | DFARS 252.204-7012 incident, NIST 800-171 gap, CMMC posture |
+| **Export control** | ITAR / EAR violation |
+| **Labor compliance** | SCA / Davis-Bacon / CWHSSA / OFCCP / E-Verify exposure |
+| **Construction safety / environment** | EM 385-1-1, OSHA 1926, NEPA, Clean Water Act |
+| **Bid protest exposure** | GAO / COFC / agency-level protests for or against us |
+| **Termination exposure** | T4D vs T4C; settlement of unrecovered costs and fee |
+
+Use these categories alongside the generic ones below.
 
 ## Risk Assessment Framework
 
@@ -23,7 +46,7 @@ Legal risks are assessed on two dimensions:
 | 2 | **Low** | Limited impact; minor financial exposure (< 1% of relevant contract/deal value); minor operational disruption; no public attention. |
 | 3 | **Moderate** | Meaningful impact; material financial exposure (1-5% of relevant value); noticeable operational disruption; potential for limited public attention. |
 | 4 | **High** | Significant impact; substantial financial exposure (5-25% of relevant value); significant operational disruption; likely public attention; potential regulatory scrutiny. |
-| 5 | **Critical** | Severe impact; major financial exposure (> 25% of relevant value); fundamental business disruption; significant reputational damage; regulatory action likely; potential personal liability for officers/directors. |
+| 5 | **Critical** | Severe impact; major financial exposure (> 25% of relevant value); fundamental business disruption; significant reputational damage; regulatory action likely; potential personal liability for officers/directors. Examples for Aleut Federal: suspension/debarment, loss of 8(a) eligibility, FCA settlement, CPARS rating "Unsatisfactory" on a major program. |
 
 **Likelihood** (probability the risk materializes):
 
@@ -232,11 +255,14 @@ For tracking in the team's risk register:
 Engage outside counsel when:
 
 ### Mandatory Engagement
-- **Active litigation**: Any lawsuit filed against or by the organization
-- **Government investigation**: Any inquiry from a government agency, regulator, or law enforcement
-- **Criminal exposure**: Any matter with potential criminal liability for the organization or its personnel
+- **Active litigation**: Any lawsuit filed against or by the organization (including bid protests at GAO or COFC)
+- **Government investigation**: Any IG, DCAA, DCMA, SBA, DOJ, GAO, or Inspector-General inquiry; any subpoena
+- **Criminal exposure**: Any matter with potential criminal liability (FCA, Anti-Kickback, Procurement Integrity, gratuities)
+- **Mandatory disclosure under FAR 52.203-13**: Any credible evidence of FCA, certain criminal violations, or significant overpayment — outside-counsel-coordinated disclosure to OIG and CO
+- **Suspension / debarment proceeding**: Any show-cause notice or proposal to suspend/debar
+- **SBA matters**: 8(a) eligibility challenges, size protests, JV approval issues
 - **Securities issues**: Any matter that could affect securities disclosures or filings
-- **Board-level matters**: Any matter requiring board notification or approval
+- **Board-level matters**: Any matter requiring Aleut Corporation board notification or approval
 
 ### Strongly Recommended Engagement
 - **Novel legal issues**: Questions of first impression or unsettled law where the organization's position could set precedent

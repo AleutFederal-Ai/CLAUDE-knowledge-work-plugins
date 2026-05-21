@@ -4,9 +4,24 @@ description: Prepare and route a document for e-signature — run a pre-signatur
 argument-hint: "<document or contract to send>"
 ---
 
-# /signature-request -- E-Signature Routing
+# /signature-request -- E-Signature Routing (Aleut Federal)
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Signature Authority and Federal Documents
+
+- **Federal prime contracts and mods (SF 1449, SF 33, SF 30, DD 1155):** signed by the Contracting Officer on the Government side. On our side, only authorized officers may sign — verify against the current **Delegation of Authority** matrix (typically CEO / President / contracts director with named dollar thresholds and contract-type limits).
+- **Teaming Agreements / Joint Venture Agreements:** for 8(a) JVs, ensure the **managing venturer's** authorized signatory signs first; SBA approval may be required prior to award and may need to be attached.
+- **Subcontracts:** require purchase-order / subcontract-administrator sign-off plus the authorized officer; flow-downs exhibit must be attached.
+- **Reps and Certs (FAR 52.204-8 annual reps, SAM.gov):** only an authorized official may certify; preserve provenance (date, IP, signer identity).
+- **Wage Determinations (SCA / Davis-Bacon):** the WD revision in effect at contract execution governs; the executed WD must be attached and posted at the worksite.
+- **Bond forms (Miller Act SF 25 / SF 25A):** signed by surety + authorized officer; deliver originals to CO; verify Treasury Listing 570 acceptability.
+
+Bright lines:
+
+- **No backdating.** Effective dates must reflect actual signature dates.
+- **No simultaneous-execution shortcuts on federal mods.** A mod requires the CO's signature first or per the mod's effective-date language.
+- **No CUI / source-selection information** in signature envelopes routed through non-authorized e-signature tenants.
 
 Prepare a document for electronic signature — verify completeness, set signing order, and route for execution.
 

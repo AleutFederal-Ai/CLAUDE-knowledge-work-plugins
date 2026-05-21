@@ -1,16 +1,16 @@
 ---
 name: compliance-check
-description: Run a compliance check on a proposed action, product feature, or business initiative, surfacing applicable regulations, required approvals, and risk areas. Use when launching a feature that touches personal data, when marketing or product proposes something with regulatory implications, or when you need to know which approvals and jurisdictional requirements apply before proceeding.
+description: Run a compliance check on a proposed Aleut Federal action — a pursuit, teaming arrangement, hire, marketing claim, vendor selection, technology deployment, or process change — against the federal regulatory framework (FAR, DFARS, SBA 8(a), labor, environmental, cyber). Surface applicable authorities, required approvals, and risk areas before proceeding.
 argument-hint: "<action or initiative to check>"
 ---
 
-# /compliance-check -- Compliance Review
+# /compliance-check -- Federal Compliance Review
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
 
-Run a compliance check on a proposed action, product feature, marketing campaign, or business initiative.
+Run a compliance check on a proposed action, pursuit decision, business arrangement, hire, vendor selection, technology deployment, or process change.
 
-**Important**: This command assists with legal workflows but does not provide legal advice. Compliance assessments should be reviewed by qualified legal professionals. Regulatory requirements change frequently; always verify current requirements with authoritative sources.
+**Important:** This skill assists with compliance analysis; it does not provide legal advice. Compliance assessments must be reviewed by qualified counsel. Federal acquisition and labor regulations change frequently; verify current requirements at authoritative sources (acquisition.gov, sam.gov, ecfr.gov, dol.gov, sba.gov, dcaa.mil, dcma.mil).
 
 ## Usage
 
@@ -20,11 +20,25 @@ Run a compliance check on a proposed action, product feature, marketing campaign
 
 ## What I Need From You
 
-Describe what you're planning to do. Examples:
-- "We want to launch a referral program with cash rewards"
-- "We're adding biometric authentication to our mobile app"
-- "We need to process EU customer data in our US data center"
-- "Marketing wants to use customer testimonials in ads"
+Describe the proposed action. Useful examples in our world:
+
+- "We want to bid an 8(a) sole-source award to USDA at $145M ceiling."
+- "We're forming a JV with [Company X] for a Navy NAVFAC MATOC."
+- "We're hiring a former Air Force CO who managed our incumbent contract."
+- "We want to use [supplier]'s switches on a CMMC L2 project."
+- "Marketing wants to publish a case study naming the Army customer and contract number."
+- "We're moving incurred-cost workpapers to a new GovCloud tenant."
+- "We're adding a 25% workshare bump to our JV partner mid-performance."
+- "We want to recompete an SCA contract at a lower bill rate than the WD allows."
+
+## Workflow
+
+1. **Classify the action** — pursuit, teaming, hire, marketing, vendor, technology, process change, cost/pricing action, labor/HR action, environmental, ethics/PIA.
+2. **Identify applicable authorities** — FAR/DFARS/agency supplements, SBA, DOL, EPA, NIST/CMMC, EEOC/OFCCP, ITAR/EAR, state law where applicable.
+3. **Run the applicable checklist(s)** from the libraries below.
+4. **Score severity** — Proceed / Proceed with conditions / Hold / Stop and route to counsel.
+5. **List approvals required** — internal (GC, CFO, COO, FSO, Compliance Officer) and external (CO, SBA, agency authorities).
+6. **Surface mandatory-disclosure triggers** under FAR 52.203-13.
 
 ## Output
 
@@ -32,243 +46,202 @@ Describe what you're planning to do. Examples:
 ## Compliance Check: [Initiative]
 
 ### Summary
-[Quick assessment: Proceed / Proceed with conditions / Requires further review]
+[Proceed / Proceed with conditions / Hold / Stop and escalate]
 
-### Applicable Regulations and Policies
-| Regulation/Policy | Relevance | Key Requirements |
-|-------------------|-----------|-----------------|
-| [GDPR / CCPA / HIPAA / etc.] | [How it applies] | [What you need to do] |
+### Applicable Authorities
+| Authority | Relevance | Key Requirements |
+|-----------|-----------|------------------|
+| FAR Subpart 19.8 / 13 C.F.R. Part 124 | 8(a) program | ... |
+| DFARS 252.204-7012 / NIST SP 800-171 | CUI safeguarding | ... |
+| 41 U.S.C. § 2101 et seq. (Procurement Integrity Act) | Former officials, source-selection info | ... |
+| DOL Wage Determination [#] | SCA / Davis-Bacon wages | ... |
 
 ### Requirements
 | # | Requirement | Status | Action Needed |
 |---|-------------|--------|---------------|
-| 1 | [Requirement] | [Met / Not Met / Unknown] | [What to do] |
+| 1 | ... | Met / Not met / Unknown | ... |
 
 ### Risk Areas
 | Risk | Severity | Mitigation |
 |------|----------|------------|
-| [Risk] | [High/Med/Low] | [How to address] |
 
 ### Recommended Actions
-1. [Most important action]
-2. [Second priority]
-3. [Third priority]
+1. ...
 
 ### Approvals Needed
 | Approver | Why | Status |
 |----------|-----|--------|
-| [Person/Team] | [Reason] | [Pending] |
+
+### Mandatory-Disclosure / FCA / PIA Check
+[Any credible-evidence concerns under FAR 52.203-13; escalate to GC]
 
 ### Further Review Recommended
-[Areas where outside counsel or specialist review is advised]
+[Outside counsel, CO consultation, SBA coordination]
 ```
 
-## Privacy Regulation Overview
+## Checklist Libraries
 
-### GDPR (General Data Protection Regulation)
+### A. 8(a) / Set-Aside Eligibility (FAR Subpart 19.8, 13 C.F.R. Part 124)
 
-**Scope**: Applies to processing of personal data of individuals in the EU/EEA, regardless of where the processing organization is located.
+- [ ] **Entity is an SBA-certified 8(a) participant** in good standing (verify in DSBS / certify.SBA.gov).
+- [ ] **Sole-source threshold:** civilian — unlimited for ANC; DoD — currently $100M (verify against current DFARS).
+- [ ] **Sole-source justification:** D&F or J&A drafted; rationale documented; competition not feasible under 13 C.F.R. § 124.506.
+- [ ] **NAICS size:** under the SBA size standard for the assigned NAICS at offer date.
+- [ ] **Affiliation:** ANC subsidiaries — generally not affiliated under 13 C.F.R. § 121.103(b)(2); confirm no other affiliation triggers (common management, identity of interest).
+- [ ] **Non-manufacturer rule** (if supplies): waiver in place or compliance documented.
+- [ ] **Limitations on subcontracting (FAR 52.219-14):** staffing plan supports self-performance (services 50% cost of personnel; general construction 15%; specialty 25%); JVs count partners' work; flow-downs do not cause similarly-situated entity gaps.
+- [ ] **Bona-fide place of business:** for construction set-asides where required.
+- [ ] **Past performance and capability** documented to meet "responsible offeror" threshold (FAR 9.104).
+- [ ] **SBA acceptance:** sole-source offered into the program; SBA acceptance letter received prior to award.
 
-**Key Obligations for In-House Legal Teams**:
-- **Lawful basis**: Identify and document lawful basis for each processing activity (consent, contract, legitimate interest, legal obligation, vital interest, public task)
-- **Data subject rights**: Respond to access, rectification, erasure, portability, restriction, and objection requests within 30 days (extendable by 60 days for complex requests)
-- **Data protection impact assessments (DPIAs)**: Required for processing likely to result in high risk to individuals
-- **Breach notification**: Notify supervisory authority within 72 hours of becoming aware of a personal data breach; notify affected individuals without undue delay if high risk
-- **Records of processing**: Maintain Article 30 records of processing activities
-- **International transfers**: Ensure appropriate safeguards for transfers outside EEA (SCCs, adequacy decisions, BCRs)
-- **DPO requirement**: Appoint a Data Protection Officer if required (public authority, large-scale processing of special categories, large-scale systematic monitoring)
+### B. 8(a) Joint Venture (13 C.F.R. § 124.513)
 
-**Common In-House Legal Touchpoints**:
-- Reviewing vendor DPAs for GDPR compliance
-- Advising product teams on privacy by design requirements
-- Responding to supervisory authority inquiries
-- Managing cross-border data transfer mechanisms
-- Reviewing consent mechanisms and privacy notices
+- [ ] **Managing venturer** is the 8(a) participant.
+- [ ] **Written JV agreement** addresses all 13 C.F.R. § 124.513(c) elements (project manager from 8(a) firm, profit allocation by workshare, equipment/facilities, records, accounting).
+- [ ] **Workshare:** 8(a) protégé performs at least **40%** of the work done by the JV.
+- [ ] **Profit distribution** matches workshare percentages.
+- [ ] **Mentor-Protégé Agreement** active and SBA-approved if relying on mentor exception.
+- [ ] **SBA approval** of the JV obtained **before award** for sole-source (and tracked as needed for competitive).
+- [ ] **Compliance reporting** — annual JV performance reports filed with SBA.
+- [ ] **No prohibited affiliation** created (size, control).
+- [ ] **Three-in-Two rule:** JV can receive max 3 contract awards over a 2-year period.
 
-### CCPA / CPRA (California Consumer Privacy Act / California Privacy Rights Act)
+### C. Procurement Integrity Act / Former-Official Hiring (41 U.S.C. § 2101 et seq.; FAR 3.104)
 
-**Scope**: Applies to businesses that collect personal information of California residents and meet revenue, data volume, or data sale thresholds.
+- [ ] **Source-selection information** — no current or former federal official has shared non-public source-selection information with us.
+- [ ] **Contractor bid or proposal information** — no improper exchange.
+- [ ] **Former federal officials we're hiring:**
+  - Identify their last position(s) and contracts they personally and substantially worked on.
+  - Apply **18 U.S.C. § 207** post-employment restrictions (lifetime ban on particular-matter representation; two-year ban on related matters; one-year cooling-off for senior officials).
+  - **§ 2104 one-year compensation ban** if served as procuring contracting officer, source-selection authority, evaluation board member, or contracting officer's technical representative on a contract > $10M with us.
+  - **Ethics letter** obtained from their former agency where required.
+- [ ] **Gifts and gratuities** — no improper offers to federal officials.
+- [ ] **Document** the screening in the personnel file and notify the CO if § 2104 applies.
+- [ ] **Mandatory disclosure** under FAR 52.203-13 if credible evidence of a violation arises.
 
-**Key Obligations**:
-- **Right to know**: Consumers can request disclosure of personal information collected, used, and shared
-- **Right to delete**: Consumers can request deletion of their personal information
-- **Right to opt-out**: Consumers can opt out of the sale or sharing of personal information
-- **Right to correct**: Consumers can request correction of inaccurate personal information (CPRA addition)
-- **Right to limit use of sensitive personal information**: Consumers can limit use of sensitive PI to specific purposes (CPRA addition)
-- **Non-discrimination**: Cannot discriminate against consumers who exercise their rights
-- **Privacy notice**: Must provide a privacy notice at or before collection describing categories of PI collected and purposes
-- **Service provider agreements**: Contracts with service providers must restrict use of PI to the specified business purpose
+### D. CUI / DFARS 252.204-7012 / NIST SP 800-171 / CMMC 2.0
 
-**Response Timelines**:
-- Acknowledge receipt within 10 business days
-- Respond substantively within 45 calendar days (extendable by 45 days with notice)
+- [ ] **Identify CUI** in the scope (CDRLs, deliverables, technical data, personnel data).
+- [ ] **SSP and POA&M** current; NIST 800-171 controls implemented to the extent applicable.
+- [ ] **SPRS score** posted (within 3 years); plan for remediation if below target.
+- [ ] **CMMC level** required by the contract (Level 1 for FCI, Level 2 for CUI, Level 3 for select higher-sensitivity); compliance pathway (self-assessment, C3PAO assessment, DIBCAC) chosen.
+- [ ] **Cyber incident reporting** — 72-hour reporting infrastructure to DIBNet operational.
+- [ ] **Flow-downs** — DFARS 252.204-7012 flows down to subs handling CUI.
+- [ ] **Cloud services** — if CUI processed in cloud, FedRAMP Moderate (equivalent) baseline plus DFARS supplement; for DoD, DoD IL4/IL5 may apply.
+- [ ] **GovCloud tenancy** — verify storage location (CONUS), administrator citizenship, and key management.
 
-### Other Key Regulations to Monitor
+### E. Section 889 (Covered Telecommunications)
 
-| Regulation | Jurisdiction | Key Differentiators |
-|---|---|---|
-| **LGPD** (Brazil) | Brazil | Similar to GDPR; requires DPO appointment; National Data Protection Authority (ANPD) enforcement |
-| **POPIA** (South Africa) | South Africa | Information Regulator oversight; required registration of processing |
-| **PIPEDA** (Canada) | Canada (federal) | Consent-based framework; OPC oversight; being modernized |
-| **PDPA** (Singapore) | Singapore | Do Not Call registry; mandatory breach notification; PDPC enforcement |
-| **Privacy Act** (Australia) | Australia | Australian Privacy Principles (APPs); notifiable data breaches scheme |
-| **PIPL** (China) | China | Strict cross-border transfer rules; data localization requirements; CAC oversight |
-| **UK GDPR** | United Kingdom | Post-Brexit UK version; ICO oversight; similar to EU GDPR with UK-specific adequacy |
+- [ ] **No covered equipment or services** from Huawei, ZTE, Hytera, Hikvision, Dahua, or their affiliates anywhere in our operations or supply chain (Part A & Part B).
+- [ ] **Annual representation** in SAM.gov is accurate.
+- [ ] **Supply chain audit** for new vendors; reasonable inquiry documented.
+- [ ] **Flow-down** to subs under FAR 52.204-25.
 
-## DPA Review Checklist
+### F. Buy American Act / BABA / TAA
 
-When reviewing a Data Processing Agreement or Data Processing Addendum, verify the following:
+- [ ] **Identify domestic preference rules** applicable to the contract (FAR 52.225-3 Buy American; 52.225-5 TAA; BABA for federally-funded infrastructure).
+- [ ] **Material origin** — verify country of origin and domestic content thresholds (per BABA — manufactured products 55%/65% per phase-in; iron & steel 100% melted and poured; construction materials per material-specific rule).
+- [ ] **Waivers** — identify whether a public-interest, non-availability, or unreasonable-cost waiver applies.
+- [ ] **Commercial item exception** — if commercial COTS, generally exempt from BAA but not from BABA on infrastructure.
 
-### Required Elements (GDPR Article 28)
+### G. SCA / Davis-Bacon / CWHSSA / Copeland (Labor)
 
-- [ ] **Subject matter and duration**: Clearly defined scope and term of processing
-- [ ] **Nature and purpose**: Specific description of what processing will occur and why
-- [ ] **Type of personal data**: Categories of personal data being processed
-- [ ] **Categories of data subjects**: Whose personal data is being processed
-- [ ] **Controller obligations and rights**: Controller's instructions and oversight rights
+- [ ] **Determine applicability** — services > $2,500 (SCA); construction > $2,000 (DBA); both for hybrid work.
+- [ ] **Wage determination** — current WD attached / referenced; rates per labor category meet/exceed WD wages and fringe.
+- [ ] **Conformance** — labor categories not in the WD have proper SF 1444 conformance.
+- [ ] **CBA** — if a CBA covers the prior contract employees (successor-contractor obligation), bake into bid.
+- [ ] **Health & welfare** — pay or provide; track bona-fide fringe benefit credit.
+- [ ] **EO 14026 minimum wage** — current federal contractor minimum applied where applicable.
+- [ ] **CWHSSA overtime** — > 40 hours / week.
+- [ ] **Copeland Act** — weekly payroll certification on construction.
+- [ ] **DBRA-recipient training** — supervisors trained.
 
-### Processor Obligations
+### H. Construction-Specific (FAR Subpart 36; Miller Act; EM 385-1-1; OSHA 1926)
 
-- [ ] **Process only on documented instructions**: Processor commits to process only per controller's instructions (with exception for legal requirements)
-- [ ] **Confidentiality**: Personnel authorized to process have committed to confidentiality
-- [ ] **Security measures**: Appropriate technical and organizational measures described (Article 32 reference)
-- [ ] **Sub-processor requirements**:
-  - [ ] Written authorization requirement (general or specific)
-  - [ ] If general authorization: notification of changes with opportunity to object
-  - [ ] Sub-processors bound by same obligations via written agreement
-  - [ ] Processor remains liable for sub-processor performance
-- [ ] **Data subject rights assistance**: Processor will assist controller in responding to data subject requests
-- [ ] **Security and breach assistance**: Processor will assist with security obligations, breach notification, DPIAs, and prior consultation
-- [ ] **Deletion or return**: On termination, delete or return all personal data (at controller's choice) and delete existing copies unless legal retention required
-- [ ] **Audit rights**: Controller has right to conduct audits and inspections (or accept third-party audit reports)
-- [ ] **Breach notification**: Processor will notify controller of personal data breaches without undue delay (ideally within 24-48 hours; must enable controller to meet 72-hour regulatory deadline)
+- [ ] **Performance & payment bonds** (Miller Act > $150K) — bonding capacity confirmed.
+- [ ] **Differing site conditions** clause present (FAR 52.236-2).
+- [ ] **Liquidated damages** — rate justified; capped where possible.
+- [ ] **Site safety** — APP and AHA per EM 385-1-1 (USACE) or OSHA 1926 (other agencies).
+- [ ] **NEPA / Cultural / Environmental** — applicable reviews completed by Government before NTP; we don't begin ground-disturbing work prior.
+- [ ] **Permits and tap fees** — responsibilities clearly allocated.
+- [ ] **Bondable, insurable subs** — qualifications confirmed.
+- [ ] **Wage decision posting** at the site.
 
-### International Transfers
+### I. Cost / Pricing / DCAA
 
-- [ ] **Transfer mechanism identified**: SCCs, adequacy decision, BCRs, or other valid mechanism
-- [ ] **SCCs version**: Using current EU SCCs (June 2021 version) if applicable
-- [ ] **Correct module**: Appropriate SCC module selected (C2P, C2C, P2P, P2C)
-- [ ] **Transfer impact assessment**: Completed if transferring to countries without adequacy decisions
-- [ ] **Supplementary measures**: Technical, organizational, or contractual measures to address gaps identified in transfer impact assessment
-- [ ] **UK addendum**: If UK personal data is in scope, UK International Data Transfer Addendum included
+- [ ] **Contract type alignment** — cost-type / T&M / FFP-LOE appropriate for the risk profile; cost-type only allowed where accounting system is DCAA-adequate (SF 1408 criteria).
+- [ ] **TINA** — certified cost or pricing data required if > $2M and no exception (commercial item, adequate competition, set by law/regulation).
+- [ ] **FAR Part 31 cost allowability** — all costs in the basis pass allowable/allocable/reasonable test.
+- [ ] **Unallowables** — lobbying, alcohol, entertainment, bad debts, fines, advertising (non-recruiting), excess executive comp, etc. — segregated.
+- [ ] **Provisional billing rates** — current; aligned to ICS forecast.
+- [ ] **CAS coverage** — modified vs full; disclosure statement filed where triggered.
+- [ ] **Forward-pricing rate agreement (FPRA)** — leverage where active.
+- [ ] **Defective pricing exposure** — data current/accurate/complete at certification date.
 
-### Practical Considerations
+### J. Ethics / FAR 52.203-13 / FCA / Anti-Kickback
 
-- [ ] **Liability**: DPA liability provisions align with (or don't conflict with) the main services agreement
-- [ ] **Termination alignment**: DPA term aligns with the services agreement
-- [ ] **Data locations**: Processing locations specified and acceptable
-- [ ] **Security standards**: Specific security standards or certifications required (SOC 2, ISO 27001, etc.)
-- [ ] **Insurance**: Adequate insurance coverage for data processing activities
+- [ ] **Ethics program** in place: code of business ethics, training, hotline, internal-control system.
+- [ ] **Mandatory disclosure (FAR 52.203-13(b)(3)(i))** — credible evidence of FCA violations, certain criminal violations (fraud, conflict of interest, bribery, gratuity), or **significant overpayment** triggers disclosure to OIG and the Contracting Officer within a reasonable time.
+- [ ] **Anti-kickback** — FAR 3.502; 41 U.S.C. § 8702. No payments to obtain or reward favorable subcontract treatment.
+- [ ] **Gifts/gratuities to federal officials** — strictly limited; check 5 C.F.R. Part 2635.
+- [ ] **Conflict of interest screen** — personal and organizational (OCI) per FAR Subpart 9.5.
+- [ ] **Suspension/debarment search** — SAM.gov check on subs and key hires.
 
-### Common DPA Issues
+### K. OFCCP / EEO / VEVRAA / Section 503
 
-| Issue | Risk | Standard Position |
-|---|---|---|
-| Blanket sub-processor authorization without notification | Loss of control over processing chain | Require notification with right to object |
-| Breach notification timeline > 72 hours | May prevent timely regulatory notification | Require notification within 24-48 hours |
-| No audit rights (or audit rights only via third-party reports) | Cannot verify compliance | Accept SOC 2 Type II + right to audit upon cause |
-| Data deletion timeline not specified | Data retained indefinitely | Require deletion within 30-90 days of termination |
-| No data processing locations specified | Data could be processed anywhere | Require disclosure of processing locations |
-| Outdated SCCs | Invalid transfer mechanism | Require current EU SCCs (2021 version) |
+- [ ] **AAP** in place if contract ≥ $50K and headcount ≥ 50.
+- [ ] **EO 11246 obligations** — recruitment, posting, recordkeeping.
+- [ ] **VEVRAA** — protected veterans outreach, VETS-4212 report.
+- [ ] **Section 503** — individuals with disabilities outreach; 7% utilization goal.
+- [ ] **E-Verify (FAR 52.222-54)** — enrolled; queries for new hires and existing employees on covered contracts.
 
-## Data Subject Request Handling
+### L. Export Control (ITAR / EAR)
 
-### Request Intake
+- [ ] **Classification** — USML category (ITAR) or ECCN (EAR) for items, technical data, software, or services.
+- [ ] **Registration** — DDTC registration current if ITAR.
+- [ ] **License requirements** — for foreign nationals (deemed export), foreign travel, OCONUS performance.
+- [ ] **TCP** — Technology Control Plan in place where required.
 
-When a data subject request is received:
+### M. Environmental (NEPA, CWA, CAA, ESA, NHPA — construction)
 
-1. **Identify the request type**:
-   - Access (copy of personal data)
-   - Rectification (correction of inaccurate data)
-   - Erasure / deletion ("right to be forgotten")
-   - Restriction of processing
-   - Data portability (structured, machine-readable format)
-   - Objection to processing
-   - Opt-out of sale/sharing (CCPA/CPRA)
-   - Limit use of sensitive personal information (CPRA)
+- [ ] **NEPA** — categorical exclusion, EA, or EIS completed by the Government before NTP.
+- [ ] **Permits** — stormwater (NPDES CGP), air, dredge/fill (404), hazardous materials.
+- [ ] **Cultural / Historic** — Section 106 NHPA review completed.
+- [ ] **Endangered species** — Section 7 ESA consultation if applicable.
 
-2. **Identify applicable regulation(s)**:
-   - Where is the data subject located?
-   - Which laws apply based on your organization's presence and activities?
-   - What are the specific requirements and timelines?
+### N. Marketing / Publicity About Federal Customers
 
-3. **Verify identity**:
-   - Confirm the requester is who they claim to be
-   - Use reasonable verification measures proportionate to the sensitivity of the data
-   - Do not require excessive documentation
+- [ ] **Contract permits publicity** — many federal contracts restrict use of agency name, logo, or contract number without CO approval.
+- [ ] **Source-selection information** — never disclose unawarded source-selection data.
+- [ ] **CUI / Sensitive** — no mission-sensitive details (capabilities, personnel cleared, classified efforts).
+- [ ] **Testimonial / endorsement** rules — federal employees generally cannot endorse contractors (5 C.F.R. § 2635.702); avoid implying endorsement.
+- [ ] **CO approval** in writing where required.
 
-4. **Log the request**:
-   - Date received
-   - Request type
-   - Requester identity
-   - Applicable regulation
-   - Response deadline
-   - Assigned handler
+## Severity Levels
 
-### Response Timelines
+| Level | Meaning | Action |
+|-------|---------|--------|
+| **PROCEED** | All checklist items met; routine action | Document and proceed |
+| **PROCEED WITH CONDITIONS** | Most met; specific conditions or approvals needed | Get approvals; document; then proceed |
+| **HOLD** | Material requirement unmet or unclear | Pause; resolve before proceeding |
+| **STOP / ESCALATE** | Likely violation, mandatory-disclosure trigger, or hard-constraint breach | Notify GC immediately; do not proceed |
 
-| Regulation | Initial Acknowledgment | Substantive Response | Extension |
-|---|---|---|---|
-| GDPR | Not specified (best practice: promptly) | 30 days | +60 days (with notice) |
-| CCPA/CPRA | 10 business days | 45 calendar days | +45 days (with notice) |
-| UK GDPR | Not specified (best practice: promptly) | 30 days | +60 days (with notice) |
-| LGPD | Not specified | 15 days | Limited extensions |
+## Automatic STOP / ESCALATE Triggers
 
-### Exemptions and Exceptions
-
-Before fulfilling a request, check whether any exemptions apply:
-
-**Common exemptions across regulations**:
-- Legal claims defense or establishment
-- Legal obligations requiring retention
-- Public interest or official authority
-- Freedom of expression and information (for erasure requests)
-- Archiving in the public interest or scientific/historical research
-
-**Organization-specific considerations**:
-- Litigation hold: Data subject to a legal hold cannot be deleted
-- Regulatory retention: Financial records, employment records, and other categories may have mandatory retention periods
-- Third-party rights: Fulfilling the request might adversely affect the rights of others
-
-### Response Process
-
-1. Gather all personal data of the requester across systems
-2. Apply any exemptions and document the basis
-3. Prepare response: fulfill the request or explain why (in whole or part) it cannot be fulfilled
-4. If denying (in whole or part): cite the specific legal basis for denial
-5. Inform the requester of their right to lodge a complaint with the supervisory authority
-6. Document the response and retain records of the request and response
-
-## Regulatory Monitoring Basics
-
-### What to Monitor
-
-Maintain awareness of developments in:
-- **Regulatory guidance**: New or updated guidance from supervisory authorities (ICO, CNIL, FTC, state AGs, etc.)
-- **Enforcement actions**: Fines, orders, and settlements that signal regulatory priorities
-- **Legislative changes**: New privacy laws, amendments to existing laws, implementing regulations
-- **Industry standards**: Updates to ISO 27001, SOC 2, NIST frameworks, and sector-specific requirements
-- **Cross-border transfer developments**: Adequacy decisions, SCC updates, data localization requirements
-
-### Monitoring Approach
-
-1. **Subscribe to regulatory authority communications** (newsletters, RSS feeds, official announcements)
-2. **Track relevant legal publications** for analysis of new developments
-3. **Review industry association updates** for sector-specific guidance
-4. **Maintain a regulatory calendar** of known upcoming deadlines, effective dates, and compliance milestones
-5. **Brief the legal team** on material developments that affect the organization's processing activities
-
-### Escalation Criteria
-
-Escalate regulatory developments to senior counsel or leadership when:
-- A new regulation or guidance directly affects the organization's core business activities
-- An enforcement action in the organization's sector signals heightened regulatory scrutiny
-- A compliance deadline is approaching that requires organizational changes
-- A data transfer mechanism the organization relies on is challenged or invalidated
-- A regulatory authority initiates an inquiry or investigation involving the organization
+- Any indication of FCA, Anti-Kickback Act, or Procurement Integrity Act violation.
+- Source-selection information improperly obtained.
+- Hiring a former CO/SSA/CTR/SSB member with active 18 U.S.C. § 207 or § 2104 restrictions that have not been screened.
+- 8(a) JV without SBA approval prior to award on sole-source.
+- FAR 52.219-14 self-performance not achievable on a set-aside award.
+- DFARS 252.204-7012 / CMMC level unmet for CUI work.
+- Section 889 violation in active operations or supply chain.
+- Use of agency identity / contract number without CO approval.
+- Disclosure of CUI or classified data outside an authorized environment.
 
 ## Tips
 
-1. **Be specific** — "We want to email all our users" is better than "marketing campaign."
-2. **Include the geography** — Compliance requirements vary by jurisdiction.
-3. **Mention the data** — What personal data is involved? This drives most compliance requirements.
+1. **Be specific.** "8(a) sole-source to USDA, $145M, 5-year IDIQ, services" is better than "new pursuit."
+2. **Include the customer and vehicle.** Authorities differ by agency and contract type.
+3. **Name the people.** Hiring, COI, and PIA screens depend on prior roles.
+4. **State the dollars.** Many thresholds are dollar-driven (TINA, Miller Act, simplified acquisition, etc.).
+5. **Tell us if it's already started.** A pending action gets a different answer than something already in execution.

@@ -4,9 +4,15 @@ description: Generate a response to a common legal inquiry using configured temp
 argument-hint: "[inquiry-type]"
 ---
 
-# /legal-response -- Generate Response from Templates
+# /legal-response -- Generate Response from Templates (Aleut Federal)
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context
+
+Do **not** use a templated reply for federal-contractor inquiries that require counsel: subpoenas / CIDs / grand-jury requests, OIG / DOJ / GAO / DCAA fraud-referral inquiries, FAR 52.203-13 mandatory-disclosure correspondence, bid protests (GAO 10/30-day clocks, agency, COFC), CO-issued cure / show-cause / T4D notices, and any request for source-selection or contractor proposal information.
+
+Templated responses **are** appropriate for: routine NDA acknowledgments, signature requests, vendor legal-questionnaire intake, internal litigation-hold reminders, ethics-hotline acknowledgments, and pro-forma legal-intake confirmations.
 
 Generate a response to a common legal inquiry using configured templates. Customizes the response with specific details and includes escalation triggers for situations that should not use a templated response.
 
