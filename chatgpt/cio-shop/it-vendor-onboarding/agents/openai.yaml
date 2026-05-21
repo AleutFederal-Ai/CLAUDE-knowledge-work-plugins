@@ -1,0 +1,12 @@
+interface:
+  display_name: It Vendor Onboarding
+  short_description: Onboard a new IT vendor (SaaS, hardware, software, MSP, MSSP) for Aleut Federal — full federal-contractor diligence including SAM exclusions / FAPIIS, Section 889 representation,…
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

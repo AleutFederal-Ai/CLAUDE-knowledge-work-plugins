@@ -1,0 +1,12 @@
+interface:
+  display_name: Environmental Aspects
+  short_description: Maintain Aleut Federal's ISO 14001 Environmental Aspects and Impacts register and the linked Compliance Obligations register.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

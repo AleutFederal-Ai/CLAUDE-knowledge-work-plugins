@@ -1,1 +1,0 @@
-Federal-contractor operations for Aleut Federal. Manage FAR flow-downs to subcontractors and vendors, track FAR/DFARS/EM 385-1-1/OSHA 1926 compliance, run risk assessments on services and construction work, document processes and runbooks for cost-type and FFP contracts, and report status to PMs, COs, and CORs.

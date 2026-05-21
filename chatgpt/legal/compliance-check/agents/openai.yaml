@@ -1,0 +1,12 @@
+interface:
+  display_name: Compliance Check
+  short_description: Run a compliance check on a proposed Aleut Federal action — a pursuit, teaming arrangement, hire, marketing claim, vendor selection, technology deployment, or process change —…
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

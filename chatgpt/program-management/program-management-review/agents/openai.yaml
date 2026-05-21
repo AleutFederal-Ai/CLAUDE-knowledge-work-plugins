@@ -1,0 +1,12 @@
+interface:
+  display_name: Program Management Review
+  short_description: Prepare and run a Program Management Review (PMR) for an Aleut Federal federal program — periodic formal review with the customer covering cost, schedule, technical, risk,…
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

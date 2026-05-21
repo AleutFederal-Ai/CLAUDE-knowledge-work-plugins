@@ -1,0 +1,12 @@
+interface:
+  display_name: Statistical Analysis
+  short_description: Apply statistical methods including descriptive stats, trend analysis, outlier detection, and hypothesis testing.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

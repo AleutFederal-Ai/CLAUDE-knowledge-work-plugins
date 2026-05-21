@@ -1,1 +1,0 @@
-People operations for Aleut Federal as a federal services and construction contractor. Recruit and onboard cleared and uncleared staff, build SCA / Davis-Bacon-compliant compensation analyses, generate offers with applicable wage determinations, run OFCCP / VEVRAA / Section 503 / E-Verify-aware policy lookups, and manage performance reviews across CONUS and OCONUS sites.

@@ -1,0 +1,12 @@
+interface:
+  display_name: It Incident Response
+  short_description: Run an internal IT incident response workflow for Aleut Federal corporate systems — triage, contain, investigate, communicate, post-incident review.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

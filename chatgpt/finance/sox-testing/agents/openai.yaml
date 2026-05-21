@@ -1,0 +1,12 @@
+interface:
+  display_name: Sox Testing
+  short_description: Generate sample selections, testing workpapers, and control assessments for federal-contractor internal controls — DCAA-adequate accounting system (SF 1408), DFARS 252.242-7005…
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

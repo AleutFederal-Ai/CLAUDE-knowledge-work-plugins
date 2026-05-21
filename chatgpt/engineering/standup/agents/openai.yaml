@@ -1,0 +1,12 @@
+interface:
+  display_name: Standup
+  short_description: Generate a standup update from recent activity.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

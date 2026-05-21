@@ -1,0 +1,12 @@
+interface:
+  display_name: Signature Request
+  short_description: Prepare and route a document for e-signature — run a pre-signature checklist, configure signing order, and send for execution.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

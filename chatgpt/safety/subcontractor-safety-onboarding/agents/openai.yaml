@@ -1,0 +1,12 @@
+interface:
+  display_name: Subcontractor Safety Onboarding
+  short_description: Onboard a new subcontractor to an Aleut Federal construction site's safety program — sub prequalification (EMR, OSHA history, prior CPARS-type safety record), site-specific…
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

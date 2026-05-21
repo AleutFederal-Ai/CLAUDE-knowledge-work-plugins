@@ -1,0 +1,12 @@
+interface:
+  display_name: Safety Inspection
+  short_description: Plan and execute a safety inspection at an Aleut Federal construction site or office — daily / weekly / monthly cadence; site walk-throughs; equipment inspections; PPE…
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

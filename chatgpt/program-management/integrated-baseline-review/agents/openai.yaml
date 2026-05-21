@@ -1,0 +1,12 @@
+interface:
+  display_name: Integrated Baseline Review
+  short_description: Prepare Aleut Federal for an Integrated Baseline Review (IBR) — joint customer-contractor assessment that the Performance Measurement Baseline (PMB) is realistic, traceable to…
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

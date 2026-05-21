@@ -1,0 +1,12 @@
+interface:
+  display_name: Product Brainstorming
+  short_description: Brainstorm product ideas, explore problem spaces, and challenge assumptions as a thinking partner.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

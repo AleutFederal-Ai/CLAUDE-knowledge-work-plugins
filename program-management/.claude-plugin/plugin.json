@@ -1,0 +1,8 @@
+{
+  "name": "program-management",
+  "version": "0.1.0",
+  "description": "Federal program management for Aleut Federal — Integrated Master Schedule (IMS), EVMS reporting per DFARS 252.234-7002 / EIA-748, Program Management Review (PMR) preparation, Integrated Baseline Review (IBR) readiness, program-level risk management, and program monthly reporting to PMO and customer.",
+  "author": {
+    "name": "Aleut Federal"
+  }
+}

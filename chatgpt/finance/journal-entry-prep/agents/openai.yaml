@@ -1,0 +1,12 @@
+interface:
+  display_name: Journal Entry Prep
+  short_description: Prepare journal entries with proper debits, credits, and supporting documentation for month-end close.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

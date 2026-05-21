@@ -1,0 +1,12 @@
+interface:
+  display_name: Kb Article
+  short_description: Draft a knowledge base article from a resolved issue or common question.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

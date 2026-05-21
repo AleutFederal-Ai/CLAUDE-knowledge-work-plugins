@@ -1,0 +1,12 @@
+interface:
+  display_name: Synthesize Research
+  short_description: Synthesize user research from interviews, surveys, and feedback into structured insights.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

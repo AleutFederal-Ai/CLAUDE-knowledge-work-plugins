@@ -1,0 +1,12 @@
+interface:
+  display_name: Toolbox Talk
+  short_description: Plan and run a daily toolbox safety talk at an Aleut Federal construction site — short focused briefing at the start of the shift covering today's planned activities, the…
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

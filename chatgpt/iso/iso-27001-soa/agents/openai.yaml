@@ -1,0 +1,12 @@
+interface:
+  display_name: Iso 27001 Soa
+  short_description: Manage Aleut Federal's ISO 27001 Statement of Applicability (SoA) — the document that lists every Annex A control, whether it's applicable, how it's implemented, and the…
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

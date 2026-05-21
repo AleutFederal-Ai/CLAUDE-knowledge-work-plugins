@@ -1,0 +1,12 @@
+interface:
+  display_name: Account Research
+  short_description: Research a federal agency, prime contractor, or specific federal contract for Aleut Federal capture.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

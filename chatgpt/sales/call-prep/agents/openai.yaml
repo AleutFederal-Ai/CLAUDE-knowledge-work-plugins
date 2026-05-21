@@ -1,0 +1,12 @@
+interface:
+  display_name: Call Prep
+  short_description: Prepare for a federal BD / capture call — agency or prime customer meeting, industry day, sources-sought interaction, teaming negotiation, debrief, post-award kickoff.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

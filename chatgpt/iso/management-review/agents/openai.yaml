@@ -1,0 +1,12 @@
+interface:
+  display_name: Management Review
+  short_description: Plan, run, and document the annual Management Review meeting for an Aleut Federal ISO management system (ISO 9001 / 14001 / 45001 / 27001 clause 9.3).
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

@@ -1,0 +1,12 @@
+interface:
+  display_name: Vendor Review
+  short_description: Evaluate a vendor or subcontractor for Aleut Federal — federal-contractor responsibility check, cost analysis with allowable-cost screen, risk assessment with SAM/FAPIIS/CMMC…
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

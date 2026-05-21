@@ -1,0 +1,12 @@
+interface:
+  display_name: Aleut Federal Context
+  short_description: Auto-loads Aleut Federal's company facts, regulatory framework, and hard constraints for any AF-related question.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

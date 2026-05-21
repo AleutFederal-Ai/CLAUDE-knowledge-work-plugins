@@ -1,0 +1,12 @@
+interface:
+  display_name: Create An Asset
+  short_description: Generate tailored sales assets (landing pages, decks, one-pagers, workflow demos) from your deal context.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

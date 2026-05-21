@@ -1,0 +1,12 @@
+interface:
+  display_name: It Governance
+  short_description: Aleut Federal IT governance and policy decisions — IT investment / portfolio reviews, technology standards setting, enterprise architecture decisions, IT policy authoring and…
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

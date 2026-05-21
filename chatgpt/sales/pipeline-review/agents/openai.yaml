@@ -1,0 +1,12 @@
+interface:
+  display_name: Pipeline Review
+  short_description: Analyze the Aleut Federal capture / BD pipeline through Shipley capture stages — prioritize pursuits, flag bid/no-bid hygiene, identify single-threaded teams, surface compliance…
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

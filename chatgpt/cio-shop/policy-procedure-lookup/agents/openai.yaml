@@ -1,0 +1,12 @@
+interface:
+  display_name: Policy Procedure Lookup
+  short_description: Look up and explain an Aleut Federal corporate policy or procedure from the AF Policy / Procedure library — IT policy (acceptable use, BYOD, remote access, password, data…
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

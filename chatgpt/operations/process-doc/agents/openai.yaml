@@ -1,0 +1,12 @@
+interface:
+  display_name: Process Doc
+  short_description: Document a business process — flowcharts, RACI, and SOPs.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

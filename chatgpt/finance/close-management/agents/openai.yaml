@@ -1,0 +1,12 @@
+interface:
+  display_name: Close Management
+  short_description: Manage the month-end close process with task sequencing, dependencies, and status tracking.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

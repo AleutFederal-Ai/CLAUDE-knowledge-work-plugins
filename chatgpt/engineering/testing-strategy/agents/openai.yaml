@@ -1,0 +1,12 @@
+interface:
+  display_name: Testing Strategy
+  short_description: Design test strategies and test plans.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

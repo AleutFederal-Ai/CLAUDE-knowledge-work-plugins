@@ -1,0 +1,12 @@
+interface:
+  display_name: Reconciliation
+  short_description: Reconcile accounts by comparing GL balances to subledgers, bank statements, or third-party data.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

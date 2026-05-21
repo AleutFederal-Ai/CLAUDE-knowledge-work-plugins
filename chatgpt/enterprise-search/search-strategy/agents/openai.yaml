@@ -1,0 +1,12 @@
+interface:
+  display_name: Search Strategy
+  short_description: Query decomposition and multi-source search orchestration.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

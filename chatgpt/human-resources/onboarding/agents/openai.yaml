@@ -1,0 +1,12 @@
+interface:
+  display_name: Onboarding
+  short_description: Generate an onboarding checklist and first-week plan for a new hire.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

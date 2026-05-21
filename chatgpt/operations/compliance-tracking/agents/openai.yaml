@@ -1,0 +1,12 @@
+interface:
+  display_name: Compliance Tracking
+  short_description: Track Aleut Federal's federal-contractor compliance posture and audit readiness — FAR/DFARS clauses on active contracts, DCAA business systems, CMMC 2.0 / NIST 800-171, OFCCP /…
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

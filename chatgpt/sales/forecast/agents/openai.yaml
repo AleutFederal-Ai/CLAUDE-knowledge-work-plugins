@@ -1,0 +1,12 @@
+interface:
+  display_name: Forecast
+  short_description: Generate a weighted sales forecast with best/likely/worst scenarios, commit vs.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

@@ -1,0 +1,13 @@
+interface:
+  display_name: SBA ANC Source Guide
+  short_description: Answers SBA, 8(a), and ANC policy/news questions using approved
+    sources only.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

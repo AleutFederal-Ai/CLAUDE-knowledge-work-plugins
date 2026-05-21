@@ -1,0 +1,12 @@
+interface:
+  display_name: Validate Data
+  short_description: QA an analysis before sharing -- methodology, accuracy, and bias checks.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

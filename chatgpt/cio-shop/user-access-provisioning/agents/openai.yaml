@@ -1,0 +1,12 @@
+interface:
+  display_name: User Access Provisioning
+  short_description: Provision, modify, and deprovision user accounts and access for Aleut Federal — joiner / mover / leaver workflow across AF systems and federal-customer environments.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false

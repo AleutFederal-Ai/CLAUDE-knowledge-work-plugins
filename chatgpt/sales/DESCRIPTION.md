@@ -1,1 +1,0 @@
-Federal business development and capture for Aleut Federal. Research agencies and primes via SAM.gov / USAspending / GovWin, prep capture-manager call plans, manage the BD pipeline through Shipley capture stages, build incumbent and recompete intelligence, and draft compliant outreach for 8(a) sole-source and competitive pursuits.

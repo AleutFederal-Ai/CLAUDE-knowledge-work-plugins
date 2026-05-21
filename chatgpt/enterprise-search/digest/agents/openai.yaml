@@ -1,0 +1,12 @@
+interface:
+  display_name: Digest
+  short_description: Generate a daily or weekly digest of activity across all connected sources.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false
