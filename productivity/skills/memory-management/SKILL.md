@@ -4,9 +4,30 @@ description: Two-tier memory system that makes Claude a true workplace collabora
 user-invocable: false
 ---
 
-# Memory Management
+# Memory Management — Aleut Federal
 
-Memory makes Claude your workplace collaborator - someone who speaks your internal language.
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md).
+
+Memory makes Claude an Aleut Federal collaborator — someone who speaks our internal language.
+
+## Aleut Federal Context — What Memory Should Capture
+
+Working memory and the knowledge base should learn AF-specific language and entities:
+
+- **Customers** — agencies, sub-agencies, COs, CORs, program offices.
+- **Contracts** — short name + contract number + vehicle; PoP and option dates.
+- **Vehicles** — GSA MAS schedule numbers, OASIS+ pool, SeaPort-NxG zone, CIO-SP4, STARS III, USACE MATOCs.
+- **Teaming partners and subs** — JV partners, MPP mentor/protégé, prime relationships.
+- **Internal entities** — AF subsidiaries, Aleut Corporation, Aleut shareholders.
+- **Acronyms** — FAR, DFARS, CDRL, DID, SOW, PWS, SOO, BPA, IDIQ, CLIN, REA, RFI, SS, CPARS, DCAA, DCMA, MPP, JVA, ANC, 8(a), SDB, OFCCP, EM 385-1-1, CMMC, NIST 800-171, etc.
+
+## Hard Rules
+
+- **Never write CUI into memory.** Memory and KB files traverse environments not authorized for CUI.
+- **Never write classified info** into memory.
+- **Source-selection / proposal data (FAR 3.104)** stays in the cleared capture environment.
+- **Privileged content** (attorney-prepared / -directed) marked and isolated.
+- **Mandatory-disclosure triggers** never live in personal memory — route to GC.
 
 ## The Goal
 

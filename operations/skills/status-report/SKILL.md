@@ -4,9 +4,25 @@ description: Generate a status report with KPIs, risks, and action items. Use wh
 argument-hint: "[weekly | monthly | quarterly] [project or team]"
 ---
 
-# /status-report
+# /status-report — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal-Contractor Status Reports
+
+Calibrate to audience:
+
+| Type | Audience | Key elements |
+|------|----------|--------------|
+| **Monthly Status Report (CDRL deliverable)** | Customer (CO/COR/PM) | Required CDRL format; period activities, deliverables, metrics, issues, risks, next-period work; submission via PIEE or agency channel |
+| **CPARS-supportive interim** | Customer | Surfaces performance evidence aligned to CPARS elements (quality, schedule, cost, management, small-business utilization, regulatory compliance) |
+| **EVMS report** | EVMS-covered customer | Format II–V; SPI/CPI; variance narratives; EAC |
+| **Program review** | Internal + customer | Cost, schedule, risk, scope, staffing, subcontractor performance |
+| **AIA G702/G703** | Customer / owner / surety | Schedule of values, % complete by line, retainage, change orders |
+| **Internal weekly / monthly** | AF leadership | Bookings vs plan, revenue vs plan, GM, indirect rate posture, headcount, B&P burn, top opportunities, top risks |
+| **Aleut Corp report-up** | Parent | High-level financials, headcount, regulatory posture, mandatory-disclosure activity (counsel-restricted summary) |
+
+Customer-deliverable reports must follow the CDRL format exactly (mismatches show up in CPARS); never include CUI unless the distribution is authorized; never misrepresent performance but do explain root causes and corrective action; surface LoC / LoF posture early on cost-type (FAR 52.232-20/-22).
 
 Generate a polished status report for leadership or stakeholders. See the **risk-assessment** skill for risk matrix frameworks and severity definitions.
 

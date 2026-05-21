@@ -1,0 +1,1 @@
+Federal-contractor finance and accounting workflows for Aleut Federal. DCAA-compliant journal entries and reconciliations, FAR Part 31 cost allowability checks, indirect rate / ICS preparation, T&M and cost-reimbursable invoicing, CAS-aware financial statements and variance analysis, and audit support for DCAA, DCMA, and IPA engagements.

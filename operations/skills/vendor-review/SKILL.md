@@ -1,14 +1,14 @@
 ---
 name: vendor-review
-description: Evaluate a vendor — cost analysis, risk assessment, and recommendation. Use when reviewing a new vendor proposal, deciding whether to renew or replace a contract, comparing two vendors side-by-side, or building a TCO breakdown and negotiation points before procurement sign-off.
+description: Evaluate a vendor or subcontractor for Aleut Federal — federal-contractor responsibility check, cost analysis with allowable-cost screen, risk assessment with SAM/FAPIIS/CMMC posture, flow-down readiness, and recommendation. Use when onboarding a new vendor or sub, deciding renewal vs replacement, or comparing teaming candidates for a federal pursuit.
 argument-hint: "<vendor name or proposal>"
 ---
 
-# /vendor-review
+# /vendor-review — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
 
-Evaluate a vendor with structured analysis covering cost, risk, performance, and fit.
+Evaluate a vendor or subcontractor with structured analysis covering federal-contractor responsibility, cost (with allowability screen), risk, past performance, and flow-down readiness.
 
 ## Usage
 
@@ -18,87 +18,109 @@ Evaluate a vendor with structured analysis covering cost, risk, performance, and
 
 ## What I Need From You
 
-- **Vendor name**: Who are you evaluating?
-- **Context**: New vendor evaluation, renewal decision, or comparison?
-- **Details**: Contract terms, pricing, proposal document, or current performance data
+- **Vendor / sub name** and entity (verify legal name matches SAM).
+- **Use case** — direct (charged to a contract / CLIN) or indirect (overhead / G&A / B&P).
+- **Contract context** — which federal prime contract(s) the vendor would support; contract type (FFP / T&M / CR); any specific FAR clauses to flow down.
+- **Spend profile** — annual estimate and 3-year TCO.
+- **Source documents** — proposal, prior agreements, capability statement, SAM record.
 
-## Evaluation Framework
+## Federal-Contractor Responsibility Screen (Always First)
 
-### Cost Analysis (Total Cost of Ownership)
-- Total cost of ownership (not just license fees)
-- Implementation and migration costs
-- Training and onboarding costs
-- Ongoing support and maintenance
-- Exit costs (data migration, contract termination)
+Before any cost or fit analysis, the vendor must clear these gates:
 
-### Risk Assessment
-- Vendor financial stability
-- Security and compliance posture
-- Concentration risk (single vendor dependency)
-- Contract lock-in and exit terms
-- Business continuity and disaster recovery
+| # | Gate | Source |
+|---|------|--------|
+| 1 | **Active SAM.gov registration** with valid UEI; not in the SAM exclusions list | SAM.gov |
+| 2 | **CAGE code** present and matches entity | SAM.gov / CAGE |
+| 3 | **FAPIIS** — no adverse entries that disqualify (or compensating controls documented) | FAPIIS public |
+| 4 | **Section 889 representation** — does not provide/use covered telecom entities | FAR 52.204-25; SAM annual reps |
+| 5 | **OFAC sanctioned-party screen** clear | OFAC SDN |
+| 6 | **Size and socioeconomic status** — captured per NAICS for FAR 52.219-9 reporting | DSBS / SAM |
+| 7 | **DFARS 252.204-7012 / NIST 800-171 / CMMC posture** (if vendor will handle CUI) — SPRS score / CMMC level on file | SPRS / vendor-provided |
+| 8 | **OCI screen** (FAR Subpart 9.5) — no conflicting work on the same procurement | Internal capture file + vendor disclosure |
 
-### Performance Metrics
-- SLA compliance
-- Support response times
-- Uptime and reliability
-- Feature delivery cadence
-- Customer satisfaction
+A failure on any gate stops the review (or compensating control is required and documented).
 
-### Comparison Matrix
-When comparing vendors, produce a side-by-side matrix covering: pricing, features, integrations, security, support, contract terms, and references.
+## Cost Analysis with Allowability Screen
+
+Standard TCO components:
+
+| Component | Annual Cost | Notes |
+|-----------|-------------|-------|
+| Direct rates / unit prices | $[X] | Verify against benchmarks (GSA Schedule prices for similar labor categories where applicable) |
+| Implementation / onboarding | $[X] | One-time |
+| Support / maintenance | $[X] | Annual |
+| Travel / per diem | $[X] | Subject to FTR/JTR if billed to government |
+| Exit / data return | $[X] | Plan now |
+| **Total Year 1** | **$[X]** | |
+| **Total 3-Year** | **$[X]** | |
+
+**FAR 31.205 allowability screen** — for each cost the vendor will charge into a federal billable pool or directly to a federal contract, confirm:
+
+- No expressly unallowable categories (advertising, lobbying, alcohol, entertainment, donations, fines, bad debts, certain legal).
+- Reasonable, allocable, and consistent with FAR 31.201-2.
+- Travel within FTR/JTR.
+- Compensation within FAR 31.205-6(p) caps if the vendor invoices labor at a fully-burdened rate.
+
+## Risk Assessment
+
+| Risk | Likelihood | Impact | Mitigation |
+|------|-----------|--------|------------|
+| Financial instability | | | D&B / financial-stability report; advance-payment terms |
+| Security / cyber (CUI exposure) | | | DFARS 252.204-7012 flow-down; SPRS verification; CMMC compliance evidence |
+| Section 889 supply chain | | | Annual rep + spot supplier audit |
+| OCI | | | Walling off; firewalled personnel; CO notification |
+| Concentration / single source | | | Identify backups; long-term sole-source justification |
+| Past-performance / litigation history | | | FAPIIS, GAO bid-protest history, court records |
+| Country-of-origin / TAA / BABA | | | Material origin certifications |
+| Set-aside compliance (if sub on small-business contract) | | | Verify size at contract level; track similarly-situated entity status |
+
+## Past-Performance Evaluation
+
+- Capture statement; relevant past performance (3–5 with customer, value, scope, recency).
+- Public CPARS data where available.
+- References from prior Aleut Federal contracts (CRM lookup).
+- GAO bid-protest decisions involving this vendor.
+
+## Flow-Down Readiness
+
+Confirm the vendor accepts (or has equivalent in their MSA):
+
+- **FAR 52.244-6** commercial-item flow-downs (always for commercial-item subs).
+- **Contract-specific flow-downs** for the underlying prime: DFARS 252.204-7012, FAR 52.222-6 (DBA) / -41 (SCA), 52.222-54 (E-Verify), 52.203-13 (ethics), 52.204-25 (889), 52.225-x (BAA/TAA/BABA), 52.219-9 (subcontracting reporting), 52.215-2 (records), etc.
+- **CDRL flow-downs** for deliverables.
+- **Privacy / CUI** terms if applicable.
+- **Audit access** (FAR 52.215-2) for cost-type / T&M subs.
 
 ## Output
 
 ```markdown
 ## Vendor Review: [Vendor Name]
-**Date:** [Date] | **Type:** [New / Renewal / Comparison]
+**Date:** [Date] | **Type:** [New / Renewal / Sub for opp X / Comparison]
 
-### Summary
-[2-3 sentence recommendation]
+### Responsibility Screen
+| Gate | Status |
+[8 gates from above]
 
-### Cost Analysis
-| Component | Annual Cost | Notes |
-|-----------|-------------|-------|
-| License/subscription | $[X] | [Per seat, flat, usage-based] |
-| Implementation | $[X] | [One-time] |
-| Support/maintenance | $[X] | [Included or add-on] |
-| **Total Year 1** | **$[X]** | |
-| **Total 3-Year** | **$[X]** | |
-
-### Risk Assessment
-| Risk | Likelihood | Impact | Mitigation |
-|------|-----------|--------|------------|
-| [Risk] | High/Med/Low | High/Med/Low | [Mitigation] |
-
-### Strengths
-- [Strength 1]
-- [Strength 2]
-
-### Concerns
-- [Concern 1]
-- [Concern 2]
-
-### Recommendation
+### Summary Recommendation
 [Proceed / Negotiate / Pass] — [Reasoning]
 
+### Cost & Allowability
+[TCO table; FAR 31.205 allowability notes]
+
+### Risk Matrix
+
+### Past Performance
+
+### Flow-Down Readiness
+
 ### Negotiation Points
-- [Leverage point 1]
-- [Leverage point 2]
+
+### Open Items / Conditions Precedent
 ```
-
-## If Connectors Available
-
-If **~~knowledge base** is connected:
-- Search for existing vendor evaluations, contracts, and performance reviews
-- Pull procurement policies and approval thresholds
-
-If **~~procurement** is connected:
-- Pull current contract terms, spend history, and renewal dates
-- Compare pricing against existing vendor agreements
 
 ## Tips
 
-1. **Upload the proposal** — I can extract pricing, terms, and SLAs from vendor documents.
-2. **Compare vendors** — "Compare Vendor A vs Vendor B" gets you a side-by-side analysis.
-3. **Include current spend** — For renewals, knowing what you pay now helps evaluate price changes.
+1. Upload the SAM record + capability statement + proposal — extracts pricing, certs, status.
+2. For comparisons, name both vendors and the federal contract / opportunity at issue.
+3. For renewals, attach the current agreement so flow-down readiness is checked against the latest prime-contract clauses, not stale ones.

@@ -4,9 +4,22 @@ description: Update, create, or reprioritize your product roadmap. Use when addi
 argument-hint: "<update description>"
 ---
 
-# Roadmap Update
+# Roadmap Update — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal Program Roadmaps
+
+Roadmaps for federal contracts are gated by external events. Build the roadmap with these in view:
+
+- **Contract structure** — Base period, Option Year 1 / 2 / 3 / 4 dates; option-exercise windows.
+- **CDRL delivery schedule** — each deliverable is a roadmap milestone.
+- **Funding cycles** — federal FY (Oct–Sep), CR risk, incremental-funding triggers.
+- **ATO timeline** — FedRAMP / agency ATO is a hard prerequisite for any release into a federal-customer environment.
+- **CCB / Government CCB** approval cycles for scope changes.
+- **CO authority** — any roadmap change affecting scope/price/PoP requires a written mod; "we'll fit it in" creates constructive-change risk.
+- **Recompete window** — for incumbents, the next 12–24 months of the roadmap is fundamentally about CPARS-narrative-supporting delivery.
+- **Sub / JV workshare** alignment with FAR 52.219-14 must hold across the roadmap.
 
 Update, create, or reprioritize a product roadmap.
 

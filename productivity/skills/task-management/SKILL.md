@@ -4,9 +4,22 @@ description: Simple task management using a shared TASKS.md file. Reference this
 user-invocable: false
 ---
 
-# Task Management
+# Task Management — Aleut Federal
+
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md).
 
 Tasks are tracked in a simple `TASKS.md` file that both you and the user can edit.
+
+## Aleut Federal Context — Federal-Task Hygiene
+
+Tasks in TASKS.md should:
+
+- Tag the **contract / capture / indirect pool** the task supports (drives correct charge codes — DFARS 252.242-7006(c)(7)).
+- Tag **CDRL deliverables** and federal deadlines as first-class items.
+- Tag **CO/COR action items** distinctly from internal items.
+- **Never include CUI** — TASKS.md travels through environments not authorized for CUI.
+- **Never include source-selection or proposal data** outside the cleared capture environment.
+- Surface mandatory-disclosure / hotline-related items only as a pointer to GC, never with substance.
 
 ## File Location
 

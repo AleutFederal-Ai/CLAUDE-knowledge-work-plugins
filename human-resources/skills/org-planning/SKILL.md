@@ -3,9 +3,25 @@ name: org-planning
 description: Headcount planning, org design, and team structure optimization. Trigger with "org planning", "headcount plan", "team structure", "reorg", "who should we hire next", or when the user is thinking about team size, reporting structure, or organizational design.
 ---
 
-# Org Planning
+# Org Planning — Aleut Federal
 
-Help plan organizational structure, headcount, and team design.
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md).
+
+Help plan organizational structure, headcount, and team design for a federal services and construction contractor.
+
+## Aleut Federal Context — Federal-Contractor Org Constraints
+
+- **Direct vs indirect headcount** drives indirect rates; coordinate indirect growth with Finance.
+- **B&P / IR&D budget** caps unfunded BD/R&D capacity (FAR 31.205-18).
+- **Mentor-Protégé** — workshare and capability-transfer obligations may inform role placement.
+- **JV staffing** — managing-venturer requirements and FAR 52.219-14 self-performance inform both AF and JV org charts.
+- **8(a) Annual Review** — SBA reviews ANC 8(a) firms annually; staffing changes affecting eligibility may need disclosure.
+- **Clearance / CMMC personnel pipeline** — count by clearance level and CMMC role requirements.
+- **OCONUS / Alaska** — locality-specific staffing, fringe, travel.
+- **AAP / EEO-1 / VETS-4212 thresholds** — org changes crossing thresholds trigger reporting.
+- **Aleut Corp reporting** — material org changes surface in parent reporting.
+
+Run a "federal-impact" check on every reorg or material headcount change.
 
 ## Planning Dimensions
 

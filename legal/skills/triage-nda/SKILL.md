@@ -4,15 +4,36 @@ description: Rapidly triage an incoming NDA and classify it as GREEN (standard a
 argument-hint: "<NDA file or text>"
 ---
 
-# /triage-nda -- NDA Pre-Screening
+# /triage-nda -- NDA Pre-Screening (Aleut Federal)
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
 
 Triage the NDA: @$1
 
-Rapidly triage incoming NDAs against standard screening criteria. Classify the NDA for routing: standard approval, counsel review, or full legal review.
+Rapidly triage incoming NDAs against Aleut Federal's standard screening criteria. Classify the NDA for routing: standard approval, counsel review, or full legal review.
 
-**Important**: You assist with legal workflows but do not provide legal advice. All analysis should be reviewed by qualified legal professionals before being relied upon.
+**Important:** This skill assists with legal workflows; it does not provide legal advice. All analysis must be reviewed by qualified counsel before reliance.
+
+## Aleut Federal Context
+
+NDAs in our world usually arrive in one of these flavors. Identify which **before** triaging:
+
+1. **Teaming NDA / Mutual NDA with a prime or sub** — typical pre-RFP exchange of capabilities and pricing approach. Common.
+2. **Customer / agency-issued NDA** — sometimes used during industry days, pre-solicitation engagements, or to share draft solicitation material. May implicate **Procurement Integrity Act** and source-selection sensitivity.
+3. **Vendor / supplier NDA** — incoming product evaluation, technology assessment, OEM channel program.
+4. **M&A / Tuck-in target NDA** — when evaluating an acquisition; coordinate with Corporate Development.
+5. **Mentor-Protégé / ANC-family NDA** — internal between Aleut entities or with an SBA-approved mentor.
+
+**Federal-specific triage red flags** (escalate to RED regardless of other factors):
+
+- Any indication the counterparty is sharing **source-selection information** (FAR 3.104) or **contractor bid or proposal information** that we are not entitled to receive.
+- Any **non-compete** that would restrict pursuit of federal opportunities, especially on a particular vehicle, customer, or NAICS.
+- Any **exclusivity** that would lock us out of competing teams on the same opportunity.
+- Any **CUI** disclosure where our environment isn't authorized (DFARS 252.204-7012 / NIST 800-171).
+- Any **ITAR / EAR** technical data without an export-control plan.
+- Any **classified** material — stop and route to FSO immediately.
+- **One-way disclosure to us** from a federal employee (potential ethics issue under 5 C.F.R. Part 2635).
+- Terms inconsistent with the **Aleut Federal default NDA position** in the local playbook.
 
 ## Invocation
 

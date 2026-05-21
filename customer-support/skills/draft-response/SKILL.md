@@ -4,9 +4,23 @@ description: Draft a professional customer-facing response tailored to the situa
 argument-hint: "<situation description>"
 ---
 
-# /draft-response
+# /draft-response — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal-Customer Response Rules
+
+Drafting a response to a federal customer:
+
+- **No commitments outside CO authority.** Never promise scope, schedule, or cost changes that only the CO can authorize. Acknowledge the request; route the substantive answer through Contracts.
+- **Tone** — professional, factual, dry. Federal customers do not want marketing language or apologetic flourishes; they want clear status, decisions, and dates.
+- **Plain Writing Act** — short sentences, active voice, common words.
+- **CUI scrub** — never include CUI in a response that traverses unauthorized channels.
+- **CDRL alignment** — if the response is a CDRL deliverable, follow the DID format.
+- **Constructive change preservation** — if the customer is directing out-of-scope work, the response must reserve REA rights (e.g., "we will perform as directed and submit a Request for Equitable Adjustment per FAR 52.243-x").
+- **Privacy / PII** — minimum-necessary; no PII in routine emails.
+- **Privileged content** — coordinate any reference to attorney-prepared material through GC.
+- **Mandatory disclosure** — if the response would acknowledge any FAR 52.203-13 trigger, route to GC before sending.
 
 Draft a professional, customer-facing response tailored to the situation, customer relationship, and communication context.
 

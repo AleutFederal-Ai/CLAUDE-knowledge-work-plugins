@@ -3,9 +3,37 @@ name: competitive-intelligence
 description: Research your competitors and build an interactive battlecard. Outputs an HTML artifact with clickable competitor cards and a comparison matrix. Trigger with "competitive intel", "research competitors", "how do we compare to [competitor]", "battlecard for [competitor]", or "what's new with [competitor]".
 ---
 
-# Competitive Intelligence
+# Competitive Intelligence — Aleut Federal
 
-Research your competitors extensively and generate an **interactive HTML battlecard** you can use in deals. The output is a self-contained artifact with clickable competitor tabs and an overall comparison matrix.
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md).
+
+Research federal competitors and build an interactive HTML battlecard for capture and proposal use. The output is a self-contained artifact with clickable competitor tabs and a comparison matrix.
+
+## Aleut Federal Context — Federal Competitor Profiles
+
+A federal competitor profile is structurally different from a commercial one. For each competitor, build:
+
+- **Federal mix** — share of revenue from federal vs commercial; agency breakdown from USAspending.
+- **Vehicle holdings** — GWACs, IDIQs, GSA Schedule, agency BPAs, MATOCs/SATOCs.
+- **Set-aside status** — small business / 8(a) / HUBZone / SDVOSB / WOSB / ANC subsidiary / Tribal / Native Hawaiian / large business.
+- **NAICS / PSC concentration** — where they win and lose.
+- **Past performance** — major active contracts; CPARS posture where available; recent CPARS Significant Findings.
+- **Recompete exposure** — what's up for recompete in 12–24 months (their and our incumbencies).
+- **Pricing posture** — labor categories on GSA Schedule (public); average bill rates from Schedule price lists; recent task-order award values from USAspending.
+- **Clearances / certifications** — facility clearance level, CMMC posture (where disclosed), ISO/CMMI ratings.
+- **Teaming behavior** — who they typically team with; who is their SBA Mentor or Protégé.
+- **Capture posture** — recent capture announcements, key BD hires, M&A activity, agency-specific investments.
+- **Compliance / litigation flags** — FAPIIS entries, SAM exclusions, recent qui tam settlements, bid-protest history at GAO/COFC, debarments.
+- **Differentiators they emphasize** — from their public capability statements and proposals.
+
+Use authoritative federal sources first: USAspending.gov, SAM.gov, FPDS-NG, GSA eLibrary (Schedule price lists), DSBS, GAO bid-protest decisions database, FAPIIS public, SAM exclusions, court records for active litigation.
+
+## Aleut Federal Bright Lines
+
+- **No source-selection or contractor bid/proposal information** — Procurement Integrity Act applies (FAR 3.104 / 41 U.S.C. § 2102).
+- **No insider tips on pending solicitations** from competitor employees we may hire — see compliance-check skill for PIA / § 207 / § 2104 screening.
+- **No misrepresentation** of a competitor's status — disclose accurately or not at all.
+- **Use only public sources** for the battlecard content distributed beyond the immediate team.
 
 ## How It Works
 

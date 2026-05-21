@@ -15,9 +15,27 @@ description: >
   terminology, metrics definitions, and common query patterns.
 ---
 
-# Data Context Extractor
+# Data Context Extractor — Aleut Federal
 
-A meta-skill that extracts company-specific data knowledge from analysts and generates tailored data analysis skills.
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md).
+
+A meta-skill that extracts company-specific data knowledge from analysts and generates tailored data analysis skills for Aleut Federal's data environment.
+
+## Aleut Federal Context — Federal-Contractor Data Sources
+
+When bootstrapping or iterating a data-context skill, prompt for these federal-contractor-specific data sources in addition to standard commercial warehouses:
+
+- **ERP / cost accounting** — Deltek Costpoint, Unanet, or equivalent: job-cost, indirect rates, ICS schedules, labor distribution, AP, AR, billing.
+- **Timekeeping** — Deltek Time & Expense / Replicon / ADP.
+- **PIEE / WAWF** — public voucher and invoice status.
+- **SAM.gov / USAspending / FPDS-NG / DSBS** — federal market intelligence.
+- **GovWin / HigherGov / Bloomberg Gov / EZGovOpps** — paid market intel (if active).
+- **CRM / capture** — Salesforce, HubSpot, or in-house capture tracker; pipeline and pursuits.
+- **HRIS** — ADP, Workday, UKG; headcount, clearances, OFCCP categories.
+- **Contracts CLM** — for clause registry, expirations, mod history.
+- **Cyber / GRC** — Tenable, Qualys, eMASS; CMMC posture, NIST 800-171 control status.
+
+Always note **classification level** of each source (public, FOUO, CUI, classified) and whether the extraction environment is authorized for that level. Never extract CUI into an unauthorized analysis environment.
 
 ## How It Works
 

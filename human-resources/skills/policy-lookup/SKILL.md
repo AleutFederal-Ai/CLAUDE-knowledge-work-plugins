@@ -4,11 +4,45 @@ description: Find and explain company policies in plain language. Trigger with "
 argument-hint: "<policy topic — PTO, benefits, travel, expenses, etc.>"
 ---
 
-# /policy-lookup
+# /policy-lookup — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
 
-Look up and explain company policies in plain language. Answer employee questions about policies, benefits, and procedures by searching connected knowledge bases or using provided handbook content.
+Look up and explain Aleut Federal policies in plain language. Many of our policies are driven by federal law and contract clauses, not just internal preference — when answering, identify both.
+
+## Aleut Federal Context — Frequent Federal-Driven Policies
+
+These policies are rooted in federal law or contract clauses. When an employee asks about them, give the plain-language answer **and** the authority so they understand it isn't optional.
+
+| Topic | Federal authority | Practical effect |
+|-------|-------------------|------------------|
+| Drug-free workplace | Drug-Free Workplace Act; FAR 52.223-6 | Pre-employment screen; for-cause testing; drug-conviction reporting within 5 days |
+| Work authorization / E-Verify | FAR 52.222-54; IRCA | Form I-9 + E-Verify queries; required reverification on certain federal contracts |
+| Equal employment | EO 11246, VEVRAA, Section 503, Title VII | Recruitment, posting, AAP, VETS-4212, EEO-1 obligations |
+| Affirmative action plan | OFCCP regulations | Required when contract ≥ $50K and headcount ≥ 50 |
+| Service Contract Act wages and benefits | 41 U.S.C. ch. 67; FAR 52.222-41 | WD posted at site; pay no less than WD wage + H&W |
+| Davis-Bacon wages (construction) | 40 U.S.C. ch. 31; FAR 52.222-6 | WD posted at site; weekly certified payroll (WH-347) |
+| EO 14026 minimum wage | EO 14026 | Federal contractor minimum (updated annually) |
+| Paid sick leave (federal contractors) | EO 13706 | 1 hour earned per 30 worked; 56-hour cap per year |
+| Whistleblower protections | 41 U.S.C. § 4712; 10 U.S.C. § 4701; FAR 52.203-17 | Protected disclosures of fraud / abuse on federal contracts; required posting |
+| Workplace anti-trafficking | FAR 52.222-50 | Prohibitions and compliance plan for covered contracts |
+| Ethics & conduct | FAR 52.203-13 | Code, training, hotline, internal-control system, mandatory disclosure |
+| Cyber / CUI handling | DFARS 252.204-7012; NIST 800-171 | SSP-aligned procedures; incident reporting within 72 hours |
+| Travel | FTR / JTR for federally reimbursed travel | Per diem caps; lodging tax exemption where applicable |
+| Foreign travel / OCONUS | ITAR/EAR if applicable; agency country clearance | TCP, country clearance, foreign-national interaction rules |
+| Off-duty conduct affecting clearance | SF-86 / DCSA / agency-specific | Continuous-evaluation reportable incidents (financial issues, foreign contact, etc.) |
+| Gift / entertainment with federal officials | 5 C.F.R. Part 2635; FAR 3.101 | $20/$50 de minimis; coordinate with Ethics |
+| Outside employment / moonlighting | OCI; FAR Subpart 9.5 | Disclose; conflicts with federal customer or competitor work prohibited |
+| Lobbying | 31 U.S.C. § 1352 (Byrd); FAR 52.203-11/-12; SF-LLL | Federal funds may not be used for lobbying; reporting |
+| Davis-Bacon Apprentice / Trainee programs | 29 C.F.R. § 5.5 | Approved program required; ratios |
+
+For each policy, when answering:
+
+1. Provide the **plain-language answer**.
+2. Cite the **federal authority** (clause or statute).
+3. Note any **contract-specific variations** (e.g., this contract's WD has a different H&W amount).
+4. Identify **who to contact** for the authoritative interpretation (HR, FSO, Ethics, Contracts, Legal).
+5. For anything implicating whistleblower / FCA / mandatory-disclosure, advise the employee of the FAR 52.203-13 hotline path and protections under FAR 52.203-17.
 
 ## Usage
 

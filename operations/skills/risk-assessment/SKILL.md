@@ -3,9 +3,11 @@ name: risk-assessment
 description: Identify, assess, and mitigate operational risks. Trigger with "what are the risks", "risk assessment", "risk register", "what could go wrong", or when the user is evaluating risks associated with a project, vendor, process, or decision.
 ---
 
-# Risk Assessment
+# Risk Assessment — Aleut Federal
 
-Systematically identify, assess, and plan mitigations for operational risks.
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md).
+
+Systematically identify, assess, and plan mitigations for operational risks across federal services and construction work.
 
 ## Risk Assessment Matrix
 
@@ -15,14 +17,16 @@ Systematically identify, assess, and plan mitigations for operational risks.
 | **Medium Likelihood** | Low | Medium | High |
 | **Low Likelihood** | Low | Low | Medium |
 
-## Risk Categories
+## Risk Categories — Federal Contractor
 
-- **Operational**: Process failures, staffing gaps, system outages
-- **Financial**: Budget overruns, vendor cost increases, revenue impact
-- **Compliance**: Regulatory violations, audit findings, policy breaches
-- **Strategic**: Market changes, competitive threats, technology shifts
-- **Reputational**: Customer impact, public perception, partner relationships
-- **Security**: Data breaches, access control failures, third-party vulnerabilities
+- **Operational**: Process failures, staffing gaps, system outages, FAR 52.219-14 self-performance shortfall, key-personnel attrition on contract.
+- **Financial**: Budget overruns, indirect rate drift, Limitation of Funds / Cost triggers (FAR 52.232-20/-22), provisional vs actual indirect-rate variance, defective pricing exposure (TINA).
+- **Compliance**: FAR/DFARS violations, FCA exposure, mandatory disclosure (FAR 52.203-13), OFCCP findings, SCA / Davis-Bacon WD non-compliance, Section 889, CMMC posture gaps, EM 385-1-1 / OSHA 1926 safety findings, NEPA / permits gaps.
+- **Strategic**: CR / budget continuing-resolution risk, agency-mission shifts, recompete exposure, set-aside graduation timing (8(a) 9-year clock), Mentor-Protégé expiration.
+- **Reputational**: CPARS rating impact, FAPIIS entries, suspension/debarment exposure, bid-protest losses, Aleut shareholder relations.
+- **Security / Cyber**: DFARS 252.204-7012 incidents, NIST 800-171 control failures, CMMC gaps, third-party CUI handling, classified spillage (escalate to FSO).
+- **Construction-specific**: Differing site conditions, weather/season, safety incidents (recordable / DART / fatal), permit delays, bonding capacity, surety relationship.
+- **Teaming / JV**: Partner non-performance, workshare drift from JVA, SBA compliance under 13 C.F.R. § 124.513.
 
 ## Risk Register Format
 

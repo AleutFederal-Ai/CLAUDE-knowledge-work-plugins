@@ -4,13 +4,24 @@ description: Generate contextual briefings for legal work — daily summary, top
 argument-hint: "[daily | topic <query> | incident]"
 ---
 
-# /brief -- Legal Team Briefing
+# /brief -- Legal Team Briefing (Aleut Federal)
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
 
-Generate contextual briefings for legal work. Supports three modes: daily brief, topic brief, and incident brief.
+Generate contextual briefings for legal work at Aleut Federal. Supports three modes: daily brief, topic brief, and incident brief.
 
-**Important**: This command assists with legal workflows but does not provide legal advice. Briefings should be reviewed by qualified legal professionals before being relied upon.
+**Important:** This skill assists with legal workflows; it does not provide legal advice. Briefings must be reviewed by qualified counsel.
+
+## Aleut Federal Context
+
+When generating any briefing, prioritize signals relevant to a federal services and construction contractor:
+
+- **Solicitation pipeline:** new RFPs / sources sought / industry days on SAM.gov, agency forecasts, and GovWin (filter by our NAICS and set-asides — 8(a) sole-source, 8(a) competitive, SB, HUBZone, SDVOSB).
+- **Contract administration:** mods, REAs, T4C/T4D notices, stop-work orders, CPARS communications from CORs/COs.
+- **Compliance triggers:** DCAA/DCMA notices, IG/OIG inquiries, FAPIIS entries, SBA program correspondence.
+- **Regulatory developments:** new FAR/DFARS rules (Federal Register), SBA 8(a) program changes, DOL WD updates, CMMC rollout, OFCCP directives, Section 889 supplier alerts.
+- **Bid protest watch:** GAO and COFC filings affecting our pursuits.
+- **Mandatory-disclosure triggers (FAR 52.203-13):** any credible evidence of FCA, certain criminal violations, or significant overpayment surfaced in email, chat, or hotline reports — flag prominently.
 
 ## Invocation
 

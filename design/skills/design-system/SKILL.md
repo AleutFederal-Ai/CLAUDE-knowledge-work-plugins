@@ -4,9 +4,23 @@ description: Audit, document, or extend your design system. Use when checking fo
 argument-hint: "[audit | document | extend] <component or system>"
 ---
 
-# /design-system
+# /design-system — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal Design Systems
+
+Most federal customers have their own design systems:
+
+- **U.S. Web Design System (USWDS)** — the default for many civilian agency-facing applications. Contracts may require USWDS-conformant UI; the design system audit must reflect that.
+- **VA Design System**, **GSA U.S. Design System**, **DHS Design System**, **DoD agency systems** — agency-specific extensions.
+- **Section 508 / WCAG 2.1 AA** baked into every component.
+- **Plain-language guidelines** (plainlanguage.gov) for content components.
+- **Accessibility annotations** in every component spec (ARIA, keyboard, screen reader, contrast).
+- **Data classification banner** components for CUI / classified marking.
+- **Government branding** — never apply Aleut Federal branding to customer-owned components without CO authorization.
+
+When auditing or extending, start from the customer's design-system requirements (typically named in Section L or the SOW) and inherit; don't reinvent.
 
 Manage your design system — audit for consistency, document components, or design new patterns.
 

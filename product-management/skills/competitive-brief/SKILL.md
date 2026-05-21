@@ -4,9 +4,17 @@ description: Create a competitive analysis brief for one or more competitors or 
 argument-hint: "<competitor or feature area>"
 ---
 
-# Competitive Brief
+# Competitive Brief — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). For federal BD competitive intel (against named primes on named pursuits), prefer `sales/competitive-intelligence` — it's tailored for SAM.gov / USAspending / vehicle / set-aside / CPARS analysis. This skill is best for **product / program** competition: feature-level positioning, capability differentiation. If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal Competitor Briefs (Product Lens)
+
+- **Source-selection sensitivity (FAR 3.104)** — public sources only for distributable briefs.
+- **Federal mix** — federal vs commercial; agency breakdown from USAspending.
+- **Vehicle holdings**, **set-aside posture**, **CPARS density** as differentiators.
+- **Compliance posture** — FAPIIS, SAM exclusions, suspension/debarment, GAO protest record.
+- **AF positioning** — ANC / 8(a) sole-source eligibility, MPP, Tribal benefit, OCONUS, specific past performance.
 
 Create a competitive analysis brief for one or more competitors or a feature area.
 

@@ -1,374 +1,181 @@
 ---
 name: audit-support
-description: Support SOX 404 compliance with control testing methodology, sample selection, and documentation standards. Use when generating testing workpapers, selecting audit samples, classifying control deficiencies, or preparing for internal or external audits.
+description: Support DCAA, DCMA, IPA, and CO/COR audits of Aleut Federal — incurred cost audits, accounting-system reviews, business-system audits, forward-pricing rate audits, T&M / cost-reimbursable invoice audits, floor checks, CPSR purchasing system reviews, and CAS compliance audits. Use when preparing workpapers, responding to audit requests, packaging the annual Incurred Cost Submission, or coordinating field-audit logistics.
 user-invocable: false
 ---
 
-# Audit Support
+# Federal-Contractor Audit Support — Aleut Federal
 
-**Important**: This skill assists with SOX compliance workflows but does not provide audit or legal advice. All testing workpapers and assessments should be reviewed by qualified financial professionals. While "significance" and "materiality" are context-specific concepts that are ultimately assessed by auditors, this skill is intended to assist professionals in the creation and evaluation of effective internal controls and documentation for audits.
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md).
 
-SOX 404 control testing methodology, sample selection approaches, testing documentation standards, control deficiency classification, and common control types.
+**Important:** This skill assists with federal-contractor audit workflows; it does not provide audit, accounting, or legal advice. All workpapers and audit responses must be reviewed by qualified personnel (Controller, internal audit, IPA, or counsel) before submission. While "significance" and "materiality" are context-specific and ultimately assessed by auditors, this skill helps professionals create and evaluate effective documentation. Any matter that may implicate the False Claims Act, defective pricing, or FAR 52.203-13 mandatory disclosure must be routed to the GC.
 
-## SOX 404 Control Testing Methodology
+Aleut Federal is a privately held federal contractor and is **not subject to SOX 404**. The audits we face are federal-contractor audits — primarily by the **Defense Contract Audit Agency (DCAA)** for DoD work and audits performed by, or on behalf of, civilian Contracting Officers (often via the **Defense Contract Management Agency (DCMA)** or an **Independent Public Accountant (IPA)**). This skill is calibrated to those audits.
 
-### Overview
+## Audit Universe
 
-SOX Section 404 requires management to assess the effectiveness of internal controls over financial reporting (ICFR). This involves:
+| Audit | Authority | What it tests | Typical trigger |
+|-------|-----------|---------------|-----------------|
+| **Incurred Cost Audit (ICA)** | FAR 52.216-7; FAR 42.705 | Final indirect rates and direct costs claimed on cost-type / T&M contracts in a fiscal year | Annual ICS submission; risk-based selection |
+| **Accounting System Adequacy** | SF 1408 / DFARS 252.242-7006 | Pre-award and post-award adequacy of the accounting system to support cost-type work | Pre-award survey or post-award follow-up |
+| **Business Systems Audits** | DFARS 252.242-7005 | Accounting, estimating, MMAS, purchasing (CPSR), property, EVMS | DoD contractor with applicable thresholds |
+| **Forward Pricing Rate Audit (FPRP / FPRA / FPRR)** | FAR 15.407-3 | Indirect rate forecasts used in pricing | Proposed FPRA or significant proposal under review |
+| **Defective Pricing Audit (Post-Award)** | FAR 15.407-1; 10 U.S.C. § 3702 | Whether certified cost or pricing data was current, accurate, complete at the certification date | Post-award; statute generally 6 years |
+| **Pre-Award / Cost Proposal Audit** | FAR 15.404 | Reasonableness of a proposed cost or price | Major proposal above the TINA threshold |
+| **Public Voucher / Progress Payment Audit** | FAR 52.232-7 / 52.232-16 / 52.232-25 | Billing accuracy | Selected vouchers or progress payment requests |
+| **Floor Check** | DCAA Audit Program | Labor charging in real time at a worksite | Risk-based; CO request |
+| **CPSR (Contractor Purchasing System Review)** | FAR 44.302–305; DFARS 252.244-7001 | Purchasing system; FAR 52.244-6 flow-downs; competition; documentation | Cost reimbursable subs in past 12 months > $25M trigger consideration |
+| **CAS Audits** | 48 C.F.R. Chapter 99 | Disclosure statement adequacy / compliance with applicable standards | CAS-covered award |
+| **EVMS Surveillance** | DFARS 252.234-7002 | EVM system compliance with EIA-748 | EVMS-covered programs |
+| **OFCCP / EEO Compliance Reviews** | Executive Order 11246 | (Coordinate with HR) | OFCCP scheduling letter |
+| **IG / OIG Investigations** | Various | Allegations of fraud, waste, or abuse | Hotline or whistleblower complaint; route through GC immediately |
 
-1. **Scoping:** Identify significant accounts and relevant assertions
-2. **Risk assessment:** Evaluate the risk of material misstatement for each significant account
-3. **Control identification:** Document the controls that address each risk
-4. **Testing:** Test the design and operating effectiveness of key controls
-5. **Evaluation:** Assess whether any deficiencies exist and their severity
-6. **Reporting:** Document the assessment and any material weaknesses
+## Workflow — General Audit Engagement
 
-### Scoping Significant Accounts
+### Step 1: Receive and Classify the Audit Notice
 
-An account is significant if there is more than a remote likelihood that it could contain a misstatement that is material (individually or in aggregate).
+When an audit request, entrance letter, or DCAA Form 2000 arrives:
 
-**Quantitative factors:**
-- Account balance exceeds materiality threshold (typically 3-5% of a key benchmark)
-- Transaction volume is high, increasing the risk of error
-- Account is subject to significant estimates or judgment
+1. **Read carefully** — capture the audit type, scope, contracts in scope, period, deliverable dates, point of contact.
+2. **Log the engagement** in our audit tracker with engagement code.
+3. **Notify** CFO, Controller, GC, and the responsible PMs for the in-scope contracts.
+4. **Set up a secure data room** — a controlled environment with audit-trail logging (e.g., a dedicated SharePoint/Egnyte folder; CUI-authorized if any CUI is in scope).
+5. **Establish the response cadence** — confirm or negotiate response timelines.
+6. **Mandatory-disclosure scan** — if any pre-existing matter could trigger FAR 52.203-13 in this audit, brief GC immediately.
 
-**Qualitative factors:**
-- Account involves complex accounting (revenue recognition, derivatives, pensions)
-- Account is susceptible to fraud (cash, revenue, related-party transactions)
-- Account has had prior misstatements or audit adjustments
-- Account involves significant management judgment or estimates
-- New account or significantly changed process
+### Step 2: Prepare the Workpaper Set
 
-### Relevant Assertions by Account Type
+For each audit type, assemble the standard package:
 
-| Account Type | Key Assertions |
-|-------------|---------------|
-| Revenue | Occurrence, Completeness, Accuracy, Cut-off |
-| Accounts Receivable | Existence, Valuation (allowance), Rights |
-| Inventory | Existence, Valuation, Completeness |
-| Fixed Assets | Existence, Valuation, Completeness, Rights |
-| Accounts Payable | Completeness, Accuracy, Existence |
-| Accrued Liabilities | Completeness, Valuation, Accuracy |
-| Equity | Completeness, Accuracy, Presentation |
-| Financial Close/Reporting | Presentation, Accuracy, Completeness |
+**ICA / Incurred Cost Submission backup:**
+- ICS (formerly ICE model) — Schedules A through O.
+- General Ledger / trial balance, mapped to ICS schedules.
+- Indirect rate computation workbook with eliminations.
+- Direct cost reconciliation to billed amounts by contract.
+- Labor distribution / timekeeping evidence.
+- Executive compensation analysis (FAR 31.205-6(p) cap).
+- Unallowable cost segregation (FAR 31.205) supporting schedules.
+- Bonus/incentive comp plan documentation.
+- Travel detail with FTR/JTR compliance check.
+- Related-party transactions disclosure.
+- Subcontractor settled rates and pending audits.
 
-### Design Effectiveness vs Operating Effectiveness
+**Accounting System Adequacy / SF 1408:**
+- Accounting policies & procedures manual.
+- Chart of accounts.
+- Job-cost system narrative & process flow.
+- Timekeeping procedures and electronic-timesheet controls.
+- Sample journal entries with approvals.
+- Sample T&M and CR billings with reconciliation.
 
-**Design effectiveness:** Is the control properly designed to prevent or detect a material misstatement in the relevant assertion?
-- Evaluated through walkthroughs (trace a transaction end-to-end through the process)
-- Confirm the control is placed at the right point in the process
-- Confirm the control addresses the identified risk
-- Performed at least annually, or when processes change
+**Defective Pricing / Forward Pricing:**
+- The certified cost or pricing data file used in negotiation.
+- The sweep memo (what was in/out at certification).
+- Cost models and assumptions.
+- BOE narratives.
+- Indirect rate history vs FPRA proposal.
 
-**Operating effectiveness:** Did the control actually operate as designed throughout the testing period?
-- Evaluated through testing (inspection, observation, re-performance, inquiry)
-- Requires sufficient sample sizes to support a conclusion
-- Must cover the full period of reliance
+**CPSR:**
+- Policies & procedures manual.
+- Procurement files for the sample (PR, sources sought, competition documentation, sole-source justifications, price/cost analysis, FAR 52.244-6 flow-downs, debriefs, file completion checklists).
+- Supplier qualification records (SAM exclusions, Section 889 reps, FAPIIS, size representations).
 
-## Sample Selection Approaches
+### Step 3: Manage Audit Requests for Information (RFIs)
 
-### Random Selection
+- **Single point of contact (SPOC)** for all auditor requests; no direct PM-auditor exchanges without SPOC awareness.
+- **Log every RFI** with timestamp, requester, due date, owner, and response.
+- **Privileged review** for any document with legal exposure — route through GC before release.
+- **Redactions** appropriate only for clearly-privileged matter; do not redact responsive data.
+- **Track open RFIs** in a tracker; flag aging > 5 business days.
+- **Disclose CAS noncompliance** as discovered (consistent with cooperation obligations).
 
-**When to use:** Default method for transaction-level controls with large populations.
+### Step 4: Floor-Check Logistics (Labor)
 
-**Method:**
-1. Define the population (all transactions subject to the control during the period)
-2. Number each item in the population sequentially
-3. Use a random number generator to select sample items
-4. Ensure no bias in selection (all items have equal probability)
+If a floor check is announced (often without notice for high-risk):
 
-**Advantages:** Statistically valid, defensible, no selection bias
-**Disadvantages:** May miss high-risk items, requires complete population listing
+- Verify employees on site / on call.
+- Have HR provide active employee roster, recent timesheets, job-charge codes, contract assignments.
+- Make supervisors available; coach them: be honest, answer only the question asked, don't speculate.
+- Pull our timekeeping policy and most recent training acknowledgments.
+- Run a self-floor-check the prior quarter to find issues first.
 
-### Targeted (Judgmental) Selection
+### Step 5: Manage Findings (Draft Reports)
 
-**When to use:** Supplement to random selection for risk-based testing; primary method when population is small or highly varied.
+When DCAA issues a draft report:
 
-**Method:**
-1. Identify items with specific risk characteristics:
-   - High dollar amount (above a defined threshold)
-   - Unusual or non-standard transactions
-   - Period-end transactions (cut-off risk)
-   - Related-party transactions
-   - Manual or override transactions
-   - New vendor/customer transactions
-2. Select items matching risk criteria
-3. Document rationale for each targeted selection
+1. **Read in full** — separate factual findings from cost-questioned items.
+2. **Internal reconciliation** — Controller + PMs reconcile to our records and identify factual disputes.
+3. **Cost-questioned response** — for each questioned cost:
+   - Accept (and recommend voluntary refund), or
+   - Defend (with FAR 31 / CAS authority and supporting evidence), or
+   - Negotiate (range with rationale).
+4. **Coordinate with GC** on any matter raising FCA / mandatory disclosure / defective pricing exposure.
+5. **Response letter** to the CO (typically 15–30 days) with our position and supporting evidence.
+6. **Update accruals** — record any probable refund or settlement.
 
-**Advantages:** Focuses on highest-risk items, efficient use of testing effort
-**Disadvantages:** Not statistically representative, may over-represent certain risks
+### Step 6: Final Indirect Rate Settlement / Close-Out
 
-### Haphazard Selection
+- Final indirect rate negotiation memorandum (FRAM) executed by CO.
+- Adjust prior provisional billings to final rates.
+- Generate adjustment vouchers (cumulative billings reconciliation).
+- File the executed FRAM in contract files for the relevant FY.
 
-**When to use:** When random selection is impractical (no sequential population listing) and population is relatively homogeneous.
+## Common Control Topics (Cross-Audit)
 
-**Method:**
-1. Select items without any specific pattern or bias
-2. Ensure selections are spread across the full population period
-3. Avoid unconscious bias (don't always pick items at the top, round numbers, etc.)
+### Direct vs Indirect — FAR 31.202 / 31.203
+- Pre-defined logic for charging; documented and consistently applied; no manual reassignment without approval.
 
-**Advantages:** Simple, no technology required
-**Disadvantages:** Not statistically valid, susceptible to unconscious bias
+### Unallowable Costs — FAR 31.205
+- Screened **before** indirect rate allocation; segregated to non-billable accounts.
+- Pay special attention to: lobbying (52.203-12), advertising (31.205-1), bad debts (31.205-3), contributions/donations (31.205-8), entertainment (31.205-14), gifts (31.205-13), fines & penalties (31.205-15), interest (31.205-20), executive comp cap (31.205-6(p)), legal costs in proceedings (31.205-47), professional services from related parties (31.205-33).
 
-### Systematic Selection
+### Labor / Timekeeping — DFARS 252.242-7006(c)(6),(7)
+- Daily entry; total time accounting; supervisor approval; system-enforced edit controls; documented training; no proxy entry.
 
-**When to use:** When population is sequential and you want even coverage across the period.
+### Executive Compensation Cap — FAR 31.205-6(p)
+- Confirm cap for the applicable year; apply to all "covered employees" (the term has changed over time — verify against current FAR).
 
-**Method:**
-1. Calculate the sampling interval: Population size / Sample size
-2. Select a random starting point within the first interval
-3. Select every Nth item from the starting point
+### CAS — 48 C.F.R. Chapter 99
+- Disclosure statement (if covered) reflects actual practice.
+- Cost accounting practice changes documented per 9903.302.
 
-**Example:** Population of 1,000, sample of 25 → interval of 40. Random start: item 17. Select items 17, 57, 97, 137, ...
+### FAR 52.203-13 Ethics Program
+- Code, training, hotline, internal-control system, mandatory-disclosure log all current.
 
-**Advantages:** Even coverage across population, simple to execute
-**Disadvantages:** Periodic patterns in the population could bias results
+## Output Templates
 
-### Sample Size Guidance
-
-| Control Frequency | Expected Population | Low Risk Sample | Moderate Risk Sample | High Risk Sample |
-|------------------|--------------------|-----------------|--------------------|-----------------|
-| Annual | 1 | 1 | 1 | 1 |
-| Quarterly | 4 | 2 | 2 | 3 |
-| Monthly | 12 | 2 | 3 | 4 |
-| Weekly | 52 | 5 | 8 | 15 |
-| Daily | ~250 | 20 | 30 | 40 |
-| Per-transaction (small pop.) | < 250 | 20 | 30 | 40 |
-| Per-transaction (large pop.) | 250+ | 25 | 40 | 60 |
-
-**Factors increasing sample size:**
-- Higher inherent risk in the account/process
-- Control is the sole control addressing a significant risk (no redundancy)
-- Prior period control deficiency identified
-- New control (not tested in prior periods)
-- External auditor reliance on management testing
-
-## Testing Documentation Standards
-
-### Workpaper Requirements
-
-Every control test should be documented with:
-
-1. **Control identification:**
-   - Control number/ID
-   - Control description (what is done, by whom, how often)
-   - Control type (manual, automated, IT-dependent manual)
-   - Control frequency
-   - Risk and assertion addressed
-
-2. **Test design:**
-   - Test objective (what you are trying to determine)
-   - Test procedures (step-by-step instructions)
-   - Expected evidence (what you expect to see if the control is effective)
-   - Sample selection methodology and rationale
-
-3. **Test execution:**
-   - Population description and size
-   - Sample selection details (method, items selected)
-   - Results for each sample item (pass/fail with specific evidence examined)
-   - Exceptions noted with full description
-
-4. **Conclusion:**
-   - Overall assessment (effective / deficiency / significant deficiency / material weakness)
-   - Basis for conclusion
-   - Impact assessment for any exceptions
-   - Compensating controls considered (if applicable)
-
-5. **Sign-off:**
-   - Tester name and date
-   - Reviewer name and date
-
-### Evidence Standards
-
-**Sufficient evidence includes:**
-- Screenshots showing system-enforced controls
-- Signed/initialed approval documents
-- Email approvals with identifiable approver and date
-- System audit logs showing who performed the action and when
-- Re-performed calculations with matching results
-- Observation notes (with date, location, observer)
-
-**Insufficient evidence:**
-- Verbal confirmations alone (must be corroborated)
-- Undated documents
-- Evidence without identifiable performer/approver
-- Generic system reports without date/time stamps
-- "Per discussion with [name]" without corroborating documentation
-
-### Working Paper Organization
-
-Organize testing files by control area:
+### Audit Engagement Tracker Entry
 
 ```
-SOX Testing/
-├── [Year]/
-│   ├── Scoping and Risk Assessment/
-│   ├── Revenue Cycle/
-│   │   ├── Control Matrix
-│   │   ├── Walkthrough Documentation
-│   │   ├── Test Workpapers (one per control)
-│   │   └── Supporting Evidence
-│   ├── Procure to Pay/
-│   ├── Payroll/
-│   ├── Financial Close/
-│   ├── Treasury/
-│   ├── Fixed Assets/
-│   ├── IT General Controls/
-│   ├── Entity Level Controls/
-│   └── Summary and Conclusions/
-│       ├── Deficiency Evaluation
-│       └── Management Assessment
+**Engagement:** [audit type] — [auditor] — [period]
+**Notice received:** [date]
+**Entrance conference:** [date]
+**Contracts in scope:** [...]
+**SPOC:** [...]
+**Status:** [Open / Fieldwork / Draft / Response / Closed]
+**Key dates:** [...]
+**Open RFIs:** [count, oldest]
+**Risk flags:** [PIA / FCA / mandatory disclosure exposure?]
 ```
 
-## Control Deficiency Classification
+### Cost-Questioned Item Response
 
-### Deficiency
+```
+**Audit:** [...]
+**Questioned cost / Issue:** [...]
+**Auditor position:** [...]
+**Our position:** Accept / Defend / Negotiate
+**Authority:** [FAR / CAS / contract clause citation]
+**Evidence:** [list]
+**Proposed dollars:** [...]
+**FCA / Mandatory-disclosure exposure:** [None / Refer to GC]
+**Owner / Due date:** [...]
+```
 
-A deficiency in internal control exists when the design or operation of a control does not allow management or employees, in the normal course of performing their assigned functions, to prevent or detect misstatements on a timely basis.
+## Bright Lines
 
-**Evaluation factors:**
-- What is the likelihood that the control failure could result in a misstatement?
-- What is the magnitude of the potential misstatement?
-- Is there a compensating control that mitigates the deficiency?
-
-### Significant Deficiency
-
-A deficiency, or combination of deficiencies, that is less severe than a material weakness yet important enough to merit attention by those charged with governance.
-
-**Indicators:**
-- The deficiency could result in a misstatement that is more than inconsequential but less than material
-- There is more than a remote (but less than reasonably possible) likelihood of a material misstatement
-- The control is a key control and the deficiency is not fully mitigated by compensating controls
-- Combination of individually minor deficiencies that together represent a significant concern
-
-### Material Weakness
-
-A deficiency, or combination of deficiencies, such that there is a reasonable possibility that a material misstatement of the financial statements will not be prevented or detected on a timely basis.
-
-**Indicators:**
-- Identification of fraud by senior management (any magnitude)
-- Restatement of previously issued financial statements to correct a material error
-- Identification by the auditor of a material misstatement that would not have been detected by the company's controls
-- Ineffective oversight of financial reporting by the audit committee
-- Deficiency in a pervasive control (entity-level, IT general control) affecting multiple processes
-
-### Deficiency Aggregation
-
-Individual deficiencies that are not significant individually may be significant in combination:
-
-1. Identify all deficiencies in the same process or affecting the same assertion
-2. Evaluate whether the combined effect could result in a material misstatement
-3. Consider whether deficiencies in compensating controls exacerbate other deficiencies
-4. Document the aggregation analysis and conclusion
-
-### Remediation
-
-For each identified deficiency:
-
-1. **Root cause analysis:** Why did the control fail? (design gap, execution failure, staffing, training, system issue)
-2. **Remediation plan:** Specific actions to fix the control (redesign, additional training, system enhancement, added review)
-3. **Timeline:** Target date for remediation completion
-4. **Owner:** Person responsible for implementing the remediation
-5. **Validation:** How and when the remediated control will be re-tested to confirm effectiveness
-
-## Common Control Types
-
-### IT General Controls (ITGCs)
-
-Controls over the IT environment that support the reliable functioning of application controls and automated processes.
-
-**Access Controls:**
-- User access provisioning (new access requests require approval)
-- User access de-provisioning (terminated users removed timely)
-- Privileged access management (admin/superuser access restricted and monitored)
-- Periodic access reviews (user access recertified on a defined schedule)
-- Password policies (complexity, rotation, lockout)
-- Segregation of duties enforcement (conflicting access prevented)
-
-**Change Management:**
-- Change requests documented and approved before implementation
-- Changes tested in a non-production environment before promotion
-- Separation of development and production environments
-- Emergency change procedures (documented, approved post-implementation)
-- Change review and post-implementation validation
-
-**IT Operations:**
-- Batch job monitoring and exception handling
-- Backup and recovery procedures (regular backups, tested restores)
-- System availability and performance monitoring
-- Incident management and escalation procedures
-- Disaster recovery planning and testing
-
-### Manual Controls
-
-Controls performed by people using judgment, typically involving review and approval.
-
-**Examples:**
-- Management review of financial statements and key metrics
-- Supervisory approval of journal entries above a threshold
-- Three-way match verification (PO, receipt, invoice)
-- Account reconciliation preparation and review
-- Physical inventory observation and count
-- Vendor master data change approval
-- Customer credit approval
-
-**Key attributes to test:**
-- Was the control performed by the right person (proper authority)?
-- Was it performed timely (within the required timeframe)?
-- Is there evidence of the review (signature, initials, email, system log)?
-- Did the reviewer have sufficient information to perform an effective review?
-- Were exceptions identified and appropriately addressed?
-
-### Automated Controls
-
-Controls enforced by IT systems without human intervention.
-
-**Examples:**
-- System-enforced approval workflows (cannot proceed without required approvals)
-- Three-way match automation (system blocks payment if PO/receipt/invoice don't match)
-- Duplicate payment detection (system flags or blocks duplicate invoices)
-- Credit limit enforcement (system prevents orders exceeding credit limit)
-- Automated calculations (depreciation, amortization, interest, tax)
-- System-enforced segregation of duties (conflicting roles prevented)
-- Input validation controls (required fields, format checks, range checks)
-- Automated reconciliation matching
-
-**Testing approach:**
-- Test design: Confirm the system configuration enforces the control as intended
-- Test operating effectiveness: For automated controls, if the system configuration has not changed, one test of the control is typically sufficient for the period (supplemented by ITGC testing of change management)
-- Verify change management ITGCs are effective (if system changed, re-test the control)
-
-### IT-Dependent Manual Controls
-
-Manual controls that rely on the completeness and accuracy of system-generated information.
-
-**Examples:**
-- Management review of a system-generated exception report
-- Supervisor review of a system-generated aging report to assess reserves
-- Reconciliation using system-generated trial balance data
-- Approval of transactions identified by a system-generated workflow
-
-**Testing approach:**
-- Test the manual control (review, approval, follow-up on exceptions)
-- AND test the completeness and accuracy of the underlying report/data (IPE — Information Produced by the Entity)
-- IPE testing confirms the data the reviewer relied on was complete and accurate
-
-### Entity-Level Controls
-
-Broad controls that operate at the organizational level and affect multiple processes.
-
-**Examples:**
-- Tone at the top / code of conduct
-- Risk assessment process
-- Audit committee oversight of financial reporting
-- Internal audit function and activities
-- Fraud risk assessment and anti-fraud programs
-- Whistleblower/ethics hotline
-- Management monitoring of control effectiveness
-- Financial reporting competence (staffing, training, qualifications)
-- Period-end financial reporting process (close procedures, GAAP compliance reviews)
-
-**Significance:**
-- Entity-level controls can mitigate but typically cannot replace process-level controls
-- Ineffective entity-level controls (especially audit committee oversight and tone at the top) are strong indicators of a material weakness
-- Effective entity-level controls may reduce the extent of testing needed for process-level controls
+- **Never** alter, backdate, or destroy documents that may be responsive to an audit, even if you believe they are unhelpful.
+- **Never** instruct an employee how to answer a specific auditor question other than "be truthful and only answer what is asked."
+- **Never** treat a hotline / whistleblower allegation as the trigger for cover-up activity — that converts an audit issue into a criminal issue.
+- **Always** route potential FCA, Anti-Kickback Act, Procurement Integrity Act, or FAR 52.203-13 mandatory-disclosure issues to GC immediately.
+- **Always** maintain document holds when an audit, investigation, or litigation is reasonably anticipated.

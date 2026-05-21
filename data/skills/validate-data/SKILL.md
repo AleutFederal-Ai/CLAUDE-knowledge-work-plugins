@@ -4,9 +4,22 @@ description: QA an analysis before sharing -- methodology, accuracy, and bias ch
 argument-hint: "<analysis to review>"
 ---
 
-# /validate-data - Validate Analysis Before Sharing
+# /validate-data — Validate Analysis Before Sharing (Aleut Federal)
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal-Audience Validation
+
+Before sharing an analysis externally (customer, IPA, DCAA, lender, surety), validate:
+
+- **Definitions** match the contract / customer convention (cost-to-date, EAC, indirect rate, period basis, FY vs CY).
+- **Source provenance** — every metric ties back to a system of record we can show on demand.
+- **Reproducibility** — query / notebook / model is versioned and retained per FAR 4.703.
+- **CUI / PII scrub** — no controlled data leaks into the distributable.
+- **Section 508** if delivered as PDF or HTML.
+- **Methodology footer** present.
+- **No source-selection-sensitive content** if distribution extends beyond the cleared capture team.
+- **Privileged markings** preserved if the analysis was prepared for / by counsel.
 
 Review an analysis for accuracy, methodology, and potential biases before sharing with stakeholders. Generates a confidence assessment and improvement suggestions.
 

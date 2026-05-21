@@ -3,9 +3,22 @@ name: user-research
 description: Plan, conduct, and synthesize user research. Trigger with "user research plan", "interview guide", "usability test", "survey design", "research questions", or when the user needs help with any aspect of understanding their users through research.
 ---
 
-# User Research
+# User Research — Aleut Federal
 
-Help plan, execute, and synthesize user research studies.
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md).
+
+Help plan, execute, and synthesize user research studies with federal users.
+
+## Aleut Federal Context — Federal User Research
+
+- **PRA / OMB clearance** — research collecting identical information from 10+ members of the public typically requires OMB approval (44 U.S.C. ch. 35). Carve-outs: federal employees in the course of their duties, contractor-only research, qualitative usability testing under generic clearances. Plan for clearance lead times in the research roadmap.
+- **Recruiting federal employees** — must respect their gift / endorsement / time-on-task rules (5 C.F.R. Part 2635); typically no incentive payments to federal employees.
+- **Incentives** to non-federal participants must be reasonable and documented per FAR 31.205 (when the contract pays for them).
+- **Consent and recording** — informed consent in writing; recording requires explicit consent; CUI must not enter research recordings.
+- **Privacy Act / PII** — identifiable participant data handled per the agency's Privacy Act SORN.
+- **Section 508** — research instruments (surveys, screens) accessible.
+- **Customer ownership of research outputs** — research conducted under a federal contract typically produces deliverables with Government Purpose Rights or Unlimited Rights; check FAR 52.227-14 / DFARS 252.227-7013/7014 in the contract.
+- **CO authorization** for any research that contacts federal customers outside the contract scope; never use insights to gain competitive advantage on adjacent procurements (PIA).
 
 ## Research Methods
 

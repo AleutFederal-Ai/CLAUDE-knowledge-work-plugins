@@ -4,9 +4,19 @@ description: Generate a standup update from recent activity. Use when preparing 
 argument-hint: "[yesterday | today | blockers]"
 ---
 
-# /standup
+# /standup — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal Standups
+
+When the standup is on a federal contract:
+
+- **No CUI in distributable standup notes** — keep CUI-marked work descriptions inside the authorized environment.
+- **Charge codes implicit** — work items should map back to the contract / CLIN / task or to the proper indirect pool; if unclear, note as a blocker for the PM.
+- **CDRL milestones** — surface upcoming CDRL deliverable dates; missed dates affect CPARS.
+- **Blockers** — call out blockers that require CO / COR action separately so the PM can escalate properly (constructive-change risk).
+- **Cleared-personnel limitations** — if a cleared-only conversation is needed, schedule that separately; don't mix unclassified standup with classified detail.
 
 Generate a standup update by pulling together recent activity across your tools.
 

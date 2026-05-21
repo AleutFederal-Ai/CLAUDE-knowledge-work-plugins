@@ -4,9 +4,21 @@ description: Synthesize user research into themes, insights, and recommendations
 argument-hint: "<research data, transcripts, or survey results>"
 ---
 
-# /research-synthesis
+# /research-synthesis — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal-User Research Synthesis
+
+When synthesizing research with federal users:
+
+- **PRA compliance** — research that collects identical information from 10 or more members of the public requires OMB clearance under the Paperwork Reduction Act unless an exception applies. Internal federal-employee research and contractor-only research is typically exempt; verify before proceeding.
+- **Privacy / PII** — research data containing PII handled per the Privacy Act and the agency's Privacy Impact Assessment.
+- **CUI handling** — research notes referencing CUI live in authorized environments.
+- **Federal-employee identifiability** — direct quotes attributed to identifiable federal employees can create issues (5 C.F.R. § 2635 / agency policy on endorsements). Aggregate / anonymize.
+- **Distribution** — synthesis distributed to the customer is a CDRL deliverable if specified; format per the DID.
+
+Themes should map back to PWS / SOO objectives the contract is performing against.
 
 Synthesize user research data into actionable insights. See the **user-research** skill for research methods, interview guides, and analysis frameworks.
 

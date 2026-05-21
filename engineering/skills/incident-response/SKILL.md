@@ -4,9 +4,38 @@ description: Run an incident response workflow — triage, communicate, and writ
 argument-hint: "<incident description or alert>"
 ---
 
-# /incident-response
+# /incident-response — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal-Contract Incident Handling
+
+Federal IR is two parallel tracks: **service restoration** (SLA / CDRL availability) AND **regulatory reporting**.
+
+### Cyber incident track — DFARS 252.204-7012
+
+If the incident involves a **"cyber incident"** that affects covered defense information (CUI), the contractor's information system, or the ability to perform requirements designated as operationally critical:
+
+- **72-hour reporting to DIBNet** (https://dibnet.dod.mil) is **mandatory** under DFARS 252.204-7012.
+- **Preserve forensic images** of affected systems for 90 days.
+- **Media-related malicious software**, if isolated, must be submitted to DoD Cyber Crime Center.
+- **No customer-side workaround that exposes CUI** — even if it restores service faster.
+- **CO and COR notification** in parallel with DIBNet report.
+- Civilian-agency incidents follow agency-specific incident reporting (often CISA + agency SOC).
+
+### Service incident track
+
+Standard triage / commander-of-the-incident / communications / postmortem.
+
+- **SLA / CDRL impact** — track availability against contracted SLA; document for the MSR and CPARS narrative.
+- **Customer comms** — CO / COR receive formal notice; do not communicate directly with end users without coordination.
+- **Postmortem** — blameless internally; sanitized for any CUI before sharing outside the authorized environment; provided to the customer per the CDRL if a deliverable exists.
+
+### Bright lines
+
+- Never destroy evidence; preservation overrides convenience.
+- Never share incident details with parties outside the authorized environment without CO clearance.
+- If the incident has any indication of fraud (FCA), criminal conduct, or significant overpayment, **separately route to GC** for FAR 52.203-13 mandatory-disclosure consideration.
 
 Manage an incident from detection through postmortem.
 

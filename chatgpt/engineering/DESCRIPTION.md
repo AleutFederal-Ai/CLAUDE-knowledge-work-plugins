@@ -1,0 +1,1 @@
+Engineering workflows for Aleut Federal's federal IT and systems-engineering work — standups, code review, architecture decisions, incident response, and technical documentation calibrated for NIST RMF / ATO, FedRAMP, CMMC / NIST 800-171 CUI environments, DFARS 252.204-7012 cyber-incident reporting, Section 508 accessibility, and ITAR/EAR-controlled engineering data.

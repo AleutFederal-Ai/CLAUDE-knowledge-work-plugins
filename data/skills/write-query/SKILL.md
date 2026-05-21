@@ -4,9 +4,9 @@ description: Write optimized SQL for your dialect with best practices. Use when 
 argument-hint: "<description of what data you need>"
 ---
 
-# /write-query - Write Optimized SQL
+# /write-query — Write Optimized SQL (Aleut Federal)
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). See the user-invocable `sql-queries` skill for federal-data hygiene (no CUI in snippets, audit logging assumptions, PII minimization, cost-data join alignment). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
 
 Write a SQL query from a natural language description, optimized for your specific SQL dialect and following best practices.
 

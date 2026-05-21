@@ -4,9 +4,28 @@ description: Check the status of existing agreements with a vendor across all co
 argument-hint: "[vendor name]"
 ---
 
-# /vendor-check -- Vendor Agreement Status
+# /vendor-check -- Vendor Agreement Status (Aleut Federal)
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal-Contractor Vendor Diligence
+
+In addition to the standard MSA/DPA/SOW gap check, vendors used on federal contracts must clear these gates:
+
+- **SAM.gov registration** active; **not** on the SAM exclusions list (suspension/debarment).
+- **FAPIIS check** — review any adverse entries.
+- **CAGE code** present and matches entity.
+- **Size & socioeconomic status** confirmed against the SBA standard for the applicable NAICS; small / SDB / 8(a) / HUBZone / SDVOSB / WOSB status captured for FAR 52.219-9 subcontracting plan reporting.
+- **Section 889 (FAR 52.204-25)** representation — re-collect annually.
+- **Country of origin / TAA / Buy American / BABA** reps where applicable.
+- **DFARS 252.204-7012 / NIST 800-171 / CMMC** posture if vendor handles CUI — SPRS score and CMMC level on file.
+- **Insurance** COI with required limits and additional-insured endorsement; on construction, OCIP/CCIP alignment.
+- **Bonding (construction)** for subs above thresholds — performance + payment bonds or SDI by exception.
+- **Flow-downs** — vendor accepts FAR 52.244-6 (commercial item) plus contract-specific flow-downs (Davis-Bacon, SCA, DFARS 252.204-7012, Section 889, EO 14026 wage, E-Verify, OFCCP/EEO, Section 503, VEVRAA).
+- **OFAC / sanctioned-party screen.**
+- **OCI screen** under FAR 9.5.
+
+A vendor failing any gate is not approvable for a federal-contract role without compensating controls and counsel review.
 
 Check the status of existing agreements with a vendor across all connected systems. Provides a consolidated view of the legal relationship.
 

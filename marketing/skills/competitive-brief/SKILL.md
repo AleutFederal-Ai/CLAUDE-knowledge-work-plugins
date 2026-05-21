@@ -4,9 +4,28 @@ description: Research competitors and generate a positioning and messaging compa
 argument-hint: "<competitor or market segment>"
 ---
 
-# Competitive Brief
+# Competitive Brief — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal Competitor Briefs
+
+Federal competitive briefs differ from commercial ones — the buyer is a federal agency, evaluation criteria are published (Section M), and the field is bounded by set-aside, vehicle, and NAICS.
+
+Build:
+
+- **Direct competitors** — likely bidders on the named opportunity or on the agency / NAICS pattern.
+- **Federal mix** — federal vs commercial revenue; agency breakdown from USAspending.
+- **Vehicle holdings** — GWACs, IDIQs, GSA Schedule, MATOCs, BPAs.
+- **Set-aside posture** — large, small, 8(a), HUBZone, SDVOSB, WOSB, ANC, Tribal, Native Hawaiian.
+- **Past performance density** — relevant CPARS, recent wins, agency relationships.
+- **GSA Schedule pricing** as a public benchmark (eLibrary).
+- **Recompete posture** — what they're trying to retain or take.
+- **Compliance posture** — FAPIIS entries, SAM exclusions, qui tam settlements, GAO/COFC protest history, suspension/debarment.
+- **Differentiators they claim** — capability statements, press releases, proposals.
+- **AF positioning vs each** — where ANC / 8(a) sole-source, MPP, OCONUS, or specialized past performance gives us an edge.
+
+Use only public sources for briefs distributed beyond the immediate capture team. No source-selection-sensitive information (FAR 3.104 / Procurement Integrity Act).
 
 Research competitors and generate a structured competitive analysis comparing positioning, messaging, content strategy, and market presence.
 

@@ -4,9 +4,11 @@ description: Create effective data visualizations with Python (matplotlib, seabo
 user-invocable: false
 ---
 
-# Data Visualization Skill
+# Data Visualization Skill — Aleut Federal
 
-Chart selection guidance, Python visualization code patterns, design principles, and accessibility considerations for creating effective data visualizations.
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). See the user-invocable `create-viz` skill for federal-audience visualization rules (Section 508, CUI banners, no agency logos, methodology footers, accessible PDFs).
+
+Chart selection guidance, Python visualization code patterns, design principles, and accessibility considerations for creating effective data visualizations in a federal-contractor environment.
 
 ## Chart Selection Guide
 

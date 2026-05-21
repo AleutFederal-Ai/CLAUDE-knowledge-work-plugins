@@ -4,11 +4,34 @@ description: Reconcile accounts by comparing GL balances to subledgers, bank sta
 argument-hint: "<account> [period]"
 ---
 
-# Reconciliation
+# Reconciliation — Aleut Federal
 
-**Important**: This skill assists with reconciliation workflows but does not provide financial advice. All reconciliations should be reviewed by qualified financial professionals before sign-off.
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md).
 
-Methodology and best practices for account reconciliation, including GL-to-subledger, bank reconciliations, and intercompany. Covers reconciling item categorization, aging analysis, and escalation.
+**Important:** This skill assists with reconciliation workflows; it does not provide financial advice. All reconciliations should be reviewed by qualified personnel before sign-off.
+
+Methodology and best practices for GL-to-subledger, bank, and intercompany reconciliation, plus the federal-contractor reconciliations Aleut Federal must perform.
+
+## Aleut Federal Context — Federal-Contractor Reconciliations
+
+Schedule and track these in addition to standard recs:
+
+| Reconciliation | Why it matters |
+|----------------|----------------|
+| **Job-cost ledger to GL by contract** | DFARS 252.242-7006(c)(2) accounting-system requirement; supports billing accuracy and ICS |
+| **Direct labor (timekeeping) to GL** | Floor-check defense; labor distribution accuracy |
+| **Indirect cost pools (fringe / OH / G&A) to GL** | Provisional rate true-up; ICS alignment |
+| **Cumulative billings to revenue recognized (cost-type / T&M)** | Prevents under/over billing; FCA exposure control |
+| **Public vouchers (SF 1034/1035) submitted vs paid in PIEE/WAWF** | Cash forecast accuracy; aging of unpaid vouchers |
+| **Funded value vs cumulative billings on cost-type CLINs** | Triggers FAR 52.232-22 (LoF) / 52.232-20 (LoC) notifications at 75% / 85% |
+| **Retainage (construction) — withheld vs released** | Per FAR 52.232-5; aged retainage release at substantial completion |
+| **Subcontractor accruals to subcontract ceilings** | Prevents over-billing |
+| **Unallowable cost accounts (FAR 31.205)** | Verify nothing leaks into billable indirect pools |
+| **Approved-vendor list vs SAM exclusions / Section 889 reps** | Monthly vendor compliance |
+| **Government-furnished property (GFP) inventory** | DFARS 252.245-7003 property system rec |
+| **DCAA provisional billing rates vs trailing actuals** | Adjustment if material variance (FAR 42.704) |
+
+Document each rec with preparer, reviewer, period, reconciling items by category, aging of unresolved items, and escalation when older than 60 days or above materiality.
 
 ## Reconciliation Types
 

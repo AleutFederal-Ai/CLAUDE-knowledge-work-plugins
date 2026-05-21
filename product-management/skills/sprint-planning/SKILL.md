@@ -4,9 +4,21 @@ description: Plan a sprint — scope work, estimate capacity, set goals, and dra
 argument-hint: "[sprint name or date range]"
 ---
 
-# /sprint-planning
+# /sprint-planning — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal Sprint Planning
+
+In addition to standard sprint considerations:
+
+- **Sprint scope must stay in-contract.** Out-of-scope work needs a CO mod (FAR Subpart 43); don't sneak it into a sprint.
+- **Direct vs indirect charging** — each story maps to a contract / CLIN / task or an indirect pool. Stories that span both need clear split estimates.
+- **Cleared-staff availability** — sprint planning factors clearance + CUI access (not just generic capacity).
+- **CDRL deadlines** are first-class sprint goals.
+- **POA&M closure stories** for security controls count toward ATO posture.
+- **Section 508 / accessibility** acceptance criteria part of definition-of-done.
+- **Customer demo cadence** — federal customers often expect formal sprint reviews; coordinate through the COR.
 
 Plan a sprint by scoping work, estimating capacity, and setting clear goals.
 

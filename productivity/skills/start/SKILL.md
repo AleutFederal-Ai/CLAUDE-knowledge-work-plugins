@@ -3,9 +3,18 @@ name: start
 description: Initialize the productivity system and open the dashboard. Use when setting up the plugin for the first time, bootstrapping working memory from your existing task list, or decoding the shorthand (nicknames, acronyms, project codenames) you use in your todos.
 ---
 
-# Start Command
+# Start Command — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — First-Time Setup
+
+On init:
+
+- **Seed memory** with the user's role, contract assignments, customer agency, clearance level (general — never store specific clearance details), and primary capture / program work.
+- **Confirm classification posture** — productivity tools are NOT authorized for CUI; bootstrap memory from non-CUI sources only.
+- **Pull recent commitments** from non-CUI sources (calendar, unclassified email, internal task tracker).
+- **Decode AF acronyms and customer shorthand** during early interactions; build the glossary as it learns.
 
 Initialize the task and memory systems, then open the unified dashboard.
 

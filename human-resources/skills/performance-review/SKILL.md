@@ -4,9 +4,21 @@ description: Structure a performance review with self-assessment, manager templa
 argument-hint: "<employee name or review cycle>"
 ---
 
-# /performance-review
+# /performance-review — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Reviews on Federal Contracts
+
+For staff on federal contracts, include:
+
+- **Contract performance** aligned to CPARS factors (quality, schedule, cost control, management, small-business utilization, regulatory compliance).
+- **Compliance behaviors** — timekeeping accuracy, charge-code discipline, ethics-program completion, security-program participation.
+- **Cleared / CUI performance** — handling per the SSP; no security incidents.
+- **Customer engagement** — CO/COR feedback where collected.
+- **Subcontractor / teammate engagement** for those interacting with subs / JV partners.
+
+EEO / OFCCP recordkeeping rules apply throughout. Document objective, contract-aligned criteria; review distributions for adverse-impact patterns where AAP is in place.
 
 Generate performance review templates and help structure feedback.
 

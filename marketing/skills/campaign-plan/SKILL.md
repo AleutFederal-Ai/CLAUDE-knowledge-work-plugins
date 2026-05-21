@@ -4,9 +4,28 @@ description: Generate a full campaign brief with objectives, audience, messaging
 argument-hint: "<campaign objective or product>"
 ---
 
-# Campaign Plan
+# Campaign Plan — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal Marketing Campaigns
+
+Federal-market campaigns differ from B2B SaaS campaigns:
+
+- **Audience** — agency program offices, COs / KOs, COR / TM, OSDBU, primes / SBLOs, industry partners. Buyers aren't commercial decision-makers; campaigns must respect federal procurement processes (sources sought, RFI, industry day).
+- **Channels** — agency-focused events (AFCEA TechNet, SAME JETC, NCMA, AUSA, Sea-Air-Space, AFA, FedTalks), trade press (Federal News Network, Washington Technology, GovExec, Defense News, ENR for construction), agency industry days, webinars, LinkedIn (with caution), targeted OSDBU / SBLO email.
+- **Content types** — capability statements, past-performance one-pagers, white papers, mission-focused thought leadership, case studies (with CO approval for federal references), Aleut shareholder-benefit stories.
+- **Cadence** — federal fiscal year (Oct–Sep): Q1 CR-driven uncertainty, Q2–Q3 high-spend, Q4 fiscal year-end rush. Industry days cluster in spring; conferences spread through the year.
+- **Differentiators** — ANC / 8(a) sole-source eligibility, Mentor-Protégé, Tribal benefit, OCONUS / Alaska capability, specific past performance.
+- **Hard rules**:
+  - No agency logos / contract numbers without CO authorization.
+  - No federal-employee testimonials (5 C.F.R. § 2635.702).
+  - No claims of endorsement.
+  - No source-selection-sensitive content.
+  - Section 889 — no covered telecom in any solution mention.
+  - PIA / former-official screen for any agency personnel in promotional material.
+
+Success metrics aren't MQLs / SQLs — they are sources-sought responses, RFI participation, capability-briefing meetings, additions to bidders lists, teaming inquiries, and ultimately award shaping.
 
 Generate a comprehensive marketing campaign brief with objectives, audience, messaging, channel strategy, content calendar, and success metrics.
 

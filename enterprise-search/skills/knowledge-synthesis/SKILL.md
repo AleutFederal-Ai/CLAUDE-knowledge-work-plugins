@@ -4,9 +4,20 @@ description: Combines search results from multiple sources into coherent, dedupl
 user-invocable: false
 ---
 
-# Knowledge Synthesis
+# Knowledge Synthesis — Aleut Federal
 
-The last mile of enterprise search. Takes raw results from multiple sources and produces a coherent, trustworthy answer.
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md).
+
+The last mile of enterprise search. Takes raw results from multiple sources and produces a coherent, trustworthy answer for a federal-contractor environment.
+
+## Aleut Federal Context — Federal-Contractor Synthesis Rules
+
+- **Honor classification** — synthesis can never downgrade markings. If any source is CUI, synthesis is CUI.
+- **Privileged content** stays privileged; mark "Attorney-Client Privileged / Attorney Work Product" if any privileged source is included.
+- **Source-selection sensitivity** — synthesis touching capture / proposal info is PIA-sensitive.
+- **Authority weighting** — favor official sources (contracts, mods, CO/COR comms) over informal channels.
+- **Currency** — cite the FAR / DFARS revision date when synthesizing regulatory content.
+- **Confidence scoring** — call out when synthesis blends sources of different classification or authority.
 
 ## The Goal
 

@@ -4,9 +4,27 @@ description: Review content against your brand voice, style guide, and messaging
 argument-hint: "<content to review>"
 ---
 
-# Brand Review
+# Brand Review — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal Brand-Review Gates
+
+Beyond voice and style, every brand review must flag:
+
+- **Agency / customer references** used without CO authorization (logos, names, contract numbers).
+- **Federal-employee testimonials / implied endorsements** (5 C.F.R. § 2635.702).
+- **Source-selection-sensitive content** (FAR 3.104).
+- **CUI** in distributable material.
+- **Section 889** issues (covered telecom in solution mentions).
+- **Buy American / TAA / BABA** representations that aren't accurate.
+- **Certifications** claimed without current SBA / NAICS / clearance / CMMC status.
+- **Aleut shareholder representation** — accurate, dignified, coordinated with Aleut Corp Comms.
+
+Severity:
+- **BLOCK** — any compliance hit; do not publish.
+- **EDIT** — voice / style off but no compliance issue.
+- **PASS** — clear.
 
 Review marketing content against brand voice, style guidelines, and messaging standards. Flag deviations and provide specific improvement suggestions.
 

@@ -3,9 +3,31 @@ name: process-optimization
 description: Analyze and improve business processes. Trigger with "this process is slow", "how can we improve", "streamline this workflow", "too many steps", "bottleneck", or when the user describes an inefficient process they want to fix.
 ---
 
-# Process Optimization
+# Process Optimization — Aleut Federal
 
-Analyze existing processes and recommend improvements.
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md).
+
+Analyze existing processes and recommend improvements, with awareness of the federal-contractor environment.
+
+## Aleut Federal Context — Constraints on "Optimization"
+
+Many commercial "optimizations" are not permissible for a federal contractor:
+
+- Cannot bypass FAR/DFARS clause obligations (e.g., skip competitive sub procurement when FAR 52.244-2 or our CPSR requires it).
+- Cannot skip approvals required by the CO (FAR 52.243-x changes; FAR 52.245-x property).
+- Cannot lower the FAR 31.205 cost-allowability bar to widen margin.
+- Cannot relax NIST 800-171 / CMMC controls below the contract requirement.
+- Cannot reduce SCA / Davis-Bacon compliance for efficiency.
+- Cannot reduce documentation that DCAA / DCMA / IPA needs.
+
+Optimizations that ARE valuable:
+- Reducing cycle time on internal approvals while preserving required control points.
+- Automating evidence collection for compliance.
+- Consolidating indirect-cost pools where consistent with CAS and disclosure statement.
+- Streamlining timekeeping with controls preserving daily-total-time accounting.
+- Improving subcontractor onboarding to clear FAR/DFARS gates faster.
+
+Run a "compliance impact" check before recommending any process change.
 
 ## Analysis Framework
 

@@ -4,9 +4,27 @@ description: Generate a stakeholder update tailored to audience and cadence. Use
 argument-hint: "<update type and audience>"
 ---
 
-# Stakeholder Update
+# Stakeholder Update — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Stakeholder Audiences
+
+Tailor by audience:
+
+| Audience | Pre-read priorities |
+|----------|---------------------|
+| **CO / COR / agency PM** | CDRL status, schedule, cost (LoF/LoC), risks, decisions requested. Often CDRL deliverable — follow the DID format. |
+| **Aleut Federal leadership** | Bookings vs plan, revenue vs plan, GM, indirect rate posture, headcount, B&P burn, top opportunities, top risks. |
+| **Aleut Corp parent leadership** | High-level financials, headcount, compliance posture, mandatory-disclosure activity (counsel-restricted summary). |
+| **JV partner** | Workshare, schedule, costs vs ceiling, FAR 52.219-14 evidence. |
+| **Internal compliance committee** | Mandatory-disclosure log, ethics hotline, SAM exclusion / FAPIIS scan, CMMC posture. |
+| **Engineering / program team** | Sprint deliverables, blockers, dependencies, ATO milestones. |
+
+Hard rules:
+- **No CUI** in updates distributed outside the authorized environment.
+- **Privileged markings** preserved for legal/disclosure content.
+- **Customer-facing updates** never describe constructive changes as "extras" we're absorbing — preserve REA rights through Contracts.
 
 Generate a stakeholder update tailored to the audience and cadence.
 

@@ -1,245 +1,131 @@
 ---
 name: pipeline-review
-description: Analyze pipeline health — prioritize deals, flag risks, get a weekly action plan. Use when running a weekly pipeline review, deciding which deals to focus on this week, spotting stale or stuck opportunities, auditing for hygiene issues like bad close dates, or identifying single-threaded deals.
-argument-hint: "<segment or rep>"
+description: Analyze the Aleut Federal capture / BD pipeline through Shipley capture stages — prioritize pursuits, flag bid/no-bid hygiene, identify single-threaded teams, surface compliance gates (FAR 52.219-14, CMMC level, bonding, clearances), audit incumbency and recompete coverage. Use for weekly capture review, gate decisions, BD-leader portfolio review, or quarterly bid/no-bid retrospective.
+argument-hint: "<segment, agency, vehicle, or capture manager>"
 ---
 
-# /pipeline-review
+# /pipeline-review — Federal BD Pipeline Review
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
 
-Analyze your pipeline health, prioritize deals, and get actionable recommendations for where to focus.
+Federal BD pipelines work very differently from commercial sales pipelines. Stages are gated, evaluation timelines are predictable, and award decisions are driven by published criteria — not relationship momentum. This skill calibrates pipeline review to the **Shipley-style capture lifecycle** and the federal acquisition calendar.
 
-## Usage
+## Capture Stages (Shipley-Aligned)
 
-```
-/pipeline-review [segment or rep]
-```
+| # | Stage | What "done" looks like |
+|---|-------|------------------------|
+| 1 | **Identification** | Logged with agency, NAICS, PSC, set-aside guess, est. value, anticipated solicitation, source |
+| 2 | **Qualification** | Initial bid/no-bid score: strategy fit, Pwin hypothesis, vehicle, set-aside fit, past performance, capacity, teaming |
+| 3 | **Pursuit / Capture** | Capture plan approved; named capture mgr; customer engagement plan executing; teaming letters/NDAs; PTW range; competitor analysis; gap analysis |
+| 4 | **Proposal Planning** | Pink-team prep; Sections L/M/H/C/J understood; proposal team named; color reviews scheduled; pricing strategy approved |
+| 5 | **Proposal Development** | Pink → Red → Gold → White Glove on schedule; volumes coordinated; compliance matrix complete |
+| 6 | **Submission** | Submitted; receipt acknowledged; PIA wall up; evaluation begins |
+| 7 | **Evaluation / Q&A** | Respond to ENs, FPRs, clarifications; hold posture; protect PTW |
+| 8 | **Award / Debrief** | Award notice; debrief requested within 3 days (FAR Part 15); lessons learned |
+| 9 | **Protest Window** | GAO 10-day timeliness; counsel coordination |
+| 10 | **Transition / NTP** | Kickoff; contract handoff to Operations; CDRL inception; CPARS baseline |
 
-Review pipeline for: $ARGUMENTS
+## Workflow
 
-If a file is referenced: @$1
+### Step 1: Pull the Pipeline
 
----
+For each active opportunity, pull from CRM / capture system:
+- Name, solicitation #, agency / sub-agency, vehicle.
+- NAICS, PSC, set-aside type, contract type, PoP, est. value.
+- Capture stage, capture mgr, color-review schedule, key dates.
+- Pwin; fit score; PTW hypothesis.
+- Teaming structure (prime / sub / JV; partners; workshare; FAR 52.219-14 plan).
+- Incumbent (recompetes); CPARS where known.
+- Compliance gates: CMMC level, clearances, bonding (Miller Act), CAS posture, OCONUS, ITAR/EAR, Section 889.
 
-## How It Works
+### Step 2: Hygiene Audit — Flag Each Opportunity That Has
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                     PIPELINE REVIEW                              │
-├─────────────────────────────────────────────────────────────────┤
-│  STANDALONE (always works)                                       │
-│  ✓ Upload CSV export from your CRM                              │
-│  ✓ Or paste/describe your deals                                 │
-│  ✓ Health check: flag stale, stuck, and at-risk deals          │
-│  ✓ Prioritization: rank deals by impact and closability        │
-│  ✓ Hygiene audit: missing data, bad close dates, single-thread │
-│  ✓ Weekly action plan: what to focus on                        │
-├─────────────────────────────────────────────────────────────────┤
-│  SUPERCHARGED (when you connect your tools)                      │
-│  + CRM: Pull pipeline automatically, update records             │
-│  + Activity data for engagement scoring                         │
-│  + Historical patterns for risk prediction                      │
-│  + Calendar: See upcoming meetings per deal                     │
-└─────────────────────────────────────────────────────────────────┘
-```
+- Stage age > standard (Identification stuck > 60 days; Qualification > 30; Capture without engagement in 30; Proposal Planning without pink scheduled within release window).
+- Missing capture manager or proposal manager.
+- Missing bid/no-bid decision at the appropriate gate.
+- Solicitation released but no compliance matrix drafted.
+- Pwin not updated in 30 days (or last gate).
+- Single-threaded teaming — only one teammate where multiple disciplines required.
+- FAR 52.219-14 risk — set-aside where staffing plan can't show self-performance.
+- CMMC gap — L2 required, no clear path within timeline.
+- Bonding gap — federal construction > $150K and surety capacity not confirmed.
+- Clearance gap — facility / personnel clearances missing.
+- Vehicle gap — we don't hold the prime vehicle and no teaming letter to a holder.
+- OCI risk — flag for legal.
 
----
+### Step 3: Prioritize
 
-## What I Need From You
+- **Must win** — strategic; on-vehicle; clear path; protect resources.
+- **Will pursue** — favorable Pwin; resourceable; on-vehicle or teaming-clear.
+- **Will participate / no-bid** — low Pwin or fit; consider sub-only or formal no-bid.
 
-**Option A: Upload a CSV**
-Export your pipeline from your CRM (e.g. Salesforce, HubSpot). Helpful fields:
-- Deal/Opportunity name
-- Account name
-- Amount
-- Stage
-- Close date
-- Created date
-- Last activity date
-- Owner (if reviewing a team)
-- Primary contact
+Apply realistic resource constraints (B&P budget, proposal-staff capacity, SME bandwidth).
 
-**Option B: Paste your deals**
-```
-Acme Corp - $50K - Negotiation - closes Jan 31 - last activity Jan 20
-TechStart - $25K - Demo scheduled - closes Feb 15 - no activity in 3 weeks
-BigCo - $100K - Discovery - closes Mar 30 - created last week
-```
+### Step 4: Coverage View
 
-**Option C: Describe your pipeline**
-"I have 12 deals. Two big ones in negotiation that I'm confident about. Three stuck in discovery for over a month. The rest are mid-stage but I haven't talked to some of them in a while."
+| Slice | Win plan ($) | Pipeline 12-mo ($) | Probability-weighted ($) | Coverage ratio |
+|-------|--------------|--------------------|--------------------------|----------------|
+| Total | | | | (target 3–4×) |
+| By customer agency | | | | |
+| By contract type (FFP / T&M / CR / IDIQ) | | | | |
+| By set-aside (8(a) SS / 8(a) competitive / SB / F&O) | | | | |
+| By vehicle (GSA MAS / OASIS+ / SeaPort / SS / etc.) | | | | |
+| By line of business (services / construction) | | | | |
 
----
+Flag where coverage is < 2× on a critical slice.
 
-## Output
+### Step 5: Top Actions for the Week
+
+5–10 specific actions tied to opportunity IDs and owners; each advances a stage, closes a hygiene flag, or unblocks a compliance gate.
+
+### Step 6: Strategic Issues for Leadership
+
+- Coverage gaps; capacity / B&P constraints; vehicle investments.
+- 8(a) sole-source utilization vs plan.
+- Recompete exposure — existing revenue up for competition in 12–24 months.
+- Compliance posture risks (CMMC, bonding, clearances).
+
+## Output Format
 
 ```markdown
-# Pipeline Review: [Date]
+## Pipeline Review — [Segment / Period]
 
-**Data Source:** [CSV upload / Manual input / CRM]
-**Deals Analyzed:** [X]
-**Total Pipeline Value:** $[X]
+**Period**: ...
+**Reviewer**: ...
+**Scope**: [agencies / vehicles / capture mgrs]
 
----
+### Headline
+- Active: ...
+- Probability-weighted pipeline ($): ...
+- Plan ($): ...
+- Coverage: ...×
+- Submitted, awaiting award ($): ...
+- Win rate (trailing 12 mo): ...%
 
-## Pipeline Health Score: [X/100]
+### Stage Distribution
+[counts and $ by stage]
 
-| Dimension | Score | Issue |
-|-----------|-------|-------|
-| **Stage Progression** | [X]/25 | [X] deals stuck in same stage 30+ days |
-| **Activity Recency** | [X]/25 | [X] deals with no activity in 14+ days |
-| **Close Date Accuracy** | [X]/25 | [X] deals with close date in past |
-| **Contact Coverage** | [X]/25 | [X] deals single-threaded |
+### Hygiene Flags
+| Opportunity | Flag | Owner | Due |
 
----
+### Top Priorities (Must Win / Will Pursue)
 
-## Priority Actions This Week
+### Recommended No-Bids
 
-### 1. [Highest Priority Deal]
-**Why:** [Reason — large, closing soon, at risk, etc.]
-**Action:** [Specific next step]
-**Impact:** $[X] if you close it
+### Coverage View
+[table]
 
-### 2. [Second Priority]
-**Why:** [Reason]
-**Action:** [Next step]
+### Compliance / Vehicle Gaps to Close
 
-### 3. [Third Priority]
-**Why:** [Reason]
-**Action:** [Next step]
+### Recompete Watchlist (12–24 mo)
 
----
-
-## Deal Prioritization Matrix
-
-### Close This Week (Focus Time Here)
-| Deal | Amount | Stage | Close Date | Next Action |
-|------|--------|-------|------------|-------------|
-| [Deal] | $[X] | [Stage] | [Date] | [Action] |
-
-### Close This Month (Keep Warm)
-| Deal | Amount | Stage | Close Date | Status |
-|------|--------|-------|------------|--------|
-| [Deal] | $[X] | [Stage] | [Date] | [Status] |
-
-### Nurture (Check-in Periodically)
-| Deal | Amount | Stage | Close Date | Status |
-|------|--------|-------|------------|--------|
-| [Deal] | $[X] | [Stage] | [Date] | [Status] |
-
----
-
-## Risk Flags
-
-### Stale Deals (No Activity 14+ Days)
-| Deal | Amount | Last Activity | Days Silent | Recommendation |
-|------|--------|---------------|-------------|----------------|
-| [Deal] | $[X] | [Date] | [X] | [Re-engage / Downgrade / Remove] |
-
-### Stuck Deals (Same Stage 30+ Days)
-| Deal | Amount | Stage | Days in Stage | Recommendation |
-|------|--------|-------|---------------|----------------|
-| [Deal] | $[X] | [Stage] | [X] | [Push / Multi-thread / Qualify out] |
-
-### Past Close Date
-| Deal | Amount | Close Date | Days Overdue | Recommendation |
-|------|--------|------------|--------------|----------------|
-| [Deal] | $[X] | [Date] | [X] | [Update date / Push to next quarter / Close lost] |
-
-### Single-Threaded (Only One Contact)
-| Deal | Amount | Contact | Risk | Recommendation |
-|------|--------|---------|------|----------------|
-| [Deal] | $[X] | [Name] | Champion leaves = deal dies | [Identify additional stakeholders] |
-
----
-
-## Hygiene Issues
-
-| Issue | Count | Deals | Action |
-|-------|-------|-------|--------|
-| Missing close date | [X] | [List] | Add realistic close dates |
-| Missing amount | [X] | [List] | Estimate or qualify |
-| Missing next step | [X] | [List] | Define next action |
-| No primary contact | [X] | [List] | Assign contact |
-
----
-
-## Pipeline Shape
-
-### By Stage
-| Stage | # Deals | Value | % of Pipeline |
-|-------|---------|-------|---------------|
-| [Stage] | [X] | $[X] | [X]% |
-
-### By Close Month
-| Month | # Deals | Value |
-|-------|---------|-------|
-| [Month] | [X] | $[X] |
-
-### By Deal Size
-| Size | # Deals | Value |
-|------|---------|-------|
-| $100K+ | [X] | $[X] |
-| $50K-100K | [X] | $[X] |
-| $25K-50K | [X] | $[X] |
-| <$25K | [X] | $[X] |
-
----
-
-## Recommendations
-
-### This Week
-1. [ ] [Specific action for priority deal 1]
-2. [ ] [Action for at-risk deal]
-3. [ ] [Hygiene task]
-
-### This Month
-1. [ ] [Strategic action]
-2. [ ] [Pipeline building if needed]
-
----
-
-## Deals to Consider Removing
-
-These deals may be dead weight:
-
-| Deal | Amount | Reason | Recommendation |
-|------|--------|--------|----------------|
-| [Deal] | $[X] | [No activity 60+ days, no response] | Mark closed-lost |
-| [Deal] | $[X] | [Pushed 3+ times, no champion] | Qualify out |
+### Actions This Week
+[5–10 specific, owner, due]
 ```
 
----
+## Hard Rules
 
-## Prioritization Framework
-
-I'll rank your deals using this framework:
-
-| Factor | Weight | What I Look For |
-|--------|--------|-----------------|
-| **Close Date** | 30% | Deals closing soonest get priority |
-| **Deal Size** | 25% | Bigger deals = more focus |
-| **Stage** | 20% | Later stage = more focus |
-| **Activity** | 15% | Active deals get prioritized |
-| **Risk** | 10% | Lower risk = safer bet |
-
-You can tell me to weight differently: "Focus on big deals over soon deals" or "I need quick wins, prioritize close dates."
-
----
-
-## If CRM Connected
-
-- I'll pull your pipeline automatically
-- Update records with new close dates, stages, next steps
-- Create follow-up tasks
-- Track hygiene improvements over time
-
----
-
-## Tips
-
-1. **Review weekly** — Pipeline health decays fast. Weekly reviews catch issues early.
-2. **Kill dead deals** — Stale opportunities inflate your pipeline and distort forecasts. Be ruthless.
-3. **Multi-thread everything** — If one person goes dark, you need a backup contact.
-4. **Close dates should mean something** — A close date is when you expect signature, not when you hope for one.
+- No commitments to teammates outside written TA / JVA — coordinate with legal.
+- FAR 52.219-14 plan must be credible at the stage when set-aside is in play.
+- 8(a) sole-source eligibility is not a guarantee — SBA acceptance and CO discretion still apply.
+- Mandatory disclosure under FAR 52.203-13 supersedes pipeline considerations — route credible evidence to GC.

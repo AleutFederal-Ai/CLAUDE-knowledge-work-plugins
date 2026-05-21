@@ -1,4 +1,6 @@
-# Knowledge Work Plugins
+# Knowledge Work Plugins — Aleut Federal Customization
+
+> **Aleut Federal context.** This repository is the Aleut Federal customization of Anthropic's knowledge-work plugins. The single source of truth for company facts, regulatory framework (FAR/DFARS, SBA 8(a), SCA, Davis-Bacon, DCAA, NIST 800-171, CMMC, etc.), markets, vehicles, and hard constraints is [ALEUT-FEDERAL-CONTEXT.md](./ALEUT-FEDERAL-CONTEXT.md). Every skill across legal, finance, sales, operations, human-resources, marketing, engineering, design, data, product-management, enterprise-search, customer-support, and productivity references that file. Read it once; every skill assumes it. The `bio-research` plugin has been removed as it is not relevant to Aleut Federal's lines of business.
 
 Plugins that turn Claude into a specialist for your role, team, and company. Built for [Claude Cowork](https://claude.com/product/cowork), also compatible with [Claude Code](https://claude.com/product/claude-code).
 
@@ -23,28 +25,28 @@ We're open-sourcing 11 plugins built and inspired by our own work:
 | **[finance](./finance)** | Prep journal entries, reconcile accounts, generate financial statements, analyze variances, manage close, and support audits. | Snowflake, Databricks, BigQuery, Slack, Microsoft 365 |
 | **[data](./data)** | Query, visualize, and interpret datasets — write SQL, run statistical analysis, build dashboards, and validate your work before sharing. | Snowflake, Databricks, BigQuery, Definite, Hex, Amplitude, Jira |
 | **[enterprise-search](./enterprise-search)** | Find anything across email, chat, docs, and wikis — one query across all your company's tools. | Slack, Notion, Guru, Jira, Asana, Microsoft 365 |
-| **[bio-research](./bio-research)** | Connect to preclinical research tools and databases (literature search, genomics analysis, target prioritization) to accelerate early-stage life sciences R&D. | PubMed, BioRender, bioRxiv, ClinicalTrials.gov, ChEMBL, Synapse, Wiley, Owkin, Open Targets, Benchling |
 | **[cowork-plugin-management](./cowork-plugin-management)** | Create new plugins or customize existing ones for your organization's specific tools and workflows. | — |
 
 Install these directly from Cowork, browse the full collection here on GitHub, or build your own.
 
 ## Getting Started
 
-### Cowork
+### Claude (Cowork)
 
-Install plugins from [claude.com/plugins](https://claude.com/plugins/).
-
-### Claude Code
+Install plugins from [claude.com/plugins](https://claude.com/plugins/), or add this marketplace directly:
 
 ```bash
-# Add the marketplace first
-claude plugin marketplace add anthropics/knowledge-work-plugins
-
-# Then install a specific plugin
-claude plugin install sales@knowledge-work-plugins
+claude plugin marketplace add AleutFederal-Ai/aleut-federal-ai-skills
+claude plugin install sales@aleut-federal-ai-skills
 ```
 
 Once installed, plugins activate automatically. Skills fire when relevant, and slash commands are available in your session (e.g., `/sales:call-prep`, `/data:write-query`).
+
+### ChatGPT Enterprise
+
+Per-plugin Custom GPT bundles are pre-built in [`chatgpt/`](./chatgpt/). Each plugin folder under `chatgpt/` contains `INSTRUCTIONS.md`, `DESCRIPTION.md`, a `knowledge/` directory of skill files, and a per-plugin operator README with import steps. See [`chatgpt/README.md`](./chatgpt/README.md) for the import procedure and rebuild instructions.
+
+The ChatGPT export is generated from the Claude plugin source by `chatgpt/build.py`; the Claude plugin files are the single source of truth. Rerun the script after any skill edit.
 
 ## How Plugins Work
 

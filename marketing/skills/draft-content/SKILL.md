@@ -4,9 +4,24 @@ description: Draft blog posts, social media, email newsletters, landing pages, p
 argument-hint: "<content type and topic>"
 ---
 
-# Draft Content
+# Draft Content — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). See the user-invocable `content-creation` skill for federal-market content rules. If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Quick Federal Content Checks
+
+Before publishing, verify:
+
+- CO authorization for any federal customer/agency reference (logos, contract numbers, mission details).
+- No federal-employee testimonial / implied endorsement (5 C.F.R. § 2635.702).
+- No source-selection-sensitive information (FAR 3.104).
+- No CUI in distributable content.
+- Section 889 compliance in any solution / vendor mention.
+- Buy American / TAA / BABA hygiene where origin is referenced.
+- Currently-held certifications only (SBA 8(a), HUBZone, CMMC level, clearances).
+- Aleut shareholder representation accurate and coordinated with Aleut Corp Comms.
+
+Default tone: dry, credentials-first, agency-mission-focused.
 
 Generate marketing content drafts tailored to a specific content type, audience, and brand voice.
 

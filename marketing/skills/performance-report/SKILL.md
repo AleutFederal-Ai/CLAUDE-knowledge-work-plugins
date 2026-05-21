@@ -4,9 +4,26 @@ description: Build a marketing performance report with key metrics, trend analys
 argument-hint: "<time period or campaign>"
 ---
 
-# Performance Report
+# Performance Report — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal-Market KPIs
+
+Federal-market KPIs aren't MQL / SQL / pipeline-$:
+
+- **Sources-sought responses** submitted and acknowledged.
+- **RFI participation** by agency / opportunity.
+- **Industry-day attendance** at targeted events.
+- **Capability briefings booked** with OSDBUs / SBLOs / program offices.
+- **Inclusion on bidders lists** for upcoming solicitations.
+- **Teaming inquiries received** (and sent).
+- **Capability-statement / one-pager downloads** by agency / NAICS / set-aside.
+- **Earned media** in trade press relevant to our markets.
+- **CPARS-narrative-supporting events** — customer recognition usable in future proposals.
+- **Brand mentions** in agency-specific events / publications.
+
+Tie each metric back to **influence on capture and award shaping**, not vanity engagement. Pair with BD pipeline movement for the same agencies / NAICS to show marketing's influence.
 
 Generate a marketing performance report with key metrics, trend analysis, insights, and optimization recommendations.
 

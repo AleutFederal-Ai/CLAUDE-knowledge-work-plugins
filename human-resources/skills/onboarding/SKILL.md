@@ -4,9 +4,42 @@ description: Generate an onboarding checklist and first-week plan for a new hire
 argument-hint: "<new hire name and role>"
 ---
 
-# /onboarding
+# /onboarding — Aleut Federal
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Aleut Federal company context lives in [ALEUT-FEDERAL-CONTEXT.md](../../../ALEUT-FEDERAL-CONTEXT.md). If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+
+## Aleut Federal Context — Federal-Contractor Onboarding
+
+### Day 0 / pre-start
+- I-9 + E-Verify within 3 business days (FAR 52.222-54).
+- Pre-employment drug screen (FAR 52.223-6).
+- Background check appropriate to role/contract.
+- Cleared roles: clearance passback via DCSA; SF-86 if new; continuous-evaluation briefing.
+- CUI roles: SSP / NIST 800-171 acknowledgments; account in authorized environment.
+- Code of Business Ethics acknowledgment (FAR 52.203-13).
+- Workplace posters at site (DOL, OFCCP, whistleblower).
+- SCA / DBA roles: WD posted; H&W enrollment.
+
+### Day 1
+- Timekeeping training and acknowledgment (DFARS 252.242-7006(c)(6) — daily total time accounting).
+- Charge codes for assigned contract / indirect pool.
+- IT provisioning aligned to clearance and CUI level.
+- Safety briefing — construction: EM 385-1-1 / OSHA 1926 site-specific, APP/AHA.
+- Ethics training enrollment (FAR 52.203-13).
+
+### Week 1
+- Annual ethics training (if due).
+- Cybersecurity awareness (NIST 800-171 3.2.x).
+- Mentor / buddy.
+- Contract / program orientation: PWS, CDRLs, key personnel, CO/COR.
+- 30/60/90 plan tied to contract scope.
+
+### Within 90 days
+- Probationary review and contract-readiness confirmation.
+- Whistleblower-protection refresher (FAR 52.203-17).
+- OCONUS: country clearance; TCP briefing if ITAR.
+
+Document each step with date and acknowledger; retain per FAR 4.703 / agency rules.
 
 Generate a comprehensive onboarding plan for a new team member.
 
